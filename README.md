@@ -4,7 +4,7 @@ Install Eslint dependencies
 npm install
 ```
 
-Install VSCode Esling extension
+Install VSCode Eslint extension
 https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
 
 Init eslint in root folder
