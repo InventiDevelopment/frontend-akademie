@@ -2,6 +2,6 @@
 root = true
 
 # 2 space indentation
-[*.{js,html,html,json}]
+[*.{js,html,html,hbs,json,scss}]
 indent_style = space
 indent_size = 2
