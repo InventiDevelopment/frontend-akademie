@@ -2,6 +2,6 @@
 root = true
 
 # 2 space indentation
-{[*.js, *.html, *.htm}]
+[*.{js,html,html,json}]
 indent_style = space
 indent_size = 2
