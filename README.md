@@ -2,7 +2,8 @@
 
 # Aplikace Peněženka
 
-Aplikace slouží ke každodenní evidenci příjmů a výdajů. Lze sledovat celkovou bilanci účtu za určité období (den, měsíc, celkem).
+Install VSCode Eslint extension
+https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
 
 ## Popis
 Aplikace obsahuje 2 různé obrazovky:
