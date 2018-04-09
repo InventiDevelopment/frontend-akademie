@@ -1,0 +1,20 @@
+// ######################
+// ####### FORMS ########
+// ######################
+
+.input-label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.input {
+  height: 40px;
+  width: 100%;
+  padding: 10px 5px;
+  border: 1px solid $input-brd;
+  border-radius: 4px;
+  font-weight: 600;
+  color: inherit;
+  background-color: $input-bg;
+}
