@@ -1,0 +1,29 @@
+// ############################
+// ####### TRANSACTION ########
+// ############################
+
+.transaction {
+  padding: 10px;
+  border: 1px solid $transaction-brd;
+  border-radius: 4px;
+  background-color: $transaction-bg;
+
+  .transaction-created {
+    font-size: 14px;
+  }
+
+  .transaction-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+
+    &:first-of-type {
+      margin-top: 0;
+    }
+
+    &.transaction-detail {
+      margin-bottom: 5px;
+    }
+  }
+}

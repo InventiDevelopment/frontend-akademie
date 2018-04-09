@@ -1,0 +1,26 @@
+// ##################################
+// ####### TRANSACTION VALUE ########
+// ##################################
+
+.transaction-value {
+  display: flex;
+  align-items: center;
+
+  .value {
+    margin-right: 5px;
+    font-weight: 600;
+
+    &.value--positive {
+      color: $transaction-value-income;
+    }
+
+    &.value--negative {
+      color: $transaction-value-expense;
+    }
+  }
+
+  .value-currency {
+    display: inline-block;
+    font-size: 10px;
+  }
+}

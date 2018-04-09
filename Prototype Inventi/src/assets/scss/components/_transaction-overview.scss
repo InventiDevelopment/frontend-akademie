@@ -1,0 +1,36 @@
+// ######################################
+// ####### TRANSACTION -OVERVIEW ########
+// ######################################
+
+.transaction-overview {
+  margin: 20px 0;
+  padding: 20px 10px;  
+  border: 1px solid $transaction-brd;
+  border-radius: 4px;
+  background-color: $transaction-bg;
+
+  .overview-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding: 8px 15px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    &.income {
+      background-color: $transaction-overview-income-bg;
+    }
+
+    &.expenses {
+      max-width: 90%;
+      background-color: $transaction-overview-expenses-bg;
+    }
+
+    &.total {
+      background-color: $transaction-overview-total-bg;
+    }
+
+  }
+}
