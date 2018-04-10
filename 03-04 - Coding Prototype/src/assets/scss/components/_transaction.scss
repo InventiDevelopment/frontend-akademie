@@ -4,4 +4,35 @@
 
 .transaction {
   padding: 10px;
+  background: #fbfbfb;
+  display: flex;
+}
+
+.transaction--income{
+  .transaction-value{
+    color: $transaction-value-income;
+  }
+}
+.transaction--expense{
+  .transaction-value{
+  color: $transaction-value-expense;
+  }
+}
+
+.transaction-type{
+  width: 100px;
+}
+
+.transaction-name{
+  flex: auto;
+}
+.transaction-value{
+  width: 100px;
+  text-align: right;
+
+}
+.transaction-created{
+  width: 200px;
+  text-align: right;
+  font-size: 11px;
 }
