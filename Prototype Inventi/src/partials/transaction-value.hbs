@@ -1,0 +1,10 @@
+<div class="transaction-value">
+  <span class="value {{#ifequal type 'income'}}value--positive{{else}}value--negative{{/ifequal}}">
+    {{#ifequal type 'income'}}
+      + {{ value }}
+    {{else}}
+      - {{ value }}
+    {{/ifequal}}
+  </span>
+<span class="value-currency">CZK</span>
+</div>

@@ -1,0 +1,17 @@
+<li class="transaction" data-toggle=".transaction-detail">
+  <div class="transaction-row">
+    <div class="transaction-name">{{ name }}</div>
+    {{> transaction-value this }}
+  </div>
+  <div class="transaction-row transaction-detail">
+    <div class="transaction-created">{{dateFormat created}}</div>
+    <div class="transaction-actions">
+      <button type="button" class="btn btn--icon" data-toggle="#modal-transaction" data-modal>
+        <i class="fas fa-pencil-alt"></i>
+      </button>
+      <button type="button" class="btn btn--icon btn--danger" data-toggle="#modal-transaction-delete" data-modal>
+        <i class="fas fa-eraser"></i>
+      </button>
+    </div>
+  </div>
+</li>
