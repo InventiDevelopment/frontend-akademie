@@ -1,11 +1,17 @@
 ---
 title: Transactions
 ---
+<head>
+  <link rel="stylesheet" href="assets/scss/app.scss">
+</head>
 
 <main class="page">
   <a href="/overview.html">
     <i class="fas fa-chart-bar"></i>
     Overview
   </a>
+  {{> transaction-type}}
   {{> transaction-list}}
+  {{> add-new-button}}
+
 </main>

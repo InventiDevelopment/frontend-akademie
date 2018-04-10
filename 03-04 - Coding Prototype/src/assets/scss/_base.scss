@@ -2,6 +2,8 @@
 // https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
 html {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 *, *:before, *:after {
@@ -14,6 +16,8 @@ body {
   font-family: $base-font;
   font-size: $base-font-size;
   color: $base-text;
+  margin: 0;
+  padding: 0;
 }
 
 // remove outlines - no keyboard on mobile
