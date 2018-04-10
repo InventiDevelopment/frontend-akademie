@@ -14,4 +14,20 @@
       margin-bottom: 0;
     }
   }
+
+  .transaction-created {
+    color: grey;
+  }
+
+  .transaction-name {
+    color: black;
+  }
+
+  .transaction-type {
+    color: red;
+  }
+
+  .transaction-value {
+    color: green;
+  }
 }

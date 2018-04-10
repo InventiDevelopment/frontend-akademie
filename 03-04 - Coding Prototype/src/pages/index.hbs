@@ -3,9 +3,25 @@ title: Transactions
 ---
 
 <main class="page">
-  <a href="/overview.html">
-    <i class="fas fa-chart-bar"></i>
-    Overview
-  </a>
-  {{> transaction-list}}
+
+  <header class="">
+    {{> buttons}}
+
+    {//{> TO DO calendar}}
+
+    <a href="/overview.html">
+      <i class="fas fa-chart-bar"></i>
+      Overview
+    </a>
+  </header>
+
+  <section class="">
+    {{> transaction-list}}
+  </section>
+
+  <footer>
+    {{> button-transaction}}
+  </footer>
+  
+
 </main>
