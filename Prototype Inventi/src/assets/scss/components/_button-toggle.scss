@@ -1,0 +1,32 @@
+// #############################
+// ####### TOGLE BUTTON ########
+// #############################
+
+.btn-toggle {
+  display: flex;
+
+  .toggle {
+    appearance: none;
+    padding: 7px 15px;
+    border-style: none;
+    font-size: 14px;
+    font-weight: 600;
+    background-color: $button-toggle-bg;
+    color: $button-toggle-text;
+
+    &:first-of-type {
+      border-top-left-radius: $global-border-radius;
+      border-bottom-left-radius: $global-border-radius;
+    }
+
+    &:last-of-type {
+      border-top-right-radius: $global-border-radius;
+      border-bottom-right-radius: $global-border-radius;
+    }
+
+    &.is-active {
+      background-color: $button-toggle-active-bg;
+      color: $button-toggle-active-text;
+    }
+  }
+}

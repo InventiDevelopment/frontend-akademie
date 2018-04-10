@@ -1,0 +1,55 @@
+// #########################
+// #######  BUTTONS ########
+// #########################
+
+.btn {
+  @include linear-gradient(to top, $btn-primary-gradient-from, $btn-primary-gradient-to);
+  appearance: none;
+  padding: 10px 20px;
+  border-style: none;
+  border-radius: $global-border-radius;
+  font-weight: bold;
+  text-align: center;
+  color: $btn-text;
+  text-decoration: none;
+  text-shadow: 0 1px 3px rgba(0,0,0,.2);
+  box-shadow: 0 0 8px rgba(0,0,0,.35);
+
+  // Modifiers
+  &.btn--danger {
+    @include linear-gradient(to top, $btn-danger-gradient-from, $btn-danger-gradient-to);
+  }
+
+  &.btn--icon {
+    padding: 5px 15px;
+
+    .fas {
+      font-size: 14px;
+      line-height: inherit;
+    }
+  }
+
+  &.icon--left,
+  &.icon--right {
+    .fas {
+      color: $btn-text-icon;
+    }
+  }
+
+  &.icon--left {
+    .fas {
+      float: left;
+    }
+  }
+
+  &.icon--right {  
+    .fas {
+      float: right;
+    }
+  }
+
+  &.btn--block {
+    display: block;
+    width: 100%;
+  }
+}

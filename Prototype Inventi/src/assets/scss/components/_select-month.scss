@@ -1,0 +1,17 @@
+// #############################
+// ####### SELECT MONTH ########
+// #############################
+
+.select-month {
+  text-align: center;
+
+  .input {
+    max-width: 150px;
+  }
+
+  label {
+    & + select {
+      margin-left: 10px;
+    }
+  }
+}
