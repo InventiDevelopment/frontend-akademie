@@ -1,5 +1,20 @@
-{
-  "income": 1500,
-  "expenses": 1000,
-  "total": 500
-}
+[
+  {
+    "period": "Dnes",
+    "income": 1500,
+    "expenses": 1000,
+    "total": 500
+  },
+  {
+    "period": "Měsíc",
+    "income": 23456,
+    "expenses": 12345,
+    "total": 11111
+  },
+  {
+    "period": "Celkem",
+    "income": 98765,
+    "expenses": 87654,
+    "total": 11111
+  }
+]
