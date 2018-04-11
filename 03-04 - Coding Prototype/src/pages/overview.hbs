@@ -3,9 +3,13 @@ title: Overview
 ---
 
 <main class="page">
-  {{> menu}}
-  {{> overview-type}}
-  {{!-- month-button --}}
-  <div class = "overview-header">{{overview}}</div>
+  <header>
+    {{> menu}}
+  </header>
+  {{> month-button}}
+  {{> overview-text}}
+  <footer>  
+    {{> overview-type}}
+  </footer>
 
 </main>

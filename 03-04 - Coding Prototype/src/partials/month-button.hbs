@@ -1,3 +1,7 @@
-<div class="toggle-button">
-    {{!-- TO DO--}}
+<div class="toggle-button action-button">
+    <select>
+        {{#each months as |month|}}
+        <option value="{{ month }}">{{ month }}</option>
+        {{/each}}
+    </select>
 </div>
