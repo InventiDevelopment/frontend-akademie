@@ -3,18 +3,24 @@ title: Transactions
 ---
 
 <main class="page">
-  <a href="/overview.html">
+  <div class="controls">
+    {{> btn-toggle}}
+  <a href="/overview.html" class="btn btn-icon">
     <i class="fas fa-chart-bar"></i>
     Overview
   </a>
-  {{> btn-delete}}
+  </div>
+  
+  <div class="content">
+    {{> transaction-list}}
+  </div>
+  {{!-- {{> btn-delete}}
   {{> btn-edit}}
   {{> btn-toggle}}
   {{> input-text}}
   {{> input-date}}
   {{> input-number}}
-  {{> table}}
-  {{> total-balance}}
+  {{> total-balance}} --}}
   {{!-- {{> transaction-list}} --}}
 
 </main>
