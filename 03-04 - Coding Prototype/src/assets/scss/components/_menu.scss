@@ -1,0 +1,19 @@
+.menu{
+    background-color: $menu-bg;
+    height: $menu-height;
+    a {
+        text-decoration: none;
+        color: #000;
+        }
+}
+.row{
+    display: flex;
+    text-align: center;
+}
+.menu-column{
+    flex: 50%;
+    padding: $page-content-padding;
+    text-transform: uppercase;
+}
+        
+

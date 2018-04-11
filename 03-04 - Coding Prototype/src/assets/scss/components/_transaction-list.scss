@@ -6,9 +6,12 @@
   margin: 0;
   padding: 0;
   list-style-type: none;
+  height: 80%;
+  flex: 1 0 auto;
 
   .transaction {
     margin-bottom: 6px;
+    background-color: $transaction-bg;
 
     &:last-of-type {
       margin-bottom: 0;

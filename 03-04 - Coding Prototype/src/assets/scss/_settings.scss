@@ -1,17 +1,17 @@
 // Typography
-$base-font: Calibri, Helvetica, sans-serif;
-$base-font-size: 16px;
+$base-font: Calibri, sans-serif;
+$base-font-size: 18px;
 
 // App
 $base-bg: #F5F1E9;
 $base-text: #707070;
 
 // Page
-$page-header-height: 70px;
-$page-footer-height: 80px;
+$page-header-height: 32vh;
+$page-footer-height: 16vh;
 $page-content-padding: 20px;
 
-$global-border-radius: 5px;
+$global-border-radius: 10px;
 
 // Components:
 
@@ -20,6 +20,7 @@ $btn-primary-gradient-from: #A38280;
 $btn-primary-gradient-to: #C5A7BF;
 $btn-text-icon: #8D6585;
 $btn-text: #E0D3D3;
+$btn-padding: 12px;
 
 $btn-danger-gradient-from: #DB8070;
 $btn-danger-gradient-to: #D87777;
@@ -35,15 +36,16 @@ $input-brd: #D3E0DF;
 $input-bg: #FFFFFF;
 
 //Menu
-$menu-btn: #F1EADE;
+$menu-bg: #F1EADE;
 $menu-active: #A38280;
+$menu-height: 11vh;
 
 // Modal
 $modal-bg: #E8F0EF;
 
 // Transaction
 $transaction-brd: #D3E0DF;
-$transaction-bg: #FFFFFF;
+$transaction-bg: #C1D9C2;
 
 // Transaction value
 $transaction-value-income: #73A05C;

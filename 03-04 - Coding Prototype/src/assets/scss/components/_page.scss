@@ -3,5 +3,33 @@
 // #####################
 
 .page {
-  padding: 20px;
+  height: 100vh;
+  overflow: hidden;
 }
+
+header{
+  position: fixed;
+  height: $page-header-height;
+  width: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+section{
+  height: 52vh;
+  margin-top: $page-header-height;
+  margin-bottom: $page-footer-height;
+  padding: 0 20px;
+  overflow-y: auto;
+}
+
+footer{
+  width: 100%;
+  align-items: center;
+  height: $page-footer-height;
+  position: fixed;
+  bottom: 0;
+  padding: $page-content-padding;
+}
+
