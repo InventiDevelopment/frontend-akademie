@@ -1,5 +1,13 @@
-<ul class="transaction-list">
+{{!<ul class="transaction-list">}}
+ {{! <div class="list-group">}}
   {{#each transactions as |transactionData|}}
+  <div class="panel panel-default">
+  <div class="panel-body">
+
     {{> transaction data=transactionData}}
+      </div>
+</div>
   {{/each}}
+
+ {{! </div>}}
 </ul>
