@@ -3,10 +3,18 @@ title: Overview
 ---
 
 <main class="page">
-  <a class="toggle-button" href="/index.html">
-    <i class="fas fa-arrow-left"></i>
-    Transakce
-  </a>
-  <div class="overview-months">{{ months }}</div>
-  <div class="overview">{{ overview }}</div>
+  <header class="page-header">
+    <div class="header-controls">
+      {{> toggle-overview }}
+    </div>
+  </header>
+  <section class="page-content">
+    {{> select-month }} {{> transaction-overview }}
+  </section>
+  <footer class="page-footer">
+    <a href="/" class="btn btn--block icon--left">
+      <i class="fas fa-arrow-left"></i>
+      Transakce
+    </a>
+  </footer>
 </main>

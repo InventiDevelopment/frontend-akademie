@@ -1,12 +1,11 @@
 // http://necolas.github.io/normalize.css/
 @import "normalize";
-
 @import "settings";
 @import "mixins";
 @import "base";
-
 // components
 @import "components/page";
 @import "components/transaction";
 @import "components/transaction-list";
-@import "components/_transaction-title.scss";
+@import "components/transaction-title.scss";
+@import "components/toggle-button.scss";

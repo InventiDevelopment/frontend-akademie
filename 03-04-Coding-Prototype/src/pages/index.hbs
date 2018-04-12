@@ -3,16 +3,21 @@ title: Transactions
 ---
 
 <main class="page">
-  <a class="toggle-button" href="/overview.html">
-    <i class="fas fa-chart-bar"></i>
-    Přehled
-  </a>
-  <!-- komponenta popisek -->
-  {{> transaction-title}}
-  <!-- komponenta transakce -->
-  {{> transaction-list}}
-  <!-- komponenta tlacitka -->
-  {{> toggle-button}}
-  <!-- komponenta pridat tlacitko -->
-   {{> toggle-button-add}}  
+  <header class="app-header">
+    <div class="header-controls">
+      <!-- komponenta tlacitka -->
+      {{> toggle-button}}
+      <a href="/overview.html" class="toggle-icon">
+        <i class="fas fa-chart-bar"></i>
+      </a>
+    </div>
+  </header>
+  <section class="app-section">
+    <!-- komponenta popisek -->
+    {{> transaction-title}}
+    <!-- komponenta transakce -->
+    {{> transaction-list}}
+    <!-- komponenta pridat tlacitko -->
+    {{> toggle-button-add}}
+  </section>  
 </main>

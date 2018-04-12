@@ -1,0 +1,23 @@
+<div class="transaction-overview">
+    <div class="overview-row income">
+        Příjem
+        <div class="transaction-value">
+            <span class="value value--positive">+ {{ overview.income }}</span>
+            <span class="value-currency">CZK</span>
+        </div>
+    </div>
+    <div class="overview-row expenses">
+        Výdej
+        <div class="transaction-value">
+            <span class="value value--negative">- {{ overview.expenses }}</span>
+            <span class="value-currency">CZK</span>
+        </div>
+    </div>
+    <div class="overview-row total">
+        Celkově
+        <div class="transaction-value">
+            <span class="value value--positive">+ {{ overview.total }}</span>
+            <span class="value-currency">CZK</span>
+        </div>
+    </div>
+</div>

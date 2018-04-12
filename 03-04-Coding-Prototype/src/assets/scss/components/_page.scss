@@ -5,33 +5,10 @@
     margin: 0 auto;
     padding: 20px;
     max-width: 620px;
-    .transaction-add {
-      display: flex;
-      justify-content: center;
-    }
-    .toggle-button {
-        text-transform: uppercase;
-        background-color: $button-toggle-bg;
-        color: $button-toggle-text;
-        border: none;
-        border-radius: 8px;
-        padding: .5rem;
-        text-align: center;
-        text-decoration: none;
-    }
-    .toggle-button-add {
-        margin: 1rem auto .5rem auto;
-        height: 50px;
-        width: 50px;
-        font-size: 2rem;
-    }
-    .transaction-filter {
+    .header-controls {
+        max-width: 210px;
         display: flex;
         justify-content: center;
-        margin: .5rem 0;
-        .toggle-button-item {
-            flex: 1 1 auto;
-            margin: 0 .5rem;
-        }
+        margin: 0 auto;
     }
 }
