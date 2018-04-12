@@ -1,4 +1,6 @@
-
+// ####################################
+// ####### TRANSACTION BUTTONS ########
+// ####################################
 
 .edit-button{
         background-color:  $btn-primary-gradient-from;
@@ -13,6 +15,8 @@
     background-color: $btn-danger-gradient-from;
     color: $transaction-bg;
 }
+
+// Align to right
 
 .expand-row{
     display: flex;

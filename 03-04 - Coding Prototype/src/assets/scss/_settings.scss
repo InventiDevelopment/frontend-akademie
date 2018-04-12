@@ -41,7 +41,7 @@ $menu-active: #A38280;
 $menu-height: 11vh;
 
 // Modal
-$modal-bg: #E8F0EF;
+$input-bg: rgb(250, 247, 239);
 
 // Transaction
 $transaction-brd: #D3E0DF;
@@ -49,5 +49,5 @@ $transaction-bg: #C1D9C2;
 
 // Transaction value
 $transaction-value-income: #73A05C;
-$transaction-value-expense: #BC5757;
+$transaction-value-expense: $btn-danger-gradient-from;
 

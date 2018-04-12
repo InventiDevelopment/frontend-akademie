@@ -1,13 +1,13 @@
 <main class="page">
   <header>
       {{> menu}}
-      <div class = "balance-overview">
+      <div class="balance-overview">
         <span>Total Balance</span>
-        <span class = "balance-value">+ 28 300 CZK</span>
+        <span class="balance-value">+ 28 300 CZK</span>
       </div>
       {{> filter-button}}
   </header>
-  <section class = "page-section">
+  <section class="page-section">
     {{> transaction-list}}
   </section>
   <footer>
@@ -16,21 +16,48 @@
 </main>
 
 {{#> modal name="modal-transaction" }}
-  <h2>Transaction</h2>
-  <div class="form-row">
-    <label class="input-label">Name</label>
-    <input type="text" class="input transaction-name">
+  <div class="modal-inside">
+  <div class="form-item">
+    <label>Name</label>
+    <input class="modal-input" type="text>">
   </div>
-  <div class="form-row">
-    <label class="input-label">Value</label>
-    <input type="number" class="input transaction-date">
+  <div class="form-item"> 
+    <label>Value</label>
+    <input class="modal-input" type="number">
   </div>
-  <div class="form-row">
-    <label class="input-label">Date</label>
-    <input type="datetime-local" class="input transaction-date">
+  <div class="form-item">
+    <label>Date created</label>
+    <input class="modal-input" type="datetime-local">
   </div>
-  <div class="modal-footer">
-    <button type="button" class="btn btn--danger" data-toggle="#modal-transaction" data-modal>Cancel</button>
-    <button type="button" class="btn">Save</button>
+  <div class="form-item">
+    <span>Type</span>
+    <div>
+      <form class="radio-form">
+      <label>
+        <input name="trans-type" class="radio-check" type="radio" checked="checked">
+        <span>Income</span>
+      </label>
+      <label>
+        <input name="trans-type" class="radio-check" type="radio">
+        <span>Expense</span>
+      </label>
+      </form>
+    </div>
+  </div>
+  <div class="modal-btns">
+    <button class="edit-button">Save</button>
+    <button class="close-button"  data-toggle="#modal-transaction" data-modal><i class="fas fa-window-close"></i></button>
+  </div>
   </div>
 {{/modal}}
+
+{{#> modal name="modal-delete" }}
+  <div class="modal-inside">
+    <span>Do you really want to delete this transaction?</span>
+    <div class="delete-btns">
+      <button class="yes">Yes</button>
+      <button class="close-button"  data-toggle="#modal-delete" data-modal>No</button>
+    </div>
+  </div>
+{{/modal}}
+

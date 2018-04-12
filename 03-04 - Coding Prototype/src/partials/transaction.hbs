@@ -1,18 +1,18 @@
 <li class="transaction" data-toggle=".transaction-expand">
   <div>
-    <div class = "transaction-row">
+    <div class="transaction-row">
       <div class="transaction-name">{{ name }}</div>
       <div class="transaction-value">
         {{#ifequal type 'income'}}
-        <span class = "income">+{{value}} CZK</span>
+        <span class="income">+{{value}} CZK</span>
         {{else}}
-        <span class = "expense">-{{ value}} CZK</span>
+        <span class="expense">-{{ value}} CZK</span>
         {{/ifequal}}
       </div>
     </div>
   </div>                       
   <div class="transaction-expand">
-    <div class = "expand-row">
+    <div class="expand-row">
       <div class="transaction-date">{{dateFormat created}}</div>
       {{> transaction-buttons}}
     </div>

@@ -7,6 +7,7 @@ button{
     padding: $btn-padding;
     font-weight: bold;
     border: 0;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
 }
 
 // Filter buttons
@@ -54,17 +55,13 @@ button{
     select {
         -webkit-appearance: button;
         -moz-appearance: button;
-        -webkit-padding-end: 20px;
-        -moz-padding-end: 20px;
-        -webkit-padding-start: 2px;
-        -moz-padding-start: 2px;
         background-color: $btn-primary-gradient-from;
         border: 0;
         border-radius: $global-border-radius;
         color: $btn-text;
         padding: 15px;
-        text-align: center;
         text-transform: uppercase;
         font-weight: bold;
+        text-align-last: center;
     }
  }

@@ -1,0 +1,65 @@
+// ######################
+// ####### MODAL ########
+// ######################
+
+.modal {
+  position: fixed;
+  background-color: rgba(0, 0, 0, .5);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  
+  .modal-inside{
+    background-color: $menu-bg;
+    padding: $page-content-padding;
+    margin: 30px;
+    margin-top: 20vh;
+    border-radius: $global-border-radius;
+  }
+
+  // Form formatting
+  
+  .form-item{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .modal-input{
+    border-radius: 10px;
+    background-color: $input-bg;
+    border: 0;
+  }
+  .radio-check{
+    margin-left: 20px;
+  }
+  .modal-btns{
+    padding-top: 25px;
+    text-align: right;
+  }
+
+  // Modal buttons
+
+  .close-button{
+    background-color: $btn-danger-gradient-from;
+    color: $menu-bg;
+    border-radius: $global-border-radius;
+  }
+  .edit-button{
+    background-color: $btn-primary-gradient-from;
+    color: $menu-bg;
+    border-radius: $global-border-radius;
+  }
+  .delete-btns{
+    text-align: center;
+    padding-top: 30px;
+  }
+  .yes{
+    background-color: $btn-primary-gradient-from;
+    color: $menu-bg;
+    border-radius: $global-border-radius;
+    margin-right: 40px;
+  }
+ }
