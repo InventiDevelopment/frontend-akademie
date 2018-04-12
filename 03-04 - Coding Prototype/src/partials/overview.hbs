@@ -1,5 +1,9 @@
 <div class="overview">
-  <p class="period">{{ period }}</p>
+  {{#if period}}
+    <p class="period">{{ period }}</p>
+  {{else}}
+    {{> select-month }}
+  {{/if}}
   <div class="income">+{{ income }}</div>
   <div class="expenses">-{{ expenses }}</div>
   <div class="total">+{{ total }}</div>

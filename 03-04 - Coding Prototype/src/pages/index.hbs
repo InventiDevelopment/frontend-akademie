@@ -3,10 +3,9 @@ title: Transactions
 ---
 
 <main class="page">
-  {{> select-month}}
-  <a href="/overview.html">
-    <i class="fas fa-chart-bar"></i>
-    Overview
-  </a>
-  {{> transaction-list}}
+  {{!--> select-month--}}
+  {{> navigation }}
+  <div><button id="new">Nová transakce</button></div>
+  {{> buttons }}
+  {{> transaction-list }}
 </main>

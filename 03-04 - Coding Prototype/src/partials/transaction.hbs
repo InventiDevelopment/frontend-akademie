@@ -1,4 +1,13 @@
 <li class="transaction">
   <div class="transaction-name">{{ name }}</div>
+  {{!--> transaction sign='-'}}
+  {{#if type desired="income" type = type }}
+    {{> transaction sign = '+'}}
+  {{/if --}}
+    <div class="transaction-value {{ type }}">{{ value }}</div>
   <div class="transaction-created">{{ dateFormat created }}</div>
+  <div class="buttons">
+    <button class="edit"></button>
+    <button class="delete"></button>
+  </div>
 </li>

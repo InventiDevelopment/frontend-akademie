@@ -1,5 +1,10 @@
-<div id="overview-block">
+---
+title: Overview
+---
+
+<main class="page">
+  {{> navigation }}
   {{#each overview as |overviewData|}}
     {{> overview data=overviewData}}
   {{/each}}
-</div>
+</main>
