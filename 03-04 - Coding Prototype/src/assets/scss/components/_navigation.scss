@@ -1,0 +1,17 @@
+// ############################
+// ####### NAVIGATION #########
+// ############################
+
+.nav {
+    background-color: $button-toggle-bg;
+    border-bottom: 1px solid $transaction-brd;
+
+    li {
+        display: inline-block;
+        width: 40%;
+        height: 1.7em;
+        text-align: center;
+        border: black;
+    }
+ 
+}

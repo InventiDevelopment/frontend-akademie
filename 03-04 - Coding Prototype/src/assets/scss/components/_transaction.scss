@@ -4,4 +4,32 @@
 
 .transaction {
   padding: 10px;
+  border: 1px solid $transaction-brd;
+  min-height: 2.5em;
+
+  .transaction-value {
+    font-weight: bold;
+  }
+
+  .transaction-name, .transaction-created {
+    float: left;
+    clear: both;
+    height: 1.5em;
+  }
+
+  .buttons, .transaction-value {
+    position: absolute;
+    right: 20pt;
+  }
+
+  .transaction-created, .buttons {
+    display: none;
+  }
+
+  & .income {
+    color: green;
+  }
+  & .expense {
+    color: firebrick;
+  }
 }
