@@ -9,25 +9,18 @@
 
   .transaction {
     margin-bottom: 6px;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid;
+    align-items: center;
 
-    &:last-of-type {
-      margin-bottom: 0;
+    > div {
+      flex: 1;
+
+      &:last-child {
+        flex: none;
+      }
+
     }
-  }
-
-  .transaction-created {
-    color: grey;
-  }
-
-  .transaction-name {
-    color: black;
-  }
-
-  .transaction-type {
-    color: red;
-  }
-
-  .transaction-value {
-    color: green;
   }
 }

@@ -8,6 +8,6 @@
 import moment from 'moment'
 
 module.exports = function (d, block) {
-  var f = block.hash.format || 'DD. MM. YYYY'
+  var f = block.hash.format || 'HH:mm'
   return moment(new Date(d)).format(f)
 }
