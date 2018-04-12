@@ -1,0 +1,13 @@
+.transaction-title {
+    display: flex;
+    justify-content: flex-start;
+    color: $base-text;
+    padding: 1rem 0 1rem .5rem;
+    margin: 1rem 0 0 0;
+    border: 1px solid #ddd;
+    li {
+        list-style-type: none;
+        text-transform: uppercase;
+        flex: 1 1 auto;
+    }
+}

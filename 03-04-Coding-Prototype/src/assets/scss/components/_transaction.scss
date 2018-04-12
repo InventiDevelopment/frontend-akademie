@@ -1,0 +1,28 @@
+// ############################
+// ####### TRANSACTION ########
+// ############################
+.transaction {
+    padding: 1rem 0 1rem .5rem;
+    margin-bottom: 6px;
+    display: flex;
+    justify-content: flex-start;
+    border-bottom: 1px solid #ddd;
+    li {
+        flex: 1 1 auto;
+    }
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+    .transaction-created {
+        width: 27%;
+    }
+    .transaction-name {
+        width: 25%;
+    }
+    .transaction-type {
+        width: 21%;
+    }
+    .transaction-value {
+        width: 10%;
+    }
+}
