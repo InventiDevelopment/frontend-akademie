@@ -2,6 +2,12 @@
 // ####### TRANSACTION LIST ########
 // #################################
 
+.top-buttons {
+  margin: 1rem;
+  padding: 0.1em;
+  text-align: right;
+}
+
 .transaction-list {
   margin: 0;
   padding: 0;
@@ -13,5 +19,15 @@
     &:last-of-type {
       margin-bottom: 0;
     }
+    .transaction-basic-info {
+      display: flex;
+      justify-content: space-between;
+    }
+      .transaction-name {
+        background-color: pink;
+      }
+      .transaction-value {
+        background-color: yellow;
+      }
   }
 }
