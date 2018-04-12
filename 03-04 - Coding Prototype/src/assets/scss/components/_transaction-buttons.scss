@@ -1,0 +1,21 @@
+
+
+.edit-button{
+        background-color:  $btn-primary-gradient-from;
+        border-radius: $global-border-radius;
+        color: $transaction-bg;
+        margin-left: 5px;
+}
+
+
+.delete-button{
+    border-radius: $global-border-radius;
+    background-color: $btn-danger-gradient-from;
+    color: $transaction-bg;
+}
+
+.expand-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

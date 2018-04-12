@@ -33,3 +33,14 @@ footer{
   padding: $page-content-padding;
 }
 
+.balance-overview{
+  padding: $page-content-padding;
+  display: flex;
+  font-size: 120%;
+  padding: 25px;
+  justify-content: space-between;
+  .balance-value{
+    color: $transaction-value-income;
+  }
+}
+

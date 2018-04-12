@@ -1,11 +1,24 @@
+// #####################
+// ####### MENU ########
+// #####################
+
+
+
+// General properties
+
 .menu{
     background-color: $menu-bg;
     height: $menu-height;
+    font-weight: bold;
+    align-items: center;
     a {
         text-decoration: none;
-        color: #000;
+        color: $base-text;
         }
 }
+
+// Splitting into two columns
+
 .row{
     display: flex;
     text-align: center;
@@ -14,6 +27,12 @@
     flex: 50%;
     padding: $page-content-padding;
     text-transform: uppercase;
+}
+
+.active-link{
+    border-bottom:$btn-primary-gradient-from;
+    border-bottom-style: solid;
+    border-bottom-width: 3px;
 }
         
 

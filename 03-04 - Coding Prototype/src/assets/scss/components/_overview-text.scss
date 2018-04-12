@@ -1,0 +1,10 @@
+.overview-text{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:20px;
+    font-size: 110%;
+    &:last-of-type{
+        font-size: 130%;
+    }
+}

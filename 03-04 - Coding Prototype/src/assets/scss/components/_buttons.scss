@@ -1,4 +1,6 @@
-
+// ########################
+// ####### BUTTONS ########
+// ########################
 
 button{
     text-transform: uppercase;
@@ -6,12 +8,16 @@ button{
     font-weight: bold;
     border: 0;
 }
+
 // Filter buttons
+
 .button-div{
     display: flex;
+    align-items: center;
+    justify-content: center;
 
     .horizontal-button{
-        width: 28%;
+        width: 30%;
         background-color: $button-toggle-bg;
         color: $button-toggle-text;
 
@@ -24,8 +30,13 @@ button{
         border-top-right-radius: $global-border-radius;
         border-bottom-right-radius: $global-border-radius;
     }
+    &.toggle-active {
+        background-color: $button-toggle-active-bg;
+        color: $button-toggle-active-text;
+    }
     }
 }
+
 
 // Action buttons
 
@@ -33,20 +44,27 @@ button{
     background-color: $btn-primary-gradient-from;
     color: $btn-text;
     border-radius: $global-border-radius;
+    width: 100%;
 }
-select {
-    -webkit-appearance: button;
-    -moz-appearance: button;
-    -webkit-padding-end: 20px;
-    -moz-padding-end: 20px;
-    -webkit-padding-start: 2px;
-    -moz-padding-start: 2px;
-    background-color: $btn-primary-gradient-from;
-    border: 0;
-    border-radius: $global-border-radius;
-    color: $btn-text;
-    padding: $page-content-padding;
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: bold;
-}
+ .month-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    select {
+        -webkit-appearance: button;
+        -moz-appearance: button;
+        -webkit-padding-end: 20px;
+        -moz-padding-end: 20px;
+        -webkit-padding-start: 2px;
+        -moz-padding-start: 2px;
+        background-color: $btn-primary-gradient-from;
+        border: 0;
+        border-radius: $global-border-radius;
+        color: $btn-text;
+        padding: 15px;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+ }
