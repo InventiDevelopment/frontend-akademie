@@ -43,12 +43,12 @@
   // Modal buttons
 
   .close-button{
-    background-color: $btn-danger-gradient-from;
+    @include linear-gradient(to top, $btn-danger-gradient-from, $btn-danger-gradient-to);
     color: $menu-bg;
     border-radius: $global-border-radius;
   }
   .edit-button{
-    background-color: $btn-primary-gradient-from;
+    @include linear-gradient(to top, $btn-primary-gradient-from, $btn-primary-gradient-to);
     color: $menu-bg;
     border-radius: $global-border-radius;
   }
@@ -57,9 +57,15 @@
     padding-top: 30px;
   }
   .yes{
-    background-color: $btn-primary-gradient-from;
+    @include linear-gradient(to top, $btn-primary-gradient-from, $btn-primary-gradient-to);
     color: $menu-bg;
     border-radius: $global-border-radius;
     margin-right: 40px;
   }
+ }
+
+ // Delete modal
+
+ .delete-text{
+   text-align: center;
  }
