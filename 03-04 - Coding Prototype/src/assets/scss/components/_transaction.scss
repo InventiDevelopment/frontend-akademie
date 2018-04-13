@@ -3,8 +3,13 @@
 // ############################
 
 .transaction {
-  padding: 10px;
+  padding: 5px;
   margin: 15px 0px;
-  border: 3px #0a0a0a;
+  border: 1px #0a0a0a solid;
   background-color: #FFFFFF;
+
+  .transaction-created {
+    font-size: 14px;
+    color: #ababab
+  }
 }
