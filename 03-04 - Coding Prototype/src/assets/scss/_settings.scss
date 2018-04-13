@@ -10,6 +10,7 @@ $base-text: #333333;
 $page-header-height: 32vh;
 $page-footer-height: 16vh;
 $page-content-padding: 20px;
+$section-height: 50vh;
 
 $global-border-radius: 10px;
 
@@ -17,13 +18,13 @@ $global-border-radius: 10px;
 
 // Buttons
 $btn-primary-gradient-from: #A38280;
-$btn-primary-gradient-to: #C5A7BF;
+$btn-primary-gradient-to: rgb(189, 156, 154);
 $btn-text-icon: #8D6585;
 $btn-text: #E0D3D3;
 $btn-padding: 12px;
 
 $btn-danger-gradient-from: #DB8070;
-$btn-danger-gradient-to: #D87777;
+$btn-danger-gradient-to: rgb(236, 141, 124);
 
 // Button Toggle
 $button-toggle-bg: #D2C1C1;

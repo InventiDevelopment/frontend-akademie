@@ -7,7 +7,6 @@ button{
     padding: $btn-padding;
     font-weight: bold;
     border: 0;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
 }
 
 // Filter buttons
@@ -25,11 +24,17 @@ button{
     &:first-of-type {
         border-top-left-radius: $global-border-radius;
         border-bottom-left-radius: $global-border-radius;
+        border-right: $menu-bg;
+        border-right-style: solid;
+        border-right-width: 1.5px;
     }
 
     &:last-of-type {
         border-top-right-radius: $global-border-radius;
         border-bottom-right-radius: $global-border-radius;
+        border-left: $menu-bg;
+        border-left-style: solid;
+        border-left-width: 1.5px;
     }
     &.toggle-active {
         background-color: $button-toggle-active-bg;
@@ -42,7 +47,7 @@ button{
 // Action buttons
 
 .action-button{
-    background-color: $btn-primary-gradient-from;
+    @include linear-gradient(to top, $btn-primary-gradient-from, $btn-primary-gradient-to);
     color: $btn-text;
     border-radius: $global-border-radius;
     width: 100%;
@@ -53,6 +58,7 @@ button{
     justify-content: center;
     margin-top: 20px;
     select {
+        @include linear-gradient(to top, $btn-primary-gradient-from, $btn-primary-gradient-to);
         -webkit-appearance: button;
         -moz-appearance: button;
         background-color: $btn-primary-gradient-from;
@@ -63,5 +69,9 @@ button{
         text-transform: uppercase;
         font-weight: bold;
         text-align-last: center;
+        option{
+            color: $btn-primary-gradient-from;
+            background-color: $base-bg;
+        }
     }
  }

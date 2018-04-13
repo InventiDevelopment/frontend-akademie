@@ -3,7 +3,7 @@
 // ####################################
 
 .edit-button{
-        background-color:  $btn-primary-gradient-from;
+        @include linear-gradient(to top, $btn-primary-gradient-from, $btn-primary-gradient-to);
         border-radius: $global-border-radius;
         color: $transaction-bg;
         margin-left: 5px;
@@ -11,8 +11,8 @@
 
 
 .delete-button{
+    @include linear-gradient(to top, $btn-danger-gradient-from, $btn-danger-gradient-to);
     border-radius: $global-border-radius;
-    background-color: $btn-danger-gradient-from;
     color: $transaction-bg;
 }
 
