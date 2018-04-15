@@ -2,3 +2,8 @@
   background: nth(nth($colors, 1), 1);
   background: linear-gradient($direction, $colors);
 }
+
+@mixin bp-min($canvas) {
+  @media only screen and (min-width:$canvas) {@content;}
+}
+
