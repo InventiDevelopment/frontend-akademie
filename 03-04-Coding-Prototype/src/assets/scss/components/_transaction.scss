@@ -4,9 +4,8 @@
 .transaction {
     padding: 1rem 0 1rem .5rem;
     margin-bottom: 6px;
-    display: flex;
-    justify-content: flex-start;
     background-color: $btn-txt;
+    border-radius: 4px;
     color: $btn-bg;
     li {
         padding: 1rem 0;
@@ -14,16 +13,21 @@
     &:last-of-type {
         margin-bottom: 0;
     }
-    .transaction-created {
-        width: 27%;
+    .transaction-info {
+        display: flex;
+        padding: 0 .5rem;
+        .transaction-name {
+            flex: 2 1 auto;
+        }
+        .transaction-value {
+            flex: 0 1 auto;
+        }
+        .value-currency {
+            padding-left: .3rem;
+        }
     }
-    .transaction-name {
-        width: 25%;
-    }
-    .transaction-type {
-        width: 21%;
-    }
-    .transaction-value {
-        width: 10%;
+    .transaction-detail {
+        display: flex;
+        padding: .5rem 0 0 .5rem;
     }
 }
