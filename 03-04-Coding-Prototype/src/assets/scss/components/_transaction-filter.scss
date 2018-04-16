@@ -1,12 +1,8 @@
-.transaction-add {
-    display: flex;
-    justify-content: center;
-}
-
 .toggle-button {
     text-transform: uppercase;
-    background-color: $button-toggle-bg;
-    color: $button-toggle-text;
+    background-color: $btn-bg;
+    color: $btn-txt;
+    font-weight: 700;
     border: none;
     border-radius: 8px;
     padding: .5rem;
@@ -14,28 +10,37 @@
     text-decoration: none;
 }
 
+.is-active {
+    background-color: $btn-txt;
+    color: $btn-bg;
+}
+
 .toggle-button-add {
-    margin: 1rem auto .5rem auto;
+    margin: 1rem auto;
     height: 50px;
     width: 50px;
     font-size: 2rem;
+    background-color: $btn-txt-icon;
+}
+
+.transaction-add {
+    display: flex;
+    justify-content: center;
 }
 
 .transaction-filter {
     display: flex;
     justify-content: center;
+    align-items: center;
     margin: .5rem 0;
     .toggle-button-item {
         flex: 1 1 auto;
-        margin: 0 .5rem;
+        margin: 0 .5rem .5rem 0;
     }
 }
 
 .toggle-icon {
-    padding: 5px 15px;
-    font-size: 14px;
     text-align: center;
-    color: $btn-text;
-    background-color: $btn-text-icon;
+    background-color: $btn-txt-icon;
     border-radius: 8px;
 }

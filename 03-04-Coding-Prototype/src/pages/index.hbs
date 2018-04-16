@@ -5,19 +5,16 @@ title: Transactions
 <main class="page">
   <header class="app-header">
     <div class="header-controls">
-      <!-- komponenta tlacitka -->
-      {{> toggle-button}}
-      <a href="/overview.html" class="toggle-icon">
-        <i class="fas fa-chart-bar"></i>
-      </a>
+      <!-- komponenta filter transakcií -->
+      {{> transaction-filter}}
     </div>
   </header>
   <section class="app-section">
-    <!-- komponenta popisek -->
-    {{> transaction-title}}
     <!-- komponenta transakce -->
     {{> transaction-list}}
+  </section>
+  <footer>
     <!-- komponenta pridat tlacitko -->
-    {{> toggle-button-add}}
-  </section>  
+    {{> transaction-add}}
+  </footer>  
 </main>

@@ -1,10 +1,14 @@
 // Typography
 $base-font: Arial, Helvetica, sans-serif;
 $base-font-size: 16px;
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700&subset=latin-ext');
+$main-font: Roboto, Helvetica, sans-serif;
 
 // App
 $base-bg: #E8F0EF;
 $base-text: #707070;
+$main-bg: #2F9494;
+$main-txt: #454445;
 
 // Page
 $page-header-height: 70px;
@@ -20,6 +24,9 @@ $btn-primary-gradient-from: #977490;
 $btn-primary-gradient-to: #C5A7BF;
 $btn-text-icon: #8D6585;
 $btn-text: #FFFFFF;
+$btn-bg: #19585E;
+$btn-txt: #F5F2DB;
+$btn-txt-icon: #F5551C;
 
 $btn-danger-gradient-from: #AF4646;
 $btn-danger-gradient-to: #D87777;

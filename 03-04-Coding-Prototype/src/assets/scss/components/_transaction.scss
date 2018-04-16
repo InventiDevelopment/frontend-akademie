@@ -6,9 +6,10 @@
     margin-bottom: 6px;
     display: flex;
     justify-content: flex-start;
-    border-bottom: 1px solid #ddd;
+    background-color: $btn-txt;
+    color: $btn-bg;
     li {
-        flex: 1 1 auto;
+        padding: 1rem 0;
     }
     &:last-of-type {
         margin-bottom: 0;
