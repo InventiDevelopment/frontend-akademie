@@ -1,0 +1,24 @@
+.time-period-selection {
+    margin: auto;
+    letter-spacing: 1px;
+    border: 1px solid white;
+    border-radius: 20px;
+    background-color: white;
+    color: black;
+    width: 50%;
+}
+
+.time-period-text {
+    font-size: 0.9rem;
+    margin-top: 0;
+    -webkit-margin-after: 8px;
+}
+
+.btn, .dropdown-menu {
+    font-size: 16px;
+}
+
+.dropdown-menu li a {
+    padding: 8px 20px;
+    text-align: center;
+}

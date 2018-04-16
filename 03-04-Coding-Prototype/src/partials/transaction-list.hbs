@@ -1,5 +1,9 @@
+<div class="transactions">
+{{> transaction-type}}
+
 <ul class="transaction-list">
   {{#each transactions as |transactionData|}}
     {{> transaction data=transactionData}}
   {{/each}}
 </ul>
+</div>
