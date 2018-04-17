@@ -1,0 +1,21 @@
+.button{
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  i{
+    margin-right: 5px;
+  }
+}
+
+.button--primary{
+  background: #0093C6;
+  color: #fff;
+
+  &:hover{
+    background: darken(#0093C6, 10%);
+  }
+}

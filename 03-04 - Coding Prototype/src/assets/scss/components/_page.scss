@@ -2,6 +2,19 @@
 // ####### PAGE ########
 // #####################
 
-.page {
-  padding: 20px;
+.page {}
+
+.page-header{
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  padding: 15px;
+}
+.page-main{
+  height: calc(100vh - 68px - 68px);
+  overflow: scroll;
+  padding: 0 15px;
+}
+.page-footer{
+  padding: 15px;
 }

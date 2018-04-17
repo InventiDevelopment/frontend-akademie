@@ -1,10 +1,19 @@
 .toggle-buttons{
   display: flex;
+
+  & + *{
+    margin-left: 10px;
+  }
 }
 
 .toggle-buttons__button{
   flex: 1;
-  background: #0093C6;
+  background: #5d747b;
   color: #fff;
-  padding: 15px;
+  padding: 10px 15px;
+  border: 0;
+
+  &:hover{
+    background: darken(#5d747b, 10%);
+  }
 }

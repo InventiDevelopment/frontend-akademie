@@ -7,6 +7,40 @@
 
 // components
 @import "components/page";
+@import "components/button";
 @import "components/transaction";
 @import "components/transaction-list";
 @import "components/toggle-buttons";
+
+.select-month{
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.transaction-overview{
+  background: #ffffff;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.overview-row{
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 10px;
+
+  & + &{
+    margin-top: 10px;
+  }
+
+  &.income{
+    background: #D7F0CA;
+  }
+  &.expenses{
+    background: #FBD3D3;
+  }
+  &.total{
+    background: #E8F0EF;
+  }
+}

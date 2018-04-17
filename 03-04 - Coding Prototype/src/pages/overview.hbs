@@ -3,8 +3,60 @@ title: Overview
 ---
 
 <main class="page">
-  <a href="/">
-    <i class="fas fa-arrow-left"></i>
-    Back to transactions
-  </a>
+    <header class="page-header">
+        <div class="toggle-buttons">
+            <button class="toggle-buttons__button">Denní</button>
+            <button class="toggle-buttons__button">Měsíční</button>
+            <button class="toggle-buttons__button">Vše</button>
+        </div>
+    </header>
+    <main class="page-main">
+        <div class="select-month">
+            <label>Current Month:</label>
+            <select class="input">
+                <option value="January">January</option>
+                <option value="February">February</option>
+                <option value="March">March</option>
+                <option value="April">April</option>
+                <option value="May">May</option>
+                <option value="June">June</option>
+                <option value="July">July</option>
+                <option value="August">August</option>
+                <option value="September">September</option>
+                <option value="October">October</option>
+                <option value="November">November</option>
+                <option value="December">December</option>
+            </select>
+        </div>
+
+        <div class="transaction-overview">
+            <div class="overview-row income">
+                Income
+                <div class="transaction-value">
+                    <span class="value value--positive">+ 1500</span>
+                    <span class="value-currency">CZK</span>
+                </div>
+            </div>
+            <div class="overview-row expenses">
+                Expenses
+                <div class="transaction-value">
+                    <span class="value value--negative">- 1000</span>
+                    <span class="value-currency">CZK</span>
+                </div>
+            </div>
+            <div class="overview-row total">
+                Total
+                <div class="transaction-value">
+                    <span class="value value--positive">+ 500</span>
+                    <span class="value-currency">CZK</span>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="page-footer">
+        <a class="button button--primary" href="#">
+            <i class="fas fa-chart-bar"></i>
+            Back to transactions
+        </a>
+    </footer>
 </main>

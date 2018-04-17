@@ -3,19 +3,23 @@ title: Transactions
 ---
 
 <main class="page">
-  <header class="page-header">
-      <a href="/overview.html">
-          <i class="fas fa-chart-bar"></i>
-          Overview
-      </a>
-      <div class="toggle-buttons">
-          <button class="toggle-buttons__button">Vše</button>
-          <button class="toggle-buttons__button">Příjmy</button>
-          <button class="toggle-buttons__button">Výdaje</button>
-      </div>
-  </header>
-  {{> transaction-list}}
+    <header class="page-header">
+        <div class="toggle-buttons">
+            <button class="toggle-buttons__button">Vše</button>
+            <button class="toggle-buttons__button">Příjmy</button>
+            <button class="toggle-buttons__button">Výdaje</button>
+        </div>
+        <a class="button button--primary" href="/overview.html">
+            <i class="fas fa-chart-bar"></i>
+            Overview
+        </a>
+    </header>
+    <main class="page-main">
+        {{> transaction-list}}
+    </main>
     <footer class="page-footer">
-        <button class="btn btn--block">Přidat novou transakci</button>
+        <a class="button button--primary" href="#">
+            Přidat novou transakci
+        </a>
     </footer>
 </main>
