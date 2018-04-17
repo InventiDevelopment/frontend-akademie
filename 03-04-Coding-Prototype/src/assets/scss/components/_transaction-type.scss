@@ -3,21 +3,15 @@
     justify-content: space-evenly;
     margin-top: 10%;
     margin-bottom: 10%;
-}
-
-.transaction-type hr {
-    border: none;
-    border-left: 1px solid #fff;
-    height: 1rem;;
-    width: 1px;  
+    border: 1px solid black;
+    border-radius: 20px;
 }
 
 .type-button {
     color: black;
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.5rem;
     width: 33.3%;
-    padding-top: 3%;
     text-shadow: 2px 6px 20px rgba(0,0,0,0.2),
     0px -5px 35px rgba(255,255,255,0);
 }
@@ -25,4 +19,6 @@
 a:hover {
     color: black;
     text-decoration: none;
+    border-radius: 20px;
+    background-color: #C689F2;
 }

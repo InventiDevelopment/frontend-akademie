@@ -2,9 +2,15 @@
 // ####### PAGE ########
 // #####################
 
-//.page {
-  //padding: 20px;
-//}
+.page {
+  height: 100vh;
+  overflow:hidden;
+}
+
+body {
+  background-image: $bg-gradient;
+	background-repeat: no-repeat;
+}
 
 h2, h3 {
   letter-spacing: 3px;

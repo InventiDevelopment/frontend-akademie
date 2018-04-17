@@ -6,8 +6,9 @@
   margin: 0;
   padding: 0;
   list-style-type: none;
-  height: calc(100vh - (70px + 80px));
-  overflow: scroll;
+  height: calc(100vh - (150px + 170px));
+  //overflow: scroll;
+  overflow-y: auto;
 
   .transaction {
     margin-bottom: 6px;
@@ -20,14 +21,14 @@
 }
 
 .transaction-name {
-  font-size: 2.7rem;
+  font-size: 2.2rem;
 }
 
 .transaction-value {
   text-align: right;
-  font-size: 2.7rem;
+  font-size: 2.2rem;
 }
 
 .transaction-created {
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
