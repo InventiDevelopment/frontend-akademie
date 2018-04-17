@@ -6,7 +6,7 @@
     margin-bottom: 6px;
     background-color: $btn-txt;
     border-radius: 4px;
-    color: $btn-bg;
+    color: $main-txt;
     li {
         padding: 1rem 0;
     }
@@ -21,9 +21,17 @@
         }
         .transaction-value {
             flex: 0 1 auto;
+            font-weight: 700;
+            .value--positive {
+                color: #73A05C;
+            }
+            .value--negative {
+                color: #BC5757;
+            }
         }
         .value-currency {
             padding-left: .3rem;
+            font-size: .8rem;
         }
     }
     .transaction-detail {

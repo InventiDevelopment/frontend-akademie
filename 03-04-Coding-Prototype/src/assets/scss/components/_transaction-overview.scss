@@ -1,0 +1,10 @@
+.transaction-overview {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    .overview-row {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+}

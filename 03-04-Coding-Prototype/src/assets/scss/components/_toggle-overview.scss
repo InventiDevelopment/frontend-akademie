@@ -1,0 +1,18 @@
+.toggle-overview {
+    margin-bottom: 1rem; 
+    .toggle {
+        text-transform: uppercase;
+        background-color: $btn-bg;
+        color: $btn-txt;
+        font-weight: 700;
+        border: none;
+        border-radius: 8px;
+        padding: .5rem .3rem;
+        text-align: center;
+        text-decoration: none;
+    }
+    .is-active {
+        background-color: $btn-txt;
+        color: $btn-bg;
+    }
+}
