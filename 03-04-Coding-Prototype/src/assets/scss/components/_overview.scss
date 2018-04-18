@@ -1,0 +1,21 @@
+.transaction-overview {
+    display: flex;
+    justify-content: center;
+    background-color: $btn-txt;
+    padding: .5rem;
+    border-radius: 8px;
+    .overview-row {
+        display: flex;
+        justify-content: space-between;
+        padding: .2rem;
+        margin: .3rem 0;
+        background-color: #fff;
+        .value {
+            font-weight: 700;
+        }
+        .value-currency {
+            padding-left: .3rem;
+            font-size: .8rem;
+        }
+    }
+}

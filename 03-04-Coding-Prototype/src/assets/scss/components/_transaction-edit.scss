@@ -1,0 +1,16 @@
+.transaction-edit {
+    align-self: flex-end;
+    .btn {
+        border: none;
+        border-radius: 4px;
+        padding: .3rem .5rem;
+    }
+    .btn-edit {
+        background-color: $btn-txt-icon;
+        color: $btn-txt;
+    }
+    .btn-delete {
+        background-color: $btn-danger-gradient-from;
+        color: $btn-txt;
+    }
+}

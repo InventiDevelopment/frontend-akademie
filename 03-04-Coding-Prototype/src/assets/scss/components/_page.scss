@@ -15,4 +15,16 @@
         height: calc(100vh - (150px));
         overflow-y: auto;
     }
+    .page-footer {
+        display: flex;
+        justify-content: center;
+        margin-top: 2rem;
+        .btn-back {
+            background-color: $btn-txt-icon;
+            color: $btn-txt;
+            text-decoration: none;
+            border-radius: 8px;
+            padding: .5rem;
+        }
+    }
 }
