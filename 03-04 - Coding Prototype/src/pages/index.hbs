@@ -15,37 +15,29 @@
   </footer>
 </main>
 
-{{#> modal name="modal-transaction" }}
+{{#> modal name="modal-transaction" id="modalT"}}
   <div class="modal-inside">
   <div class="form-item">
     <label>Name</label>
-    <input class="modal-input" type="text>">
+    <input class="modal-input trans-name" type="text>">
   </div>
   <div class="form-item"> 
     <label>Value</label>
-    <input class="modal-input" type="number">
+    <input class="modal-input trans-value" type="number">
   </div>
   <div class="form-item">
     <label>Date created</label>
-    <input class="modal-input" type="datetime-local">
+    <input class="modal-input trans-date" type="datetime-local">
   </div>
   <div class="form-item">
     <span>Type</span>
-    <div>
-      <form class="radio-form">
-      <label>
-        <input name="trans-type" class="radio-check" type="radio" checked="checked">
-        <span>Income</span>
-      </label>
-      <label>
-        <input name="trans-type" class="radio-check" type="radio">
-        <span>Expense</span>
-      </label>
-      </form>
-    </div>
+    <select class="trans-type">
+      <option value="Income">Income</option>
+      <option value="Expense">Expense</option>
+    </select>
   </div>
   <div class="modal-btns">
-    <button class="edit-button">Save</button>
+    <button class="edit-button save-button">Save</button>
     <button class="close-button"  data-toggle="#modal-transaction" data-modal><i class="fas fa-window-close"></i></button>
   </div>
   </div>
