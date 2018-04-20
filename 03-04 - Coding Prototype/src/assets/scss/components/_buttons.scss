@@ -17,11 +17,12 @@ button{
     justify-content: center;
 
     .horizontal-button{
-        width: 30%;
+        width: 100%;
         background-color: $button-toggle-bg;
         color: $button-toggle-text;
 
     &:first-of-type {
+        margin-left: $page-content-padding;
         border-top-left-radius: $global-border-radius;
         border-bottom-left-radius: $global-border-radius;
         border-right: $menu-bg;
@@ -30,6 +31,7 @@ button{
     }
 
     &:last-of-type {
+        margin-right: $page-content-padding;
         border-top-right-radius: $global-border-radius;
         border-bottom-right-radius: $global-border-radius;
         border-left: $menu-bg;

@@ -3,8 +3,10 @@ import toggos from './helperPlugins'
 const saveBtn = document.querySelector(".save-button");
 // Function executed upon clicking "Save"
 saveBtn.addEventListener("click", (e) => {
-    // Form input variables
+    // Turns off toggle for a brief time
     toggos.toggle();
+
+    // Form input variables
     const transName = document.querySelector('.trans-name').value;
     const transType = document.querySelector(".trans-type");
     const dataTransType = transType.options[transType.selectedIndex].value;
@@ -13,12 +15,6 @@ saveBtn.addEventListener("click", (e) => {
 
     //Check that all fields are filled out
     if (transName !== '' && transValue !== '' && transCreated !== ''){
-
-        const transList = document.querySelector(".transaction-list");
-        const li = document.createElement('li');
-        li.setAttribute("class", "transaction");
-        li.setAttribute("data-toggle", ".transaction-expand");
-
 
         //Div for transaction name
         const namediv = document.createElement('div');
@@ -54,6 +50,7 @@ saveBtn.addEventListener("click", (e) => {
         // Buttons
         const buttons = document.createElement('div');
         buttons.innerHTML = document.querySelector("#knofle").innerHTML
+
         // Expanding div
         const expanddiv = document.createElement('div');
         const expandrowdiv = document.createElement('div');
@@ -64,13 +61,32 @@ saveBtn.addEventListener("click", (e) => {
         expanddiv.appendChild(expandrowdiv);
 
         // Li element and appending to the list
+        const transList = document.querySelector(".transaction-list");
+        const li = document.createElement('li');
+        li.setAttribute("class", "transaction");
+        li.setAttribute("data-toggle", ".transaction-expand");
         li.appendChild(rowdiv);
         li.appendChild(expanddiv);
         transList.insertBefore(li, transList.firstChild);
+
+        // Total balance overview update
+        const total = document.querySelector(".totalB");
+        const totalInt = parseInt(total.innerHTML);
+        const valueInt = parseInt(transValue);
+        if (dataTransType === 'Income'){
+            total.innerHTML = totalInt + valueInt;
+        }
+        else{
+            total.innerHTML = totalInt - transValue;
+        } 
+        
+        // Reinitializes toggle
         toggos.toggle();
+
     }
     else{
         alert("Please fill out all the fields");
+        // Reinitializes toggle
         toggos.toggle();
     }
 })

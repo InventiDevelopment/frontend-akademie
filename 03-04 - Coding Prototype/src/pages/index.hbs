@@ -3,7 +3,11 @@
       {{> menu}}
       <div class="balance-overview">
         <span>Total Balance</span>
-        <span class="balance-value">+ 28 300 CZK</span>
+        <div>
+          <span class="balance-value">+ </span>
+          <span class="balance-value totalB">28300</span>
+          <span class="balance-value"> CZK</span>
+        </div>
       </div>
       {{> filter-button}}
   </header>
@@ -15,7 +19,7 @@
   </footer>
 </main>
 
-{{#> modal name="modal-transaction" id="modalT"}}
+{{#> modal name="modal-transaction"}}
   <div class="modal-inside">
   <div class="form-item">
     <label>Name</label>

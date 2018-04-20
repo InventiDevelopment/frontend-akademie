@@ -32,12 +32,20 @@
     background-color: $input-bg;
     border: 0;
   }
-  .radio-check{
-    margin-left: 20px;
-  }
   .modal-btns{
     padding-top: 25px;
     text-align: right;
+  }
+  .form-item{
+    select{
+      -webkit-appearance: button;
+        -moz-appearance: button;
+        padding: 5px;
+        background-color: $input-bg;
+        border: 0;
+        border-radius: 10px;
+        text-align-last: center;
+    }
   }
 
   // Modal buttons
