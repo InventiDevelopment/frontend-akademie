@@ -1,7 +1,10 @@
 .transaction-detail { 
     display: flex;
     justify-content: space-between;
+    padding: 10px;
+    background: $transaction-bg;
   }
+
   .transaction-btns {
     display: flex;
     justify-content: flex-end;
