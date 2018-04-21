@@ -1,0 +1,42 @@
+.form-row {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 0px 10px 10px;
+
+  input {
+    width: 100%;
+    padding: 20px 0px 4px 0px;
+    background: transparent;
+    border-color: #AAA;
+    border-width: 0px 0px 2px 0px;
+    color: inherit;
+    outline: none;
+    transition: all 0.3s;
+
+    &:focus {
+      border-bottom: 2px solid $btn-primary-gradient-from;
+    }
+
+    & + label:after {
+      content: '';
+    }
+
+    &:placeholder-shown + label {
+      left: 14px;
+      bottom: -8px;
+    }
+
+    &:focus + label,
+    & + label {
+      position: absolute;
+      bottom:14px;
+      left:10px;
+      color:#999;
+      line-height:60px;
+      pointer-events:none;
+      transition: all 0.25s;
+      font-size:14px;
+    }
+  }
+}
