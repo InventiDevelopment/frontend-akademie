@@ -4,6 +4,8 @@
   border-radius: $global-border-radius;
   border-style: none;
   appearance: none;
+  font-weight: bold;
+  color: $btn-text;
 
   &.is-active {
     background: $button-toggle-active-bg;
@@ -19,11 +21,23 @@
 .btn-edit {
   background: $btn-primary-gradient-from;
   color: $btn-text;
-  
+
+  &--right {
+    i {
+      float: right;
+    }
+  }
 }
 
 .btn-delete {
   margin-left: 5px;
   color: #fff;
   background: linear-gradient(to top, #AF4646, #D87777); 
+}
+
+.btn-100 {
+  width: 100%;
+  padding: 15px;
+  background: $btn-primary-gradient-from;
+  font-size: 1.25em;
 }

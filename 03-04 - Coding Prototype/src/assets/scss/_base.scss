@@ -25,4 +25,11 @@ body {
 .content {
   height: calc(100vh - (150px));
   overflow-y: auto;
+  margin-bottom: 10px;
+}
+
+.page-footer {
+  display: flex;
+  align-items: center;
+  height: 55px;
 }
