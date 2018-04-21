@@ -14,13 +14,10 @@ body {
   font-family: $base-font;
   font-size: $base-font-size;
   color: $base-text;
+  font-size: 14px;
 }
 
 // remove outlines - no keyboard on mobile
 * {
   outline: none;
 }
-
-i { 
-  vertical-align: middle;
- }
