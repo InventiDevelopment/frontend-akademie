@@ -2,6 +2,7 @@
   background: $button-toggle-bg;
   padding: 5px 15px;
   border-radius: $global-border-radius;
+  border-style: none;
   appearance: none;
 
   &.is-active {
@@ -9,16 +10,20 @@
     color: $button-toggle-active-text;
   }
 }
+
 .btn-toggle { 
   margin-right: 15px;
 }
 
-.btn-icon {
+.btn-icon,
+.btn-edit {
   background: $btn-primary-gradient-from;
   color: $btn-text;
   
-  svg { 
-      display: block;
-      width: 15px; 
-  }
+}
+
+.btn-delete {
+  margin-left: 5px;
+  color: #fff;
+  background: linear-gradient(to top, #AF4646, #D87777); 
 }
