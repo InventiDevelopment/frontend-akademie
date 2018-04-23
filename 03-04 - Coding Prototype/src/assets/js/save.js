@@ -1,17 +1,15 @@
 let saveBtn = document.querySelector(".save-button-e");
+let editBtn = document.querySelectorAll(".edit-btn");
+let parent1;
+
 // Vybere všechny edit buttony
 function selectButtons() {
-    let editBtn = document.querySelectorAll(".edit-btn");
     for (let  i = 0; i < editBtn.length; i++) {
         // Funkce, která se spustí kliknutím na edit
         editBtn[i].addEventListener("click", (e) => {
             // Vybere parent transakci kliknutého buttonu
-            let parent = event.target.parentNode.parentNode.parentNode.parentNode.parentNode;
-            let parent1 = event.target.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode;
-            let isnotTrans = parent1.classList.contains('transaction-list')
-            if (isnotTrans){
-                parent1 = parent;
-            }
+            let parent = document.querySelectorAll(".transaction");
+            parent1 = parent[i];
             //Fills out transaction name
             let nameEl = parent1.querySelector(".transaction-name");
             const currName = nameEl.innerHTML;
@@ -29,13 +27,14 @@ function selectButtons() {
             // Saves the changes
             saveBtn.addEventListener("click", (e) => {
                 let prevValue;
-                if(valueEl.classList.contains("income")){
-                    prevValue = parseInt(valueEl.innerHTML);
+                if(parent1.querySelector(".val").classList.contains("income")){
+                    prevValue = parseInt(parent1.querySelector(".val").innerHTML);
                 }else{
-                    prevValue = (-parseInt(valueEl.innerHTML));
+                    prevValue = (-parseInt(parent1.querySelector(".val").innerHTML));
                 }
+                console.log(prevValue)
                 parent1.querySelector(".transaction-name").innerHTML = document.querySelector(".trans-name-e").value;
-                valueEl.innerHTML = document.querySelector(".trans-value-e").value;
+                parent1.querySelector(".val").innerHTML = document.querySelector(".trans-value-e").value;
                 let dateEl = parent1.querySelector(".transaction-date");
                 dateEl.innerHTML = document.querySelector(".trans-date-e").value;
                 let newType = document.querySelector(".trans-type-e").value;
@@ -47,19 +46,13 @@ function selectButtons() {
                     valspans[0].setAttribute("class", "expense znamenko");
                     valspans[1].setAttribute("class", "expense val");
                     valspans[2].setAttribute("class", "expense");
-                    total.innerHTML = totalInt - parseInt(valueEl.innerHTML) - prevValue
-                    console.log(totalInt);
-                    console.log(parseInt(valueEl.innerHTML));
-                    console.log(prevValue);
+                    total.innerHTML = totalInt - parseInt(parent1.querySelector(".val").innerHTML) - prevValue
                 } else{
                     parent1.querySelector(".znamenko").innerHTML = "+";
                     valspans[0].setAttribute("class", "income znamenko");
                     valspans[1].setAttribute("class", "income val");
                     valspans[2].setAttribute("class", "income");
-                    total.innerHTML = totalInt - prevValue + parseInt(valueEl.innerHTML);
-                    console.log(totalInt);
-                    console.log(parseInt(valueEl.innerHTML));
-                    console.log(prevValue);
+                    total.innerHTML = totalInt - prevValue + parseInt(parent1.querySelector(".val").innerHTML);
                 }
             })
             })

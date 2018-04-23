@@ -1,7 +1,8 @@
 let yesBtn = document.querySelector(".yes");
+var delBtn = document.querySelectorAll(".delete-button");
+
 // Vybere všechny delete buttony
 function selectBtns() {
-    var delBtn = document.querySelectorAll(".delete-button");
     for (let  i = 0; i < delBtn.length; i++) {
         // Funkce, která se spustí kliknutím na delete
         delBtn[i].addEventListener("click", (e) => {
