@@ -14,7 +14,6 @@ function selectBtns() {
             if (isnotTrans){
                 par1 = par;
             }
-            console.log(par1);
             // Po kliknutí na yes dojde ke smazání a přepsání total balance
             yesBtn.addEventListener("click", (e) => {
                 const mark = par1.querySelector('.znamenko').innerHTML
@@ -22,10 +21,8 @@ function selectBtns() {
                 par1.innerHTML = "";
                 par1.style.display = "none";
                 let total = document.querySelector(".totalB");
-                console.log(val)
                 const totalInt = parseInt(total.innerHTML);
                 const valueInt = parseInt(val);
-                console.log(mark)
 
                 if (mark === '+'){
                     total.innerHTML = totalInt - valueInt;

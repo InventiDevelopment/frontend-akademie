@@ -25,16 +25,29 @@ saveBttn.addEventListener("click", (e) => {
         // Div for transaction value
         const valuediv = document.createElement('div');
         valuediv.setAttribute("class", "transaction-value");
-        const valuespan = document.createElement('span');
+        const valuespan1 = document.createElement('span');
+        const valuespan2 = document.createElement('span');
+        const valuespan3 = document.createElement('span');
         if(dataTransType === 'Income'){
-            valuespan.setAttribute("class", "income");
-            valuespan.innerHTML = '+' +  transValue + ' CZK';
-        }
+            valuespan1.setAttribute("class", "income znamenko");
+            valuespan2.setAttribute("class", "income val");
+            valuespan3.setAttribute("class", "income");
+            valuespan1.innerHTML = '+ ';
+            valuespan2.innerHTML = transValue;
+            valuespan3.innerHTML = ' CZK';
+  }
         else{
-            valuespan.setAttribute("class", "expense");
-            valuespan.innerHTML = '-' +  transValue  + ' CZK';
+            valuespan1.setAttribute("class", "expense znamenko");
+            valuespan2.setAttribute("class", "expense val");
+            valuespan3.setAttribute("class", "expense");
+            valuespan1.innerHTML = '- ';
+            valuespan2.innerHTML = transValue;
+            valuespan3.innerHTML = ' CZK';
         }
-        valuediv.appendChild(valuespan);
+        valuediv.appendChild(valuespan1);
+        valuediv.appendChild(valuespan2);
+        valuediv.appendChild(valuespan3);
+
 
         // Div for transaction date
         const datediv = document.createElement('div');

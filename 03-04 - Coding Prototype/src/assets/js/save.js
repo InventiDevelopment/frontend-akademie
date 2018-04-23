@@ -1,6 +1,5 @@
 let saveBtn = document.querySelector(".save-button-e");
 let editBtn = document.querySelectorAll(".edit-btn");
-let parent1;
 
 // Vybere všechny edit buttony
 function selectButtons() {
@@ -9,7 +8,7 @@ function selectButtons() {
         editBtn[i].addEventListener("click", (e) => {
             // Vybere parent transakci kliknutého buttonu
             let parent = document.querySelectorAll(".transaction");
-            parent1 = parent[i];
+            let parent1 = parent[i];
             //Fills out transaction name
             let nameEl = parent1.querySelector(".transaction-name");
             const currName = nameEl.innerHTML;
