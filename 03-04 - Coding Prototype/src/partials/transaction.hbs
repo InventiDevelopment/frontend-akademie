@@ -4,9 +4,13 @@
       <div class="transaction-name">{{ name }}</div>
       <div class="transaction-value">
         {{#ifequal type 'income'}}
-        <span class="income">+{{value}} CZK</span>
+        <span class="income znamenko">+</span>
+        <span class="income val">{{ value}}</span>
+        <span class="income"> CZK</span>
         {{else}}
-        <span class="expense">-{{ value}} CZK</span>
+        <span class="expense znamenko">-</span>
+        <span class="expense val">{{ value}}</span>
+        <span class="expense"> CZK</span>
         {{/ifequal}}
       </div>
     </div>

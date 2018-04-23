@@ -2,6 +2,10 @@
 import moment from 'moment'
 import helpers from './helperPlugins'
 import pay from './addPayment'
+import del from './deletePayment'
+import save from './save'
+
+
 
 window.moment = moment
 // initialize helper plugins

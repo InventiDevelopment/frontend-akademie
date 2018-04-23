@@ -51,9 +51,37 @@
   <div class="modal-inside">
     <div class="delete-text">Do you really wish to delete this transaction?</div>
     <div class="delete-btns">
-      <button class="yes">Yes</button>
+      <button class="yes" data-toggle="#modal-delete" data-modal>Yes</button>
       <button class="close-button"  data-toggle="#modal-delete" data-modal>No</button>
     </div>
+  </div>
+{{/modal}}
+
+{{#> modal name="modal-transaction-e"}}
+  <div class="modal-inside">
+  <div class="form-item">
+    <label>Name</label>
+    <input class="modal-input trans-name trans-name-e" type="text>">
+  </div>
+  <div class="form-item"> 
+    <label>Value</label>
+    <input class="modal-input trans-value trans-value-e" type="number">
+  </div>
+  <div class="form-item">
+    <label>Date created</label>
+    <input class="modal-input trans-date trans-date-e" type="datetime-local">
+  </div>
+  <div class="form-item">
+    <span>Type</span>
+    <select class="trans-type trans-type-e">
+      <option value="Income">Income</option>
+      <option value="Expense">Expense</option>
+    </select>
+  </div>
+  <div class="modal-btns">
+    <button class="edit-button save-button save-button-e"  data-toggle="#modal-transaction-e" data-modal>Save</button>
+    <button class="close-button"  data-toggle="#modal-transaction-e" data-modal><i class="fas fa-window-close"></i></button>
+  </div>
   </div>
 {{/modal}}
 

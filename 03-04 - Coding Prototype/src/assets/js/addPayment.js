@@ -1,8 +1,9 @@
 import toggos from './helperPlugins'
+import del from './deletePayment'
 
-const saveBtn = document.querySelector(".save-button");
+const saveBttn = document.querySelector(".save-button");
 // Function executed upon clicking "Save"
-saveBtn.addEventListener("click", (e) => {
+saveBttn.addEventListener("click", (e) => {
     // Turns off toggle for a brief time
     toggos.toggle();
 
@@ -70,7 +71,7 @@ saveBtn.addEventListener("click", (e) => {
         transList.insertBefore(li, transList.firstChild);
 
         // Total balance overview update
-        const total = document.querySelector(".totalB");
+        let total = document.querySelector(".totalB");
         const totalInt = parseInt(total.innerHTML);
         const valueInt = parseInt(transValue);
         if (dataTransType === 'Income'){
@@ -90,6 +91,8 @@ saveBtn.addEventListener("click", (e) => {
         toggos.toggle();
     }
 })
+
+
 
 
 
