@@ -1,14 +1,15 @@
-import React from 'react';
-import transactions from '../data/transactions';
-import Transaction from './Transaction';
+/* eslint-disable no-unused-vars */
+import React from 'react'
+import transactions from '../data/transactions'
+import TransactionContainer from './TransactionContainer'
 
 export default () => (
-    <ul>
-        {
-            transactions.map((transaction) => 
-                <Transaction data = {transaction} />
-        )
-        }
+  <ul>
+    {
+      transactions.map((transaction) =>
+        <TransactionContainer data = {transaction}/>
+      )
+    }
 
-    </ul>
+  </ul>
 )
