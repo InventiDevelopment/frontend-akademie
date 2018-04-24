@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
+// import transactions from './data/transactions';
+import TransactionList from './components/TransactionList';
 
 class App extends Component {
-  render() {
+  render () {
     return (
       <div className="page">
         <header className="App-header">
@@ -10,6 +12,7 @@ class App extends Component {
         <p>
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
+        <TransactionList />
       </div>
     );
   }
