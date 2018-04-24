@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import TransactionList from './components/TransactionList';
 
 class App extends Component {
   render() {
@@ -10,6 +11,7 @@ class App extends Component {
         <p>
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
+        <TransactionList />
       </div>
     );
   }
