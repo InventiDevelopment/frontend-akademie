@@ -2,9 +2,11 @@
     margin: auto;
     letter-spacing: 1px;
     border-radius: 20px;
-    background-color: transparent;
-    color: black;
-    width: 50%;
+    background-image: $btn-gradient;
+    color: white;
+    width: auto;
+    text-shadow: 1px 3px 20px rgba(0,0,0,0.2),
+    0px -5px 35px rgba(255,255,255,0);
 }
 
 .time-period-text {
@@ -15,6 +17,10 @@
 
 .btn, .dropdown-menu {
     font-size: 16px;
+}
+
+.btn:hover {
+    color: white;
 }
 
 .dropdown-menu li a {

@@ -4,7 +4,7 @@ $base-font-size: 16px;
 
 // App
 $base-bg: rgb(255, 255, 255);
-$bg-gradient: linear-gradient( 135deg, #FAB2FF 10%, #1904E5 100%);
+$bg-gradient: linear-gradient(to bottom left, #2BD3C9, #2786E2);
 $base-text: #707070;
 
 // Page
@@ -21,6 +21,7 @@ $btn-primary-gradient-from: #977490;
 $btn-primary-gradient-to: #C5A7BF;
 $btn-text-icon: #8D6585;
 $btn-text: #FFFFFF;
+$btn-gradient: linear-gradient(to bottom, #4F3AE5, #697BE5);
 
 $btn-danger-gradient-from: #AF4646;
 $btn-danger-gradient-to: #D87777;

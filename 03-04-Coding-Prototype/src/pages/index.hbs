@@ -10,4 +10,25 @@ title: Transactions
   {{> transaction-list}}
   {{> add-new-button}}
 
+
 </main>
+
+{{#> modal name="modal-transaction" }}
+  <h2>Transaction</h2>
+  <div class="form-row">
+    <label class="input-label">Name</label>
+    <input type="text" class="input transaction-name">
+  </div>
+  <div class="form-row">
+    <label class="input-label">Value</label>
+    <input type="number" class="input transaction-date">
+  </div>
+  <div class="form-row">
+    <label class="input-label">Date</label>
+    <input type="datetime-local" class="input transaction-date">
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn--danger" data-toggle="#modal-transaction" data-modal>Cancel</button>
+    <button type="button" class="btn">Save</button>
+  </div>
+{{/modal}}

@@ -3,12 +3,14 @@
     justify-content: space-evenly;
     margin-top: 10%;
     margin-bottom: 10%;
-    border: 1px solid black;
+    border: 1.3px solid black;
     border-radius: 20px;
+    background-image: $btn-gradient;
+    color: white;
 }
 
 .type-button {
-    color: black;
+    color: white;
     text-align: center;
     font-size: 1.5rem;
     width: 33.3%;
@@ -20,5 +22,5 @@ a:hover {
     color: black;
     text-decoration: none;
     border-radius: 20px;
-    background-color: #C689F2;
+    background-color: white;
 }
