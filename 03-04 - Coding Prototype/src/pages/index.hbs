@@ -10,4 +10,20 @@ title: Transactions
     </a>
     {{> transaction-list}}
     {{> footer}}
+    <div class="wallet-form">
+        <div class="field"><input class="form-account-desc"  name="account_desc" placeholder="Popis útraty"></div>
+        <div class="field"><input class="form-account-price"  name="account_price" placeholder="Částka"></div>
+        <div class="field">
+            <select class="form-account-type" name="account_type">
+                <option value="CZK">CZK</option>
+                <option value="EUR">EUR</option>
+            </select>
+        </div>
+
+        <div class="field"><button class="btn btn--add">Přidat novou platbu</button></div>
+    </div>
+
+
+
+
 </main>
