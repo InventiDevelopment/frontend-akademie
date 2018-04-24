@@ -3,13 +3,13 @@
 // #######################
 
 #filtr {
-    border: black;
     text-align: center;
+    padding: 4px 0;
 
     .filtr {
         display: inline-block;
         width: 32%;
-        margin: 0;
-        padding: 0;
+        margin: 3pt 0;
+        padding: 2pt;
     }
 }
