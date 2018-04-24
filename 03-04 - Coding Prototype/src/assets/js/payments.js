@@ -1,35 +1,62 @@
 const list = document.querySelector('.transaction-list')
 const transaction = document.querySelector('.transaction')
+const transValue = document.querySelector('.transaction-value')
 
 //Adding new transaction into transaction list
 const btnAdd = document.querySelector('.btn-save')
 btnAdd.addEventListener('click', (e) => {
-
   
   //Input form values
   const name = document.querySelector('.transaction-name').value
   const amount = document.querySelector('.transaction-amount').value
-  const newTransaction = document.createElement('li')
-  newTransaction.setAttribute('class', 'transaction')
-  newTransaction.innerHTML = `<div class="transaction-row">
-                                <span class="transaction-name">${name}</span>
-                                <div class="transaction-value">
-                                  <span class="value">${amount}</span>
-                                </div>
-                              </div>`
-  list.appendChild(newTransaction)
+
+  //Create a new transaction list
+
+    // add row
+    const divRow = document.createElement('div')
+    divRow.setAttribute('class', 'transaction-row')
+    
+    //add name
+    const spanName = document.querySelector('span')
+    spanName.setAttribute('class', 'transaction-name')
+    spanName.innerHTML = name
+
+    //add value
+    const divValue = document.createElement('div')
+    const spanValue = document.createElement('span')
+    divValue.setAttribute('class', 'transaction-value')
+    // divValue.innerHTML = amount
+    spanValue.setAttribute('class', 'value')
+    spanValue.innerHTML = amount
+    spanValue.appendChild(divValue)
+
+    divRow.appendChild(spanName)
+    divRow.appendChild(divValue)
+    divRow.appendChild(spanValue)
+
+
+  const li = document.createElement('li')
+  li.setAttribute('class', 'transaction')
+  // li.innerHTML = `<div class="transaction-row">
+  //                               <span class="transaction-name">${name}</span>
+  //                               <div class="transaction-value">
+  //                                 <span class="value">${amount}</span>
+  //                               </div>
+  //                             </div>`
+  li.appendChild(divRow)
+  list.insertBefore(li, list.firstChild)
 })
 
 //Validation 
-const income = input => input.valueAsNumber > 0
-const markAsIncome = input => {
-  input.classList.remove('outcome')
-  input.classList.add('income')
-}
-const markAsOutcome = input => {
-  input.classList.remove('income')
-  input.classList.add('outcome')
-}
+
+
+// const income = price => transValue.valueAsNumber > 0
+// const markAsIncome = price => {
+//   transValue.setAttribute('income')
+// }
+// const markAsOutcome = price => {
+//   transValue.setAttribute('outcome')
+// }
 
 // Form input variables
 
