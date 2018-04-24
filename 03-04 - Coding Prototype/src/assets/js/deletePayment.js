@@ -7,17 +7,14 @@ function selectBtns() {
         // Funkce, která se spustí kliknutím na delete
         delBtn[i].addEventListener("click", (e) => {
             // Vybere parent transakci kliknutého buttonu
-            let par = event.target.parentNode.parentNode.parentNode.parentNode;
-            let par1 = event.target.parentNode.parentNode.parentNode.parentNode.parentNode;
-            let isnotTrans = par1.classList.contains('transaction-list')
-            console.log(isnotTrans)
-            if (isnotTrans){
-                par1 = par;
-            }
+            let par = document.querySelectorAll(".transaction");
+            let par1 = par[i];
             // Po kliknutí na yes dojde ke smazání a přepsání total balance
             yesBtn.addEventListener("click", (e) => {
                 const mark = par1.querySelector('.znamenko').innerHTML
                 const val = par1.querySelector(".val").innerHTML;
+                const ul = document.getElementsByClassName(".transaction-list");
+                ul.removeChild(par1)
                 par1.innerHTML = "";
                 par1.style.display = "none";
                 let total = document.querySelector(".totalB");

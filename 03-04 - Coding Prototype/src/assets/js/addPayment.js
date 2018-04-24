@@ -1,5 +1,4 @@
 import toggos from './helperPlugins'
-import del from './deletePayment'
 
 const saveBttn = document.querySelector(".save-button");
 // Function executed upon clicking "Save"
