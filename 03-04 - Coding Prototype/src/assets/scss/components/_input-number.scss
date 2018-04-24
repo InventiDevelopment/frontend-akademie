@@ -6,13 +6,9 @@ $medium-gray: #f5f5f5;
   justify-content: center;
 
   input[type=number]::-webkit-inner-spin-button,
-  input[type=number]::-webkit-outer-spin-button {
-    appearance: none;
-  }
+  input[type=number]::-webkit-outer-spin-button { appearance: none; }
 
-  .input-group-button {
-    line-height: calc(#{$input-number-size}/2 - 5px);
-  }
+  .input-group-button { line-height: calc(#{$input-number-size}/2 - 5px); }
 
   .input-number {
     width: $input-number-size;
@@ -45,12 +41,10 @@ $medium-gray: #f5f5f5;
     font-weight: 400;
   }
 
-  .input-number-decrement {
-    margin-right: 0.3rem;
-  }
+  .input-number-decrement { margin-right: 0.3rem; }
 
-  .input-number-increment {
-    margin-left: 0.3rem;
-  }
+  .input-number-increment { margin-left: 0.3rem; }
 }
 
+.income { color: $income; }
+.outcome { color: $outcome; }
