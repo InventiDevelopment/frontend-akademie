@@ -9,23 +9,28 @@ btnAdd.addEventListener('click', (e) => {
   //Input form values
   const name = document.querySelector('.transaction-name').value
   const amount = document.querySelector('.transaction-amount').value
-  
-
-
-
-
-
   const newTransaction = document.createElement('li')
   newTransaction.setAttribute('class', 'transaction')
   newTransaction.innerHTML = `<div class="transaction-row">
                                 <span class="transaction-name">${name}</span>
-                              <div class="transaction-value">
-                                <span class="value">${amount}</span>
-                              </div>
+                                <div class="transaction-value">
+                                  <span class="value">${amount}</span>
+                                </div>
                               </div>`
-  
   list.appendChild(newTransaction)
 })
+
+//Validation 
+const income = input => input.valueAsNumber > 0
+const markAsIncome = input => {
+  input.classList.remove('outcome')
+  input.classList.add('income')
+}
+const markAsOutcome = input => {
+  input.classList.remove('income')
+  input.classList.add('outcome')
+}
+
 // Form input variables
 
 
