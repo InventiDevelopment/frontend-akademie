@@ -12,3 +12,14 @@ export default () => (
         }
     </ul>
 )
+
+componentDidMount() {
+    this.TransactionList = setInterval(
+      () => this.tick(),
+      1000
+    );
+    tick() {
+        this.setState({
+          date: new Date()
+        });
+  }
