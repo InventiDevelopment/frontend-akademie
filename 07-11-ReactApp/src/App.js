@@ -1,10 +1,17 @@
 import React, { Component } from 'react';
 // import transactions from './data/transactions';
 import TransactionList from './components/TransactionList';
+import Overview from './components/Overview';
+import {
+    BrowserRouter as Router,
+    Route,
+    Link
+} from 'react-router-dom';
 
 class App extends Component {
   render () {
     return (
+      <Router>
       <div className="page">
         <header className="App-header">
           <h1>Welcome to React</h1>
@@ -12,8 +19,14 @@ class App extends Component {
         <p>
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
-        <TransactionList />
+        <p>
+          <Link to="/">Transakce</Link>
+          <Link to="/overview">Přehled</Link>
+        </p>
+        <Route exact path="/" component={TransactionList} />          
+        <Route path="/overview" component={Overview} />          
       </div>
+      </Router>
     );
   }
 }

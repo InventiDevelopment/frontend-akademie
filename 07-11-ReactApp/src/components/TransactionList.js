@@ -14,20 +14,33 @@ export default class TransactionList extends React.Component {
     }
 
     deleteTransaction = (transaction) => {
-        const newTransaction = this.state.stateTransactions.filter(object => JSON.stringify(transaction) !== JSON.stringify(object))
+        const newTransactions = this.state.stateTransactions.filter(
+            object => JSON.stringify(transaction) !== JSON.stringify(object)
+          )
+          this.setState({ stateTransactions: newTransactions })
     }
+    
+    closeModal = () => {
+        this.setState({ modalOpen: false })
+    }
+
+    openModal = () => {
+        this.setState({ modalOpen: true })
+    }
+
 
     render() {
         return (
         <React.Fragment>
             <ul>
                 {
-                    transactions.map((transaction) => 
-                        <TransactionContainer data={transaction} action={this.deleteTransaction} />
+                    this.state.stateTransactions.map((transaction) =>
+                    <TransactionContainer data={transaction} deleteTransaction={this.deleteTransaction} />
                     )
                 }
             </ul>
-            <Modal isOpen={this.state.modalOpen}>
+            <button onClick={this.openModal}>Open modal</button>
+            <Modal isOpen={this.state.modalOpen} onRequestClose={this.closeModal}>
                 <input />
                 <input />
             </Modal>

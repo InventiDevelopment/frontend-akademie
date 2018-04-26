@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Button from './Button';
+//  import Button from './Button';
 
 const TransactionRoot = styled.div`
     margin-bottom: 6px;
@@ -17,16 +17,16 @@ export default (props) => (
     </li>
 )
 */
-export default ({data, expanded, onClick}) => (
+export default ({data, expanded, toggleExpanded, deleteTransaction}) => (
     <TransactionRoot>
         <li>
             <div>
-            { data.name }
-            { data.value }
+                { data.name }
+                { data.value }
             </div>
             { expanded &&  // když je tohle true, tak mi vykresli to dole
                 <div>Jsem vidět
-                    <Button action={onClick} data={data} />
+                    <button onClick={() => deleteTransaction(data)}>Smazat</button>
                 </div>
             }
         </li>
