@@ -15,7 +15,24 @@ title: Transactions
         </a>
     </header>
     <main class="page-main">
-        {{> transaction-list}}
+        <div class="container">
+            <div class="wallet">
+
+                <h2>Útrata CZK:</h2>
+                <div class="spent-czk-box"></div>
+                <h2>Útrata EUR:</h2>
+                <div class="spent-eur-box"></div>
+
+                <hr>
+
+                <h2>Všechny položky</h2>
+                <ul class="payments-list"></ul>
+            </div>
+        </div>
+
+
+
+
     </main>
     <footer class="page-footer">
         <a class="button button--primary" href="#">
@@ -23,3 +40,15 @@ title: Transactions
         </a>
     </footer>
 </main>
+
+<div class="wallet">
+    <h2>Útrata CZK:</h2>
+    <div class="spent-czk-box"></div>
+    <h2>Útrata EUR:</h2>
+    <div class="spent-eur-box"></div>
+
+    <hr>
+
+    <h2>Všechny položky</h2>
+    <ul class="payments-list"></ul>
+</div>
