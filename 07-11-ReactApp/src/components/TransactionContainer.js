@@ -11,7 +11,9 @@ export default class TransactionContainer extends Component {
     render() {
         return (
             <div onClick={this.clickHandler}>
-                <Transaction data={this.props.data} expanded={this.state.expanded} />
+                <Transaction data={this.props.data}
+                 expanded={this.state.expanded}
+                 deleteTransaction={this.props.deleteTransaction} />
             </div>
         )
     }

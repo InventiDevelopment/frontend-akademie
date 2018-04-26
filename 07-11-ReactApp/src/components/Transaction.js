@@ -9,14 +9,14 @@ const TransactionRoot = styled.div`
     background-color: white;
 `;
 
-export default ({ data, expanded }) => (
+export default ({ data, expanded, onClickHandler, deleteTransaction }) => (
     <TransactionRoot>
         <div>
             {data.name}
             {data.value}
         </div>
         { expanded &&
-            <div>Jsem vidět!!!</div> 
+            <button onClick={() => deleteTransaction(data)}>Jsem vidět!!!</button>
         }
     </TransactionRoot>
 )
