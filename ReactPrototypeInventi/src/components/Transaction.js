@@ -16,7 +16,7 @@ export default ({ data, expanded, toggleExpanded, deleteTransaction }) => (
             {data.value}
         </div>
         { expanded &&
-            <button onClick={() => deleteTransaction(data)}>Delete</button>
+            <button onClick={() => deleteTransaction(data)}>Jsem vidět!!!</button>
         }
     </TransactionRoot>
 )
