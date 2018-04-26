@@ -26,5 +26,6 @@ render() {
                 <TransactionContainer data={transaction} deleteTransaction={this.deleteTransaction}/>
             )
         }
-  </ul>
+    </ul>
+    )
 }
