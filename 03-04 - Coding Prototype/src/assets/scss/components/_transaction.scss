@@ -4,7 +4,9 @@
 
 .transaction {
   padding: 10px;
-  border-radius: $global-border-radius;
+  border-radius: 10px;
+  margin-bottom: 6px;
+  background-color: #C1D9C2;
 }
 
 .transaction-row{

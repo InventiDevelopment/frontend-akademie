@@ -1,51 +1,54 @@
 // Typography
-$base-font: Arial, Helvetica, sans-serif;
-$base-font-size: 16px;
+$base-font: Calibri, sans-serif;
+$base-font-size: 18px;
 
 // App
-$base-bg: #E8F0EF;
-$base-text: #707070;
+$base-bg: #F5F1E9;
+$base-text: #333333;
 
 // Page
-$page-header-height: 70px;
-$page-footer-height: 80px;
+$page-header-height: 32vh;
+$page-footer-height: 16vh;
 $page-content-padding: 20px;
+$section-height: 50vh;
 
-$global-border-radius: 5px;
+$global-border-radius: 10px;
 
 // Components:
 
 // Buttons
-$btn-primary-gradient-from: #977490;
-$btn-primary-gradient-to: #C5A7BF;
+$btn-primary-gradient-from: #A38280;
+$btn-primary-gradient-to: rgb(189, 156, 154);
 $btn-text-icon: #8D6585;
-$btn-text: #FFFFFF;
+$btn-text: #E0D3D3;
+$btn-padding: 12px;
 
-$btn-danger-gradient-from: #AF4646;
-$btn-danger-gradient-to: #D87777;
+$btn-danger-gradient-from: #DB8070;
+$btn-danger-gradient-to: rgb(236, 141, 124);
 
 // Button Toggle
-$button-toggle-bg: #D1E3E1;
-$button-toggle-text: #8DACA9;
-$button-toggle-active-bg: #8DACA9;
-$button-toggle-active-text: #E6EFEE;
+$button-toggle-bg: #D2C1C1;
+$button-toggle-text: #745654;
+$button-toggle-active-bg: #745654;
+$button-toggle-active-text: #D2C1C1;
 
 // Input
 $input-brd: #D3E0DF;
 $input-bg: #FFFFFF;
 
+//Menu
+$menu-bg: #F1EADE;
+$menu-active: #A38280;
+$menu-height: 11vh;
+
 // Modal
-$modal-bg: #E8F0EF;
+$input-bg: rgb(250, 247, 239);
 
 // Transaction
 $transaction-brd: #D3E0DF;
-$transaction-bg: #FFFFFF;
+$transaction-bg: #C1D9C2;
 
 // Transaction value
 $transaction-value-income: #73A05C;
-$transaction-value-expense: #BC5757;
+$transaction-value-expense: $btn-danger-gradient-from;
 
-// Transaction overview
-$transaction-overview-income-bg: #D7F0CA;
-$transaction-overview-expenses-bg: #FBD3D3;
-$transaction-overview-total-bg: #E8F0EF;

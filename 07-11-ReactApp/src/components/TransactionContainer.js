@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Transaction from './Transaction';
 
+
 export default class TransactionContainer extends Component {
   state = { expanded: false}
   clickHandler = () => {
@@ -9,9 +10,9 @@ export default class TransactionContainer extends Component {
   render () {
     const {data} = this.props
     return(
-    <div onClick={this.clickHandler}>
+    <li onClick={this.clickHandler}>
       <Transaction data = {data} expanded={this.state.expanded}/>
-    </div>
+    </li>
     )
 
   }

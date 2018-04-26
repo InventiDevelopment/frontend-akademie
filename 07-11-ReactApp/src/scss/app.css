@@ -6,25 +6,10 @@ html {
   box-sizing: inherit; }
 
 body {
-  background-color: #E8F0EF;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 16px;
-  color: #707070; }
+  background-color: #F5F1E9;
+  font-family: Calibri, sans-serif;
+  font-size: 18px;
+  color: #333333; }
 
 * {
   outline: none; }
-
-.page {
-  padding: 20px; }
-
-.transaction {
-  padding: 10px; }
-
-.transaction-list {
-  margin: 0;
-  padding: 0;
-  list-style-type: none; }
-  .transaction-list .transaction {
-    margin-bottom: 6px; }
-    .transaction-list .transaction:last-of-type {
-      margin-bottom: 0; }

@@ -10,13 +10,14 @@ html {
 
 // base body style
 body {
-  background-color: $base-bg;
-  font-family: $base-font;
-  font-size: $base-font-size;
-  color: $base-text;
+  background-color: #F5F1E9;
+  font-family: Calibri, sans-serif;
+  font-size: 18px;
+  color: #333333;
 }
 
 // remove outlines - no keyboard on mobile
 * {
   outline: none;
 }
+
