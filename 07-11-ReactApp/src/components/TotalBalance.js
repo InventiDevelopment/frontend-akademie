@@ -10,14 +10,15 @@ const BalanceDiv = styled.div`
 let IncomeDiv = styled.div`
   color: #73A05C;
 `;
+
 let total = 0;
-let type = transactions.type;
+total = transactions.reduce((prev, curr) => {return curr.type === 'income'? prev + curr.value: prev - curr.value},0)
 export default () => (
   <BalanceDiv>
     <div>Total Balance</div>
     <IncomeDiv>
       <span>+ </span>
-      <span>{total = transactions.reduce((prev, curr) => {return curr.type === 'income'? prev + curr.value: prev - curr.value},0)}</span>
+      <span>{total}</span>
       <span> CZK</span>
     </IncomeDiv>
   </BalanceDiv>

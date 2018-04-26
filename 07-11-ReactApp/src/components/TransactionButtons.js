@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import faPencil from '@fortawesome/fontawesome-free-solid/faPencilAlt';
 import faDelete from '@fortawesome/fontawesome-free-solid/faTrash';
-import TransactionContainer from './TransactionContainer'
 
 const EditButton = styled.button`
   text-transform: uppercase;
@@ -33,7 +32,7 @@ export default class TransactionButtons extends Component {
     return(
     <div>
       <EditButton><FontAwesomeIcon icon={faPencil}/></EditButton>
-      <DelButton onClick={() => this.deleteElement.bind(TransactionContainer.key) }><FontAwesomeIcon icon={faDelete}/></DelButton>
+      <DelButton onClick={ this.props.deleteTransaction(this.props.data) }><FontAwesomeIcon icon={faDelete}/></DelButton>
     </div>
     )
   }

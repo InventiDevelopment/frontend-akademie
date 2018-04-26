@@ -36,7 +36,7 @@ const DateDiv = styled.div`
   padding-left: 15px;
   padding-top: 10px;
 `
-export default ({data,expanded}) => (
+export default ({data,expanded, toggleExpanded, deleteTransaction}) => (
   <TransactionRoot>
         <TransactionRow>
           <div>
