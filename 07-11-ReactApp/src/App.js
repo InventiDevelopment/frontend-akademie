@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import TransactionList from './components/TransactionList';
 
+
 class App extends Component {
   render() {
     return (
@@ -12,7 +13,8 @@ class App extends Component {
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
         <TransactionList />
-          </div>)
+          </div>
+          );
   }
 }
 
