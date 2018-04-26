@@ -11,7 +11,10 @@
     "normalize.css": "^8.0.0",
     "npm-run-all": "^4.1.2",
     "react": "^16.3.1",
-    "react-dom": "^16.3.1"
+    "react-dom": "^16.3.1",
+    "react-modal": "^3.4.4",
+    "react-router": "^4.2.0",
+    "styled-components": "^3.2.6"
   },
   "scripts": {
     "build-css": "node-sass-chokidar src/ -o src/ --include-path ./src --include-path ./node_modules",
