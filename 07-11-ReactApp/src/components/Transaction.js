@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 const TransactionRoot = styled.div`
     margin-bottom: 15px;
@@ -13,7 +13,7 @@ export default ({ data, expanded }) => (
             { data.value }
         </div>
         { expanded &&
-           <div>Jsem vidět!!</div> 
+           <button onClick={deleteTransaction}>Jsem vidět!!</button> 
         }  
-    </TransactionRoot> 
+    </TransactionRoot>
 )
