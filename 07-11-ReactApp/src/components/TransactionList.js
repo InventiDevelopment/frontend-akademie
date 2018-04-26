@@ -10,7 +10,7 @@ export default class TransactionList extends React.Component {
     }
 
     componentDidMount() {
-        this.setState({ transactions: transactions})
+        this.setState({ stateTransactions: transactions})
     }
 
     deleteTransaction = (transaction) => {

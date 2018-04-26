@@ -9,18 +9,11 @@ const TransactionRoot = styled.div`
     justify-content: space-between;
     background-color: white;
 `;
-/*
-export default (props) => (
-    <li>
-        { props.data.name }
-        { props.data.value }
-    </li>
-)
-*/
+
 export default ({data, expanded, toggleExpanded, deleteTransaction}) => (
     <TransactionRoot>
         <li>
-            <div>
+            <div onClick={toggleExpanded}>
                 { data.name }
                 { data.value }
             </div>
