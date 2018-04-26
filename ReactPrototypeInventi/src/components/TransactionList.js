@@ -1,21 +1,49 @@
 import React from 'react';
+import Modal from 'react-modal';
 import transactions from '../data/transactions';
 import TransactionContainer from './TransactionContainer';
 
 export default class TransactionList extends React.Component {
-    componentDidMount() {
-        console.log('Jsem na světě')
-    }
+  state = {
+    stateTransactions: [],
+    modalOpen: false
+   }
 
-    render() {
-        return (
-            <ul>
-                {
-                    transactions.map((transaction) =>
-                        <TransactionContainer data={transaction} />
-                    )
-                }
-            </ul>
-        )
-    }
+  componentDidMount() {
+    this.setState({ stateTransactions: transactions })
+  }
+
+  deleteTransaction = (transaction) => {
+    const newTransactions = this.state.stateTransactions.filter(
+      object => JSON.stringify(transaction) !== JSON.stringify(object)
+    )
+    this.setState({ stateTransactions: newTransactions })
+  }
+
+  closeModal = () => {
+    this.setState({ modalOpen: false })
+  }
+
+  openModal = () => {
+    this.setState({ modalOpen: true })
+  }
+
+  render() {
+    return (
+      <React.Fragment>
+        <ul>
+          {
+            this.state.stateTransactions.map((transaction) =>
+              <TransactionContainer data={transaction} deleteTransaction={this.deleteTransaction} />
+            )
+          }
+        </ul>
+        <button onClick={this.openModal}>Open modal</button>
+        <Modal isOpen={this.state.modalOpen} onRequestClose={this.closeModal}>
+          <input />
+          <input />
+        </Modal>
+      </React.Fragment>
+    )
+  }
 }
