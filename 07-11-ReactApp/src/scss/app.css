@@ -6,7 +6,7 @@ html {
   box-sizing: inherit; }
 
 body {
-  background-color: #E8F0EF;
+  background-image: linear-gradient(to bottom left, #2BD3C9, #2786E2);
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
   color: #707070; }
@@ -15,7 +15,7 @@ body {
   outline: none; }
 
 .page {
-  padding: 20px; }
+  padding: 15px; }
 
 .transaction {
   padding: 10px; }
@@ -28,3 +28,11 @@ body {
     margin-bottom: 6px; }
     .transaction-list .transaction:last-of-type {
       margin-bottom: 0; }
+
+.fa-plus-circle {
+  font-size: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-shadow: 1px 3px 20px rgba(0, 0, 0, 0.2), 0px -5px 35px rgba(255, 255, 255, 0); }
