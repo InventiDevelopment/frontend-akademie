@@ -1,12 +1,8 @@
 /* eslint-disable no-unused-vars */
 import React from 'react'
-import Modal from 'react-modal';
-import transactions from '../data/transactions'
 import TransactionContainer from './TransactionContainer'
-import FontAwesomeIcon from '@fortawesome/react-fontawesome';
-import faClose from '@fortawesome/fontawesome-free-solid/faTrash';
-
 import styled from 'styled-components';
+import AddModal from './AddModal';
 
 const TransList = styled.ul`
   margin: 0;
@@ -15,70 +11,28 @@ const TransList = styled.ul`
   flex: 1 0 auto;
 `;
 
-const Section = styled.section`
-  height: 52vh;
-  margin-top: 26vh;
-  margin-bottom: 16vh;
+const TransListDiv = styled.div`
+  height: 55vh;
+  margin-bottom: 13vh;
+  padding-top: 2vh;
   overflow-y: auto;
 `
 
 export default  class TransactionList extends React.Component{
-  state = { stateTransactions: [],
-  modalOpen: false}
-  componentDidMount(){
-    this.setState({stateTransactions: transactions})
-  }
-  deleteTransaction = (transaction)=> {
-    const newTransactions = this.state.stateTransactions.filter(
-      object => JSON.stringify(transaction) !== JSON.stringify(object))
-    this.setState({stateTransactions: newTransactions})
-  }
-  openModal = () => {
-    this.setState({modalOpen:true})
-  }
-  closeModal = () => {
-    this.setState({modalOpen:false})
-  }
+
   render(){
     return(
-      <Section>
+      <TransListDiv>
         <TransList>
           {
-            this.state.stateTransactions.map((transaction, i) =>
-              <TransactionContainer data = {transaction} key={i}/>
+            this.props.stateTransactions.map((transaction, i) =>
+              <TransactionContainer data = {transaction} key={i} deleteTransaction={this.props.deleteTransaction}
+                                    editTransaction={this.props.editTransaction}/>
             )
           }
         </TransList>
-        <button onClick={this.openModal}>Open Modal</button>
-        <Modal isOpen={this.state.modalOpen} onRequestClose={this.closeModal}>
-          <div>
-            <div>
-              <label>Name</label>
-              <input type="text>"></input>
-            </div>
-            <div>
-              <label>Value</label>
-              <input type="number"></input>
-            </div>
-            <div>
-              <label>Date created</label>
-              <input type="datetime-local"></input>
-            </div>
-            <div>
-              <span>Type</span>
-              <select>
-                <option value="Income">Income</option>
-                <option value="Expense">Expense</option>
-              </select>
-            </div>
-            <div>
-              <button>Save</button>
-              <button><FontAwesomeIcon icon={faClose}/></button>
-            </div>
-          </div>
-        </Modal>
-      </Section>
-
+        <AddModal modalOpen={this.props.modalOpen} closeModal={this.props.closeModal} addTransaction={this.props.addTransaction}/>
+      </TransListDiv>
     )
   }
 }

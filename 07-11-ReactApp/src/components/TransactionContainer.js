@@ -8,10 +8,11 @@ export default class TransactionContainer extends Component {
     this.setState({expanded:!this.state.expanded})
   }
   render () {
-    const {data} = this.props
     return(
-    <li onClick={this.clickHandler}>
-      <Transaction data = {data} expanded={this.state.expanded}/>
+    <li>
+      <Transaction data = {this.props.data} expanded={this.state.expanded} toggleExpanded={this.clickHandler}
+                   deleteTransaction={this.props.deleteTransaction} openModal={this.props.openModal}
+                   editTransaction={this.props.editTransaction}/>
     </li>
     )
 

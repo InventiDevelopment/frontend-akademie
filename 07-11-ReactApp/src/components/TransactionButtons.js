@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import faPencil from '@fortawesome/fontawesome-free-solid/faPencilAlt';
 import faDelete from '@fortawesome/fontawesome-free-solid/faTrash';
+import EditModal from './EditModal';
+import ConfirmModal from './ConfirmModal';
 
 const EditButton = styled.button`
   text-transform: uppercase;
@@ -28,11 +30,29 @@ const DelButton = styled.button`
 
 
 export default class TransactionButtons extends Component {
+  state={editModalOpen: false,
+  closeModalOpen:false}
+  openEditModal = () =>{
+    this.setState({editModalOpen: true},)
+  }
+  closeEditModal = () =>{
+    this.setState({editModalOpen: false})
+  }
+  openDeleteModal = () =>{
+    this.setState({closeModalOpen: true})
+  }
+  closeDeleteModal = () =>{
+    this.setState({closeModalOpen: false})
+  }
   render() {
     return(
     <div>
-      <EditButton><FontAwesomeIcon icon={faPencil}/></EditButton>
-      <DelButton onClick={ this.props.deleteTransaction(this.props.data) }><FontAwesomeIcon icon={faDelete}/></DelButton>
+      <EditButton onClick = {() => this.openEditModal()}><FontAwesomeIcon icon={faPencil}/></EditButton>
+      <DelButton onClick={() => this.openDeleteModal()}><FontAwesomeIcon icon={faDelete}/></DelButton>
+      <EditModal editTransaction={this.props.editTransaction} data={this.props.data} closeEditModal={this.closeEditModal}
+      editModalOpen={this.state.editModalOpen}/>
+      <ConfirmModal deleteTransaction={this.props.deleteTransaction} data={this.props.data}
+      closeDeleteModal={this.closeDeleteModal} closeModalOpen={this.state.closeModalOpen}/>
     </div>
     )
   }

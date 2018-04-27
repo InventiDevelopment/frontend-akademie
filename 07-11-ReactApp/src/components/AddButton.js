@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const AddButton = styled.button`
+const Button = styled.button`
   width: 100%;
   text-transform: uppercase;
   padding: 12px;
@@ -14,16 +14,20 @@ const AddButton = styled.button`
 const Footer = styled.footer`
   width: 100%;
   align-items: center;
-  height: 16vh;
+  height: 15vh;
   position: fixed;
   bottom: 0;
   padding: 20px;
 `;
 
-export default () => (
-  <Footer>
-    <div>
-      <AddButton>Add new</AddButton>
-    </div>
-  </Footer>
-)
+export default class AddButton extends React.Component {
+  render () {
+    return (
+      <Footer>
+        <div>
+          <Button onClick={() => this.props.openModal()}>Add new</Button>
+        </div>
+      </Footer>
+    )
+  }
+}

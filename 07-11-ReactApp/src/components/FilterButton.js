@@ -18,7 +18,7 @@ const Button = styled.button`
         margin-left: 20px;
         border-top-left-radius: 12px;
         border-bottom-left-radius: 12px;
-        border-right: $menu-bg;
+        border-right: #F1EADE;
         border-right-style: solid;
         border-right-width: 1.5px;
         color: #D2C1C1;
@@ -29,7 +29,7 @@ const Button = styled.button`
         margin-right: 20px;
         border-top-right-radius: 12px;
         border-bottom-right-radius: 12px;
-        border-left: $menu-bg;
+        border-left: #F1EADE;
         border-left-style: solid;
         border-left-width: 1.5px;
     }
