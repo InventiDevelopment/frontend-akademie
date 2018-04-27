@@ -36,7 +36,7 @@ const Button = styled.button`
 const Footer = styled.footer`
   width: 100%;
   align-items: center;
-  height: 16vh;
+  height: 15vh;
   position: fixed;
   bottom: 0;
   padding: 20px;

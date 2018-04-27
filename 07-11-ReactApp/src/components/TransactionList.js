@@ -13,8 +13,7 @@ const TransList = styled.ul`
 
 const TransListDiv = styled.div`
   height: 55vh;
-  margin-bottom: 13vh;
-  padding-top: 2vh;
+  margin-bottom: 12vh;
   overflow-y: auto;
 `
 

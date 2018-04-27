@@ -5,6 +5,7 @@ const ButtonDiv = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-bottom: 1vh;
 `;
 const Button = styled.button`
      width: 100%;

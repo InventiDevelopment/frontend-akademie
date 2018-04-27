@@ -9,6 +9,12 @@ const Section = styled.section`
   margin-top: 11vh;
   height: 74vh;
 `
+const Line = styled.div`
+  border-top: #A38280;
+  border-top-style: solid;
+  border-top-width: 3px;
+  width: 50%;
+`
 
 export default class TransactionPage extends React.Component {
   state={modalOpen: false}
@@ -23,6 +29,7 @@ export default class TransactionPage extends React.Component {
     return(
       <React.Fragment>
         <Section>
+          <Line/>
           <TotalBalance stateTransactions={this.props.stateTransactions}/>
           <FilterButton/>
           <TransactionList modalOpen={this.state.modalOpen} closeModal={this.closeModal} stateTransactions={this.props.stateTransactions}
