@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
-// import transactions from './data/transactions';
-import TransactionList from './components/TransactionList';
-import Overview from './components/Overview';
 import {
     BrowserRouter as Router,
     Route,
     Link
 } from 'react-router-dom';
+import TransactionList from './components/TransactionList';
+import Overview from './components/Overview';
 
 class App extends Component {
   render () {
