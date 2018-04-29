@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import MainModal from "./Modal";
 
 const Box = styled.div` 
     background-color: white;
@@ -7,6 +8,11 @@ const Box = styled.div` 
     margin-bottom: 7%;
     padding: 5%;
     box-shadow: 0px 0px 10px 2px rgba(119, 119, 119, 0.27);
+    text-align: center;
+`
+
+const BalanceValue = styled.div`
+    font-size: 3rem;
 `
 
 export default class Overview extends React.Component {
@@ -16,7 +22,7 @@ export default class Overview extends React.Component {
                 <Box>
                     <div>
                         <h2>Aktuální bilance</h2>
-                        <p>Datum</p>
+                        <BalanceValue><p>5 000 Kč</p></BalanceValue>
                     </div>
                 </Box>
                 <Box>
@@ -24,9 +30,7 @@ export default class Overview extends React.Component {
                         <h3>Přehled za dané období</h3>
                     </div>
                 </Box>
-                    <footer>
-                        <i class="fas fa-plus-circle"></i>
-                    </footer>
+                <MainModal />
                 </div>
             );
         }

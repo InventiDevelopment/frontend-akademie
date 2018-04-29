@@ -1,13 +1,14 @@
 @import url(~normalize.css);
 html {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  height: 100%; }
 
 *, *:before, *:after {
   box-sizing: inherit; }
 
 body {
   background-image: linear-gradient(to bottom left, #2BD3C9, #2786E2);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
   font-size: 16px;
   color: #707070; }
 

@@ -1,10 +1,11 @@
 import React from 'react';
-import Modal from 'react-modal';
 import transactions from '../data/transactions';
 import TransactionContainer from './TransactionContainer';
 import styled from 'styled-components';
+import MainModal from "./Modal";
 
 const Page = styled.div`
+  color: black;
   background-color: white;
   text-align: center;
   padding: 5%;
@@ -13,28 +14,22 @@ const Page = styled.div`
 
 const Title = styled.div`
   font-weight: 300;
+  color: white;
+  text-align: center;
 `
 
-const ModalWindow = styled.div`
-    height: 50%;
-`;
-
-const FormButtons = styled.div`
-    margin: 40px;
+const TransactionType = styled.div`
     display: flex;
-    justify-content: space-between;
-    background-color: white;
-`;
-
-const EachButton = styled.div`
-    border: 1px solid black;
-    padding: 10px;
-`;
+    justify-content: space-evenly;
+    margin: 5% auto;
+    padding: 2%;
+    border: solid 1px black;
+    border-radius: 40px;
+`
 
 export default class TransactionList extends React.Component {
   state = {
     stateTransactions: [],
-    modalOpen: false
    }
 
   componentDidMount() {
@@ -48,19 +43,17 @@ export default class TransactionList extends React.Component {
     this.setState({ stateTransactions: newTransactions })
   }
 
-  closeModal = () => {
-    this.setState({ modalOpen: false })
-  }
-
-  openModal = () => {
-    this.setState({ modalOpen: true })
-  }
-
   render() {
     return (
+    <div>    
       <React.Fragment>
-        <Page>
         <Title><h1>Transactions</h1></Title>
+        <Page>
+        <TransactionType>
+            <a>VŠE</a>
+            <a>PŘÍJMY</a>
+            <a>VÝDAJE</a>
+        </TransactionType>
         <ul>
           {
             this.state.stateTransactions.map((transaction) =>
@@ -69,22 +62,9 @@ export default class TransactionList extends React.Component {
           }
         </ul>
         </Page>
-        <footer>
-        <button onClick={this.openModal}><i class="fas fa-plus-circle"></i></button>
-        <ModalWindow>
-        <Modal isOpen={this.state.modalOpen} onRequestClose={this.closeModal}>
-            <h1>New transaction</h1>
-            <input placeholder="Name"/>
-            <input placeholder="Value"/>
-            <input type="date" />
-            <FormButtons>
-            <EachButton><button>Add</button></EachButton>
-            <EachButton><button>Cancel</button></EachButton>
-            </FormButtons>
-        </Modal>
-        </ModalWindow>
-        </footer>
       </React.Fragment>
+    <MainModal />
+    </div>
     )
   }
 }
