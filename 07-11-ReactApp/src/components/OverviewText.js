@@ -20,6 +20,7 @@ const LineDiv = styled.div`
 `
 const Wrap =styled.div`
   margin-top: 25px;
+  padding: 0 20px;
 `
 
 export default class OverviewText extends React.Component{

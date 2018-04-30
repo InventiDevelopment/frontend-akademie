@@ -5,14 +5,13 @@ const ButtonDiv = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-bottom: 1vh;
 `;
 const Button = styled.button`
      width: 100%;
      background-color: #D2C1C1;
      color: #745654;
      text-transform: uppercase;
-     padding: 12px;
+     padding: 10px 20px;
      font-weight: bold;
      border: 0;
      &:first-of-type {

@@ -3,11 +3,11 @@ import months from '../data/months';
 import styled from 'styled-components';
 
 const MonthDiv = styled.div`
-    padding: 20px;
+    padding: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 15px;
 `
 
 const Select = styled.select`

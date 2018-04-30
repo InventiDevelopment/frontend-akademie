@@ -12,7 +12,7 @@ const Button = styled.button`
      color: #745654;
      text-transform: uppercase;
      font-weight: bold;
-     padding: 12px;
+     padding: 10px 20px;
      border: 0;
      &:first-of-type {
         border-top-left-radius: 12px;
@@ -36,7 +36,7 @@ const Button = styled.button`
 const Footer = styled.footer`
   width: 100%;
   align-items: center;
-  height: 15vh;
+  height: 80px;
   position: fixed;
   bottom: 0;
   padding: 20px;

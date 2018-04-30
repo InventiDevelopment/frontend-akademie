@@ -2,9 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Button = styled.button`
+  display: block;
   width: 100%;
   text-transform: uppercase;
-  padding: 12px;
+  padding: 10px 20px;
   font-weight: bold;
   border: 0;
   background-image: linear-gradient(to top, #a38280, #a98886, #b08f8d, #b69593, #bd9c9a);
@@ -12,21 +13,25 @@ const Button = styled.button`
   color: #E0D3D3;
 `
 const Footer = styled.footer`
-  width: 100%;
+  display: flex;
   align-items: center;
-  height: 15vh;
+  width: 100%;
+  height: 80px;
   position: fixed;
-  bottom: 0;
   padding: 20px;
+  bottom: 0;
+`;
+const ButtonDiv = styled.div`
+  width: 100%;
 `;
 
 export default class AddButton extends React.Component {
   render () {
     return (
       <Footer>
-        <div>
+        <ButtonDiv>
           <Button onClick={() => this.props.openModal()}>Add new</Button>
-        </div>
+        </ButtonDiv>
       </Footer>
     )
   }
