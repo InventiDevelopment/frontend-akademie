@@ -14,6 +14,7 @@ class App extends Component {
     return (
       <Router>
         <div className="page">
+
           <div className="header-controls">
             <DefaultControlBtn>
               <Link to="/">Transactions</Link>
@@ -24,6 +25,7 @@ class App extends Component {
           </div>
             <Route exact path="/" component={TransactionList} />
             <Route path="/overview" component={Overview} />
+            
         </div>
       </Router>
     );
