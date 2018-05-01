@@ -5,16 +5,15 @@ export default class TransactionContainer extends Component {
     state = { expanded: false }
 
     clickHandler = () => {
-        console.log('asdfd');
         this.setState({ expanded: !this.state.expanded })
     }
 
     render() {
-
         return (
-            <div onClick={this.clickHandler}>
-                <Transaction data={this.props.data} expanded={this.state.expanded} />
-            </div>
+            <Transaction data={this.props.data}
+                expanded={this.state.expanded}
+                toggleExpanded={this.clickHandler}
+                deleteTransaction={this.props.deleteTransaction} />
         )
     }
 }
