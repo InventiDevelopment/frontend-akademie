@@ -1,5 +1,7 @@
 import React from 'react';
 
-export default () => (
-  <div>asdff</div>
-)
+export default class Overview extends React.Component {
+
+  }
+
+

@@ -1,5 +1,6 @@
 import React from 'react';
 import Modal from 'react-modal';
+import StyledButton from './StyledButton';
 import transactions from '../data/transactions';
 import TransactionContainer from './TransactionContainer';
 
@@ -31,14 +32,16 @@ export default class TransactionList extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <ul>
+        <ul style={{padding: 0}}>
           {
             this.state.stateTransactions.map((transaction) =>
               <TransactionContainer data={transaction} deleteTransaction={this.deleteTransaction} />
             )
           }
         </ul>
-        <button onClick={this.openModal}>Open modal</button>
+        <div>
+          <StyledButton onClick={this.openModal}>Open modal</StyledButton>
+        </div>
         <Modal isOpen={this.state.modalOpen} onRequestClose={this.closeModal}>
           <input />
           <input />
