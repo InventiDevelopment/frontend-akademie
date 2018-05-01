@@ -6,8 +6,7 @@ import {
 } from 'react-router-dom';
 import TransactionList from './components/TransactionList';
 import Overview from './components/Overview';
-import StyledButton from './components/StyledButton';
-import HeaderBtn from './components/HeaderBtn';
+import DefaultControlBtn from './components/DefaultControlBtn';
 
 
 class App extends Component {
@@ -16,12 +15,12 @@ class App extends Component {
       <Router>
         <div className="page">
           <div className="header-controls">
-            <HeaderBtn>
+            <DefaultControlBtn>
               <Link to="/">Transactions</Link>
-            </HeaderBtn>
-            <HeaderBtn>
+            </DefaultControlBtn>
+            <DefaultControlBtn>
               <Link to="/overview">Overview</Link>
-            </HeaderBtn>
+            </DefaultControlBtn>
           </div>
             <Route exact path="/" component={TransactionList} />
             <Route path="/overview" component={Overview} />

@@ -16,7 +16,7 @@ body {
 
 a {
   text-decoration: none;
-  color: #fff; }
+  color: #7bd594; }
 
 ol,
 ul,
@@ -44,4 +44,5 @@ li {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  margin-top: -20px; }
