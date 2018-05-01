@@ -20,3 +20,16 @@ body {
 * {
   outline: none;
 }
+
+a { 
+  text-decoration: none;
+  color: #fff;
+}
+
+ol,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
