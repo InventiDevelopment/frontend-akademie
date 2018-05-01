@@ -9,5 +9,4 @@ export default styled.button`
     font-weight: bold;
     text-align: center;
     color: white;
-    background: black;
 `

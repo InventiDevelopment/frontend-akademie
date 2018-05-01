@@ -32,7 +32,7 @@ export default class TransactionList extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <ul style={{padding: 0}}>
+        <ul>
           {
             this.state.stateTransactions.map((transaction) =>
               <TransactionContainer data={transaction} deleteTransaction={this.deleteTransaction} />
