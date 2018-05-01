@@ -6,21 +6,25 @@ import {
 } from 'react-router-dom';
 import TransactionList from './components/TransactionList';
 import Overview from './components/Overview';
+import StyledButton from './components/StyledButton';
+import HeaderBtn from './components/HeaderBtn';
+
 
 class App extends Component {
   render() {
     return (
       <Router>
         <div className="page">
-          <header className="App-header">
-            <h1>Welcome to React</h1>
-          </header>
-          <p>
-            <Link to="/">To homepage</Link>
-            <Link to="/overview">To overview</Link>
-          </p>
-          <Route exact path="/" component={TransactionList} />
-          <Route path="/overview" component={Overview} />
+          <div className="header-controls">
+            <HeaderBtn>
+              <Link to="/">Transactions</Link>
+            </HeaderBtn>
+            <HeaderBtn>
+              <Link to="/overview">Overview</Link>
+            </HeaderBtn>
+          </div>
+            <Route exact path="/" component={TransactionList} />
+            <Route path="/overview" component={Overview} />
         </div>
       </Router>
     );
