@@ -6,9 +6,7 @@ import {
 } from 'react-router-dom';
 import TransactionList from './components/TransactionList';
 import Overview from './components/Overview';
-<<<<<<< HEAD
 import './scss/app.css';
-=======
 import styled from 'styled-components';
 
 const Links = styled.div`
@@ -25,13 +23,11 @@ const Link = styled.link`
     text-transform: uppercase;
     margin: 0 .5rem;
 `;
->>>>>>> 793a2ae98ee0071af58408129ec3113499184140
 
 class App extends Component {
   render() {
     return (
       <Router>
-<<<<<<< HEAD
         <div className="page">
           <header className="App-header">
             <h1>Peněženka</h1>
@@ -47,7 +43,6 @@ class App extends Component {
             </div>
           </main>
         </div>
-=======
       <div className="page">
         <header className="App-header">
           <h1>Welcome to React</h1>
@@ -62,7 +57,6 @@ class App extends Component {
           <Route exact path="/" component={TransactionList} />
           <Route path="/overview" component={Overview} />
       </div>
->>>>>>> 793a2ae98ee0071af58408129ec3113499184140
       </Router>
     );
   }
