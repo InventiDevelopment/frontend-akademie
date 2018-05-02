@@ -1,9 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-
-export default () => (
-  <div>asdff</div>
-=======
 import styled from 'styled-components';
 
 const Overview = styled.div`
@@ -27,5 +22,4 @@ export default () => (
         <OverviewButtons>Mesicni</OverviewButtons>
         <OverviewButtons>Celkem</OverviewButtons>
     </Overview>
->>>>>>> 793a2ae98ee0071af58408129ec3113499184140
 )
