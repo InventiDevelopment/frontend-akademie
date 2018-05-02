@@ -10,7 +10,8 @@ html {
 
 // base body style
 body {
-  background-color: $base-bg;
+  background-image: $base-bg;
+  background-repeat: no-repeat;
   font-family: $base-font;
   font-size: $base-font-size;
   color: $base-text;

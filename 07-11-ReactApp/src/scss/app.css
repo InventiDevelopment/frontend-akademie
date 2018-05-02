@@ -1,16 +1,16 @@
 @import url(~normalize.css);
 html {
-  box-sizing: border-box;
-  height: 100%; }
+  box-sizing: border-box; }
 
 *, *:before, *:after {
   box-sizing: inherit; }
 
 body {
-  background-image: linear-gradient(to bottom left, #2BD3C9, #2786E2);
+  background-image: linear-gradient(to top, #88d3ce 0%, #6e45e2 100%);
+  background-repeat: no-repeat;
   font-family: "Montserrat", Arial, Helvetica, sans-serif;
   font-size: 16px;
-  color: #707070; }
+  color: black; }
 
 * {
   outline: none; }
