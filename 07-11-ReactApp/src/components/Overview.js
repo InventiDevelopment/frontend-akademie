@@ -18,8 +18,8 @@ const OverviewButtons = styled.button`
 
 export default () => (
     <Overview> 
-        <OverviewButtons>Denni</OverviewButtons>
-        <OverviewButtons>Mesicni</OverviewButtons>
+        <OverviewButtons>Denní</OverviewButtons>
+        <OverviewButtons>Měsíční</OverviewButtons>
         <OverviewButtons>Celkem</OverviewButtons>
     </Overview>
 )

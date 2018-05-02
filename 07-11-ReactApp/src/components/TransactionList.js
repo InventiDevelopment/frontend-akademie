@@ -2,6 +2,7 @@ import React from 'react';
 import Modal from 'react-modal';
 import transactions from '../data/transactions';
 import TransactionContainer from './TransactionContainer';
+import '../scss/app.css';
 
 export default class TransactionList extends React.Component {
   state = {
@@ -47,4 +48,4 @@ export default class TransactionList extends React.Component {
         </Modal>
       </React.Fragment>
     )
-  }
+  }}
