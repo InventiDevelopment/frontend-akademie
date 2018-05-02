@@ -47,7 +47,7 @@ export default class OverviewText extends React.Component{
           <ExpenseDiv >- {this.calcExpenses()} CZK</ExpenseDiv>
         </LineDiv>
         <LineDiv>
-          <div>Total Balance</div>
+          <div>Total</div>
           {this.calcTotal() < 0? <ExpenseDiv> {this.calcTotal()} CZK</ExpenseDiv>:
             <IncomeDiv>+ {this.calcTotal()} CZK</IncomeDiv>
           }

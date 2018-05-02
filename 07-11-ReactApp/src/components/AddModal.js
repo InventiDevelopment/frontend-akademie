@@ -6,9 +6,8 @@ import styled from 'styled-components';
 
 const ModalInside = styled.div`
     background-color: #F1EADE;
-    padding: 20px;
-    margin: 30px;
-    margin-top: 20vh;
+    padding: 15px;
+    margin: 15px;
     border-radius: 10px;
 `
 const customStyles = {
@@ -21,14 +20,16 @@ const customStyles = {
   }
 };
 const FormItem = styled.div`
-    display: flex;
-    justify-content: space-between;
+    display: block;
     padding-top: 10px;
     padding-bottom: 10px;
 `
 const ModalInput = styled.input`
   border-radius: 10px;
+  width: 100%;
+  padding: 8px 0;
   background-color: rgb(250, 247, 239);
+  margin: 10px 0;
   border: 0;
 `
 const ModalButton = styled.div`
@@ -57,7 +58,9 @@ const CloseButton = styled.button`
 const Select = styled.select`
   -webkit-appearance: button;
   -moz-appearance: button;
-  padding: 5px;
+  width: 100%;
+  padding: 8px 0;
+  margin-top: 10px;
   background-color: rgb(250, 247, 239);
   border: 0;
   border-radius: 10px;

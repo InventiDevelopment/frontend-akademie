@@ -5,7 +5,7 @@ import styled from 'styled-components';
 const ModalInside = styled.div`
     background-color: #F1EADE;
     padding: 20px;
-    margin: 30px;
+    margin: 15px;
     margin-top: 20vh;
     border-radius: 10px;
 `
