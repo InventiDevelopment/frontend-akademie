@@ -1,20 +1,29 @@
 import React, { Component } from 'react';
-import TransactionList from './components/TransactionList'
+import TransactionList from './components/TransactionList';
+import Overview from './components/Overview';
+import {
+    BrowserRouter as Router,
+    Route,
+    Link
+} from 'react-router-dom';
 
 class App extends Component {
   render() {
     return (
-      <div className="page">
-        <header className="App-header">
-          <h1>Welcome to React</h1>
-        </header>
-        <p>
-          Ahoj<code>src/App.js</code> and save to reload.
-        </p>
+        <Router>
+          <div className="page">
 
-          <TransactionList/>
+              {/*<TransactionList/>*/}
 
-      </div>
+              <p>
+                  <Link to="/">To homepage</Link>
+                  <Link to="/overview">To overview</Link>
+              </p>
+              <Route path="/" component={TransactionList} />
+              <Route path="/overview" component={Overview} />
+
+          </div>
+        </Router>
     );
   }
 }

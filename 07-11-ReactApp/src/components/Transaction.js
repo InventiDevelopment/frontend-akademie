@@ -1,32 +1,22 @@
 import React from 'react';
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 const TransactionRoot = styled.div`
-       background: white;
-       margin-bottom: 4px;
-       padding: 10px;
-       display: flex;
-       justify-content: space-between;
+    margin-bottom: 6px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
 `;
 
-
-export default ({ data, expanded}) => (
-
+export default ({ data, expanded, toggleExpanded, deleteTransaction }) => (
     <TransactionRoot>
-        <div>
-            { data.name }
-            { data.value }
+        <div onClick={toggleExpanded}>
+            {data.name}
+            {data.value}
         </div>
-
-        <div>
-            <button className="btn-remove">Remove</button>
-        </div>
-            { expanded &&
-                <div>
-                    Jsem videt!!!
-                </div>
-            }
-
+        { expanded &&
+        <button onClick={() => deleteTransaction(data)}>Jsem vidět!!!</button>
+        }
     </TransactionRoot>
-
 )
