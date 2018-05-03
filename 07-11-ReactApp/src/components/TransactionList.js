@@ -2,6 +2,7 @@ import React from 'react';
 import Modal from 'react-modal';
 import transactions from '../data/transactions';
 import TransactionContainer from './TransactionContainer';
+import addTransaction from './addTransaction'
 
 export default class TransactionList extends React.Component {
   state = {
@@ -47,3 +48,11 @@ export default class TransactionList extends React.Component {
     )
   }
 }
+
+mapStateToProps = (store) => {
+  return {
+    transactions: store
+  }
+}
+
+export default connect (mapStateToProps, { addTransaction })(Transactions)
