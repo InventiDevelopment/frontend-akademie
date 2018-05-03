@@ -1,24 +1,22 @@
 import React from 'react';
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 const TransactionRoot = styled.div`
-    margin-button: 6px;
-    padding 15px;
-    dispay: flex;
+    margin-bottom: 6px;
+    padding: 15px;
+    display: flex;
     justify-content: space-between;
     background-color: white;
 `;
 
-export default ({data, expanded, onClickHandler}) => (
+export default ({ data, expanded, toggleExpanded, deleteTransaction }) => (
     <TransactionRoot>
-        <div>
-            { data.name }
-            { data.value }
+        <div onClick={toggleExpanded}>
+            {data.name}
+            {data.value}
         </div>
         { expanded &&
-            <div>
-                <button onClick={() => deleteTransaction(data)}>Jsem vidět!!!</button>
-            </div>
+            <button onClick={() => deleteTransaction(data)}>Delete</button>
         }
     </TransactionRoot>
 )
