@@ -9,7 +9,7 @@ const TransactionRoot = styled.div`
     background-color: white;
 `;
 
-export default ({ data, expanded, toggleExpanded, deleteTransaction }) => (
+export default ({data, expanded, onClickHandler, deleteTransaction}) => (
     <TransactionRoot>
         <div onClick={toggleExpanded}>
             {data.name}
