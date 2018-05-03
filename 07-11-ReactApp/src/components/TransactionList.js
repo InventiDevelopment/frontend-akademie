@@ -40,7 +40,7 @@ export default class TransactionList extends React.Component {
           }
         </ul>
         <div className="button-add">
-          <button className="select-option-button" onClick={this.openModal}><i class="fas fa-plus"></i></button>
+          <button className="select-option-button button-add" onClick={this.openModal}><i class="fas fa-plus"></i></button>
         </div>
         <Modal isOpen={this.state.modalOpen} onRequestClose={this.closeModal}>
           <input />

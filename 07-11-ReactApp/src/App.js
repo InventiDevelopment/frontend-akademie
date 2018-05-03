@@ -4,13 +4,19 @@ import {
   Route,
   Link
 } from 'react-router-dom';
+import { Provider } from 'react-redux';
 import TransactionList from './components/TransactionList';
 import Overview from './components/Overview';
 import './scss/app.css';
+import { createStore } from 'redux';
+import transactions from './reducers/transactions';
+
+const store = createStore(transactions, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
 class App extends Component {
   render() {
     return (
+      <Provider store={store}>
       <Router>
         <div className="page">
           <header className="App-header">
@@ -28,6 +34,7 @@ class App extends Component {
           </main>
         </div>
       </Router>
+      </Provider>
     );
   }
 }

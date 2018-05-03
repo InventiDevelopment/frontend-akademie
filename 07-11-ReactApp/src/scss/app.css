@@ -67,6 +67,11 @@ body {
     text-decoration: none;
     font-weight: 700;
     border-radius: 8px; }
+    .transaction-list .select-option-button .button-add {
+      background-color: #88ffff;
+      height: 40px;
+      width: 40px;
+      border-radius: 50%; }
   .transaction-list .transaction {
     margin-bottom: 6px; }
     .transaction-list .transaction:last-of-type {
