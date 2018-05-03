@@ -4,6 +4,7 @@ import AddButton from './AddButton';
 import styled from 'styled-components'
 import TotalBalance from './TotalBalance'
 import FilterButton from './FilterButton'
+import { connect } from 'react-redux'
 
 const Section = styled.section`
   margin-top: 11vh;
@@ -23,7 +24,7 @@ const TopSection = styled.div`
   top: 11vh;
 `
 
-export default class TransactionPage extends React.Component {
+class TransactionPage extends React.Component {
   state={modalOpen: false}
 
   openModal = () => {
@@ -52,3 +53,4 @@ export default class TransactionPage extends React.Component {
   )
   }
 }
+export default connect()(TransactionPage)

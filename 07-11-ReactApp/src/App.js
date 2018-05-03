@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
-import transactions from './data/transactions'
+import transactions from './data/transactions';
 import TransactionPage from './components/TransactionPage';
-import Overview from './components/Overview'
-import { BrowserRouter, Route, Link } from 'react-router-dom'
-import styled from 'styled-components'
+import Overview from './components/Overview';
+import { BrowserRouter, Route, Link } from 'react-router-dom';
+import styled from 'styled-components';
+import {createStore} from 'redux';
+import {Provider} from 'react-redux';
+import transakce from './reducers/transactions'
 
 const MenuRoot = styled.div`
    top: 0;
@@ -29,6 +32,8 @@ const MenuItem = styled.div`
   padding: 15px;
   text-transform: uppercase;
   width: 100%;`;
+
+const store = createStore(transakce, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
 class App extends Component {
   state = { stateTransactions: []}
@@ -62,21 +67,23 @@ class App extends Component {
   }
   render() {
     return (
-      <BrowserRouter>
-        <React.Fragment>
-          <header>
-            <MenuRoot>
-              <MenuItem><Link to="/">Transactions</Link></MenuItem>
-              <MenuItem><Link to="/overview">Overview</Link></MenuItem>
-            </MenuRoot>
-           </header>
-          <Route exact path={"/"} component={() => <TransactionPage editTransaction={this.editTransaction}
-                                                                    addTransaction={this.addTransaction}
-                                                                    deleteTransaction={this.deleteTransaction}
-                                                                    stateTransactions={this.state.stateTransactions}/>}/>
-          <Route path="/overview" component={ () => <Overview stateTransactions={this.state.stateTransactions}/>}/>
-        </React.Fragment>
-      </BrowserRouter>
+      <Provider store={store}>
+        <BrowserRouter>
+          <React.Fragment>
+            <header>
+              <MenuRoot>
+                <MenuItem><Link to="/">Transactions</Link></MenuItem>
+                <MenuItem><Link to="/overview">Overview</Link></MenuItem>
+              </MenuRoot>
+             </header>
+            <Route exact path={"/"} component={() => <TransactionPage editTransaction={this.editTransaction}
+                                                                      addTransaction={this.addTransaction}
+                                                                      deleteTransaction={this.deleteTransaction}
+                                                                      stateTransactions={this.state.stateTransactions}/>}/>
+            <Route path="/overview" component={ () => <Overview stateTransactions={this.state.stateTransactions}/>}/>
+          </React.Fragment>
+        </BrowserRouter>
+      </Provider>
     );
   }
 }

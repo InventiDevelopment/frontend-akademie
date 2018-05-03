@@ -7,12 +7,12 @@ const ButtonDiv = styled.div`
     justify-content: center;
 `;
 const Button = styled.button`
-     width: 100%;
+     width: 33%;
      background-color: #D2C1C1;
      color: #745654;
      text-transform: uppercase;
      font-weight: bold;
-     padding: 10px 20px;
+     padding: 10px 10px;
      border: 0;
      &:first-of-type {
         border-top-left-radius: 12px;
