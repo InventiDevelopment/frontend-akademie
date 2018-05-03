@@ -17,17 +17,6 @@
   },
   "homepage": "https://github.com/InventiDevelopment/frontend-akademie#readme",
   "devDependencies": {
-<<<<<<< HEAD
-    "eslint": "^4.19.1",
-    "eslint-config-standard": "^11.0.0",
-    "eslint-plugin-import": "^2.10.0",
-    "eslint-plugin-node": "^6.0.1",
-    "eslint-plugin-promise": "^3.7.0",
-    "eslint-plugin-standard": "^3.0.1"
-  },
-  "dependencies": {
-    "styled-components": "^3.2.6"
-=======
     "babel-eslint": "^7.2.3",
     "eslint": "^4.1.1",
     "eslint-config-react-app": "^2.1.0",
@@ -35,6 +24,5 @@
     "eslint-plugin-import": "^2.6.0",
     "eslint-plugin-jsx-a11y": "^5.1.1",
     "eslint-plugin-react": "^7.1.0"
->>>>>>> origin
   }
 }
