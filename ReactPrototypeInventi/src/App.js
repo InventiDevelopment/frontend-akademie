@@ -1,32 +1,19 @@
 import React, { Component } from 'react';
 import {
   BrowserRouter as Router,
-  Route,
-  Link
+  Route
 } from 'react-router-dom';
-import TransactionList from './components/TransactionList';
-import Overview from './components/Overview';
-import DefaultControlBtn from './components/DefaultControlBtn';
-
+import Transactions from './pages/Transactions';
+import Overview from './pages/Overview';
 
 class App extends Component {
   render() {
     return (
       <Router>
-        <div className="page">
-
-          <div className="header-controls">
-            <DefaultControlBtn>
-              <Link to="/">Transactions</Link>
-            </DefaultControlBtn>
-            <DefaultControlBtn>
-              <Link to="/overview">Overview</Link>
-            </DefaultControlBtn>
-          </div>
-            <Route exact path="/" component={TransactionList} />
-            <Route path="/overview" component={Overview} />
-            
-        </div>
+        <React.Fragment>
+          <Route exact path="/" component={Transactions} />
+          <Route path="/overview" component={Overview} />
+        </React.Fragment>
       </Router>
     );
   }
