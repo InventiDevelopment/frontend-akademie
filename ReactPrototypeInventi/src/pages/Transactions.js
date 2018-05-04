@@ -12,7 +12,7 @@ import StyledIcon from '../components/StyledIcon';
 import AddTransactionForm from '../components/AddTransactionForm';
 import ToggleButtons from '../components/ToggleButtons';
 import connect from 'react-redux/lib/connect/connect';
-import { setInitialTransactions, addTransaction } from '../actions';
+import { setInitialTransactions, addTransaction, deleteTransactionFromStore } from '../actions';
 
 const defaultNewTransactionState = { value: 0, message: '', type: 'income' };
 
@@ -28,10 +28,7 @@ class Transactions extends Component {
   }
 
   deleteTransaction = (transaction) => {
-    const newTransactions = this.state.stateTransactions.filter(
-      object => JSON.stringify(transaction) !== JSON.stringify(object)
-    )
-    this.setState({ stateTransactions: newTransactions })
+    this.props.deleteTransactionFromStore(transaction);
   }
 
   valueChanged = (event) => {
@@ -103,4 +100,4 @@ const mapStateToProps = (store) => {
   }
 }
 
-export default connect(mapStateToProps, { setInitialTransactions, addTransaction })(Transactions)
+export default connect(mapStateToProps, { setInitialTransactions, addTransaction, deleteTransactionFromStore })(Transactions)

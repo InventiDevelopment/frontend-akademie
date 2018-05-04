@@ -1,4 +1,4 @@
-import { ADD_TRANSACTION, INIT_TRANSACTION } from "../actions";
+import { ADD_TRANSACTION, INIT_TRANSACTION, DElETE_TRANSACTION } from "../actions";
 
 export default (state = [], action) => {
   switch (action.type) {
@@ -10,6 +10,11 @@ export default (state = [], action) => {
 
     case INIT_TRANSACTION:
       return action.data
+
+    case DElETE_TRANSACTION:
+      return state.filter(
+        object => JSON.stringify(action.data) !== JSON.stringify(object)
+      )
 
     default:
       return state;
