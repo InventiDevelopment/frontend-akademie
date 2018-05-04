@@ -54,6 +54,7 @@
   "private": true,
   "dependencies": {
     "moment": "^2.22.0",
-    "normalize.css": "^8.0.0"
+    "normalize.css": "^8.0.0",
+    "react-router": "^4.2.0"
   }
 }
