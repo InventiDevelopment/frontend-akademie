@@ -4,8 +4,18 @@ import {
     Route,
     Link
 } from 'react-router-dom';
+import styled from 'styled-components';
 import TransactionList from './components/TransactionList';
 import Overview from './components/Overview';
+
+const Navigation = styled.div`
+  width: 45%;
+  padding: 5pt;
+  display: inline-block;
+  text-align: center;
+  border: 1px solid black;
+  margin: 2.5%;
+`;
 
 class App extends Component {
   render () {
@@ -19,8 +29,12 @@ class App extends Component {
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
         <p>
-          <Link to="/">Transakce</Link>
-          <Link to="/overview">Přehled</Link>
+          <Navigation>
+            <Link to="/">Transakce</Link>
+          </Navigation>
+          <Navigation>
+            <Link to="/overview">Přehled</Link>
+          </Navigation>
         </p>
         <Route exact path="/" component={TransactionList} />          
         <Route path="/overview" component={Overview} />          

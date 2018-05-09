@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const ButtonRoot = styled.button`
-    display: inline-block;
+    display: block;
     background-image: none;
     background-color: lightgreen;
     color: green;

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-//  import Button from './Button';
+import Button from './Button';
 
 const TransactionRoot = styled.div`
     margin-bottom: 6px;
@@ -9,19 +9,21 @@ const TransactionRoot = styled.div`
     justify-content: space-between;
     background-color: white;
 `;
+/*const SecondRow = styled.div`
+    border: 1px solid black;
+
+`;*/
 
 export default ({data, expanded, toggleExpanded, deleteTransaction}) => (
-    <TransactionRoot>
-        <li>
-            <div onClick={toggleExpanded}>
-                { data.name }
-                { data.value }
-            </div>
-            { expanded &&  // když je tohle true, tak mi vykresli to dole
-                <div>Jsem vidět
-                    <button onClick={() => deleteTransaction(data)}>Smazat</button>
-                </div>
-            }
-        </li>
+    <TransactionRoot onClick={toggleExpanded}>
+        <div>
+            { data.name }
+        </div>
+        <div>
+            { data.value }
+        </div>
+        { expanded &&  // když je tohle true, tak mi vykresli to dole
+                <Button action={deleteTransaction} data={data} />
+        }
     </TransactionRoot>
 )
