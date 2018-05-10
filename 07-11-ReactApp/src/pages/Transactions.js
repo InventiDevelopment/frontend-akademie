@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 import Modal from 'react-modal/lib/components/Modal';
 import { faChartBar } from '@fortawesome/fontawesome-free-regular';
 import getTime from 'date-fns/get_time';
@@ -12,13 +11,13 @@ import StyledButton from '../components/StyledButton';
 import StyledIcon from '../components/StyledIcon';
 import AddTransactionForm from '../components/AddTransactionForm';
 import ToggleButtons from '../components/ToggleButtons';
-import { setInitialTransactions, addTransaction } from '../actions/';
+import connect from 'react-redux/lib/connect/connect';
+import { setInitialTransactions, addTransaction, deleteTransactionFromStore } from '../actions';
 
 const defaultNewTransactionState = { value: 0, message: '', type: 'income' };
 
- class Transactions extends Component {
+class Transactions extends Component {
   state = {
-    stateTransactions: [],
     modalOpen: false,
     transactionVisibleCategory: 0,
     ...defaultNewTransactionState
@@ -29,10 +28,7 @@ const defaultNewTransactionState = { value: 0, message: '', type: 'income' };
   }
 
   deleteTransaction = (transaction) => {
-    const newTransactions = this.state.stateTransactions.filter(
-      object => JSON.stringify(transaction) !== JSON.stringify(object)
-    )
-    this.setState({ stateTransactions: newTransactions })
+    this.props.deleteTransactionFromStore(transaction);
   }
 
   valueChanged = (event) => {
@@ -86,10 +82,10 @@ const defaultNewTransactionState = { value: 0, message: '', type: 'income' };
           <StyledButton block onClick={() => this.setState({modalOpen: true})}>Add new</StyledButton>
         </Footer>
         <Modal isOpen={modalOpen} onRequestClose={() => this.setState({modalOpen: false})}>
-          <AddTransactionForm value={value} 
-            message={message} 
-            type={type} 
-            valueChanged={this.valueChanged} 
+          <AddTransactionForm value={value}
+            message={message}
+            type={type}
+            valueChanged={this.valueChanged}
             addTransaction={this.addNewTransaction}
           />
         </Modal>
@@ -99,9 +95,9 @@ const defaultNewTransactionState = { value: 0, message: '', type: 'income' };
 }
 
 const mapStateToProps = (store) => {
-   return {
-     transactions: store
-   }
+  return {
+    transactions: store.transactions
+  }
 }
 
-export default connect(mapStateToProps, { setInitialTransactions, addTransaction })(Transactions)
+export default connect(mapStateToProps, { setInitialTransactions, addTransaction, deleteTransactionFromStore })(Transactions)
