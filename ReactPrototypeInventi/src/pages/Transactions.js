@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Modal from 'react-modal/lib/components/Modal';
 import { faChartBar } from '@fortawesome/fontawesome-free-regular';
 import getTime from 'date-fns/get_time';
-import transactions from '../data/transactions';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import TransactionList from '../components/TransactionList';
@@ -12,19 +11,17 @@ import StyledIcon from '../components/StyledIcon';
 import AddTransactionForm from '../components/AddTransactionForm';
 import ToggleButtons from '../components/ToggleButtons';
 import connect from 'react-redux/lib/connect/connect';
-import { setInitialTransactions, addTransaction, deleteTransactionFromStore } from '../actions';
+import { addTransaction, deleteTransactionFromStore } from '../actions';
+import { getfilteredTransactions } from '../reducers/transactions';
+import { getTransactionVisibleFilter } from '../reducers/filter';
+import { setTransactionVisibleCategory } from '../actions';
 
 const defaultNewTransactionState = { value: 0, message: '', type: 'income' };
 
 class Transactions extends Component {
   state = {
     modalOpen: false,
-    transactionVisibleCategory: 0,
     ...defaultNewTransactionState
-  }
-
-  componentDidMount() {
-    this.props.setInitialTransactions(transactions)
   }
 
   deleteTransaction = (transaction) => {
@@ -44,39 +41,23 @@ class Transactions extends Component {
     })
   }
 
-  setTransactinonVisibleCategory = (index) => {
-    this.setState({ transactionVisibleCategory: index });
-  }
-
-  getTransactions = () => {
-    const { transactionVisibleCategory } = this.state;
-    const { transactions } = this.props;
-
-    switch (transactionVisibleCategory) {
-      case 0:
-      default:
-      return transactions;
-
-      case 1:
-      return transactions.filter((transaction) => transaction.type === 'income');
-
-      case 2:
-      return transactions.filter((transaction) => transaction.type === 'expense');
-    }
+  setVisibleCategory = (index) => {
+    this.props.setTransactionVisibleCategory(index)
   }
 
   render() {
-    const { modalOpen, value, message, type, transactionVisibleCategory } = this.state;
+    const { transactions, transactionVisibleCategory } = this.props;
+    const { modalOpen, value, message, type } = this.state;
     return (
       <React.Fragment>
         <Header centered>
-          <ToggleButtons margin="0 20px 0 0" buttonNames={["All", "In", "Out"]} onClick={this.setTransactinonVisibleCategory} activeIndex={transactionVisibleCategory} />
+          <ToggleButtons margin="0 20px 0 0" buttonNames={["All", "In", "Out"]} onClick={this.setVisibleCategory} activeIndex={transactionVisibleCategory} />
           <StyledButton icon onClick={() => this.props.history.push("/overview")}>
             <StyledIcon icon={faChartBar} />
           </StyledButton>
         </Header>
         <Content>
-          <TransactionList transactions={this.getTransactions()} deleteTransaction={this.deleteTransaction} />
+          <TransactionList transactions={transactions} deleteTransaction={this.deleteTransaction} />
         </Content>
         <Footer>
           <StyledButton block onClick={() => this.setState({modalOpen: true})}>Add new</StyledButton>
@@ -96,8 +77,9 @@ class Transactions extends Component {
 
 const mapStateToProps = (store) => {
   return {
-    transactions: store.transactions
+    transactions: getfilteredTransactions(store),
+    transactionVisibleCategory: getTransactionVisibleFilter(store)
   }
 }
 
-export default connect(mapStateToProps, { setInitialTransactions, addTransaction, deleteTransactionFromStore })(Transactions)
+export default connect(mapStateToProps, { addTransaction, deleteTransactionFromStore, setTransactionVisibleCategory })(Transactions)
