@@ -1,13 +1,6 @@
-export const ADD_TRANSACTION = 'ADD_TRANSACTION';
-export const INIT_TRANSACTION = 'INIT_TRANSACTION';
-export const DElETE_TRANSACTION = 'DElETE_TRANSACTION';
+import { api } from "../util/api";
 
-export const addTransaction = (transaction) => {
-  return {
-    type: ADD_TRANSACTION,
-    data: transaction
-  }
-}
+export const INIT_TRANSACTION = 'INIT_TRANSACTION';
 
 export const setInitialTransactions = (data) => {
   return {
@@ -16,9 +9,35 @@ export const setInitialTransactions = (data) => {
   }
 }
 
-export const deleteTransactionFromStore = (transaction) => {
-  return {
-    type: DElETE_TRANSACTION,
-    data: transaction
+export const getAllTransactions = () => {
+  return (dispatch) => {
+    return api.get('/transactions').then(
+      response => {
+        dispatch(setInitialTransactions(response.data))
+      },
+      error => {
+        dispatch(setInitialTransactions({}))
+      }
+    )
+  }
+}
+
+export const deleteTransaction = (transaction) => {
+  return (dispatch) => {
+    return api.delete(`/transactions/${transaction.created}`).then(
+      response => {
+        dispatch(getAllTransactions())
+      }
+    )
+  }
+}
+
+export const apiAddTransaction = (transaction) => {
+  return (dispatch) => {
+    return api.post(`/transactions`, transaction).then(
+      response => {
+        dispatch(getAllTransactions())
+      }
+    )
   }
 }
