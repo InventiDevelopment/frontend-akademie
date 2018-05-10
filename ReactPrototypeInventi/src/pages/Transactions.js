@@ -11,47 +11,36 @@ import StyledButton from '../components/StyledButton';
 import StyledIcon from '../components/StyledIcon';
 import AddTransactionForm from '../components/AddTransactionForm';
 import ToggleButtons from '../components/ToggleButtons';
+import connect from 'react-redux/lib/connect/connect';
+import { setInitialTransactions, addTransaction, deleteTransactionFromStore } from '../actions';
 
 const defaultNewTransactionState = { value: 0, message: '', type: 'income' };
 
-export default class Transactions extends Component {
+class Transactions extends Component {
   state = {
-    stateTransactions: [],
     modalOpen: false,
     transactionVisibleCategory: 0,
     ...defaultNewTransactionState
   }
 
   componentDidMount() {
-    this.setState({ stateTransactions: transactions })
+    this.props.setInitialTransactions(transactions)
   }
 
   deleteTransaction = (transaction) => {
-    const newTransactions = this.state.stateTransactions.filter(
-      object => JSON.stringify(transaction) !== JSON.stringify(object)
-    )
-    this.setState({ stateTransactions: newTransactions })
+    this.props.deleteTransactionFromStore(transaction);
   }
 
   valueChanged = (event) => {
     this.setState({ [event.target.id]: event.target.value })
   }
 
-  addTransaction = () => {
-    this.setState(prevState => {
-      return {
-        ...defaultNewTransactionState,
-        modalOpen: false,
-        stateTransactions: [
-          ...prevState.stateTransactions,
-          {
-            value: parseInt(prevState.value, 0),
-            name: prevState.message,
-            type: prevState.type,
-            created: getTime(new Date())
-          }
-        ]
-      }
+  addNewTransaction = () => {
+    this.props.addTransaction({
+      value: parseInt(this.state.value, 0),
+      name: this.state.message,
+      type: this.state.type,
+      created: getTime(new Date())
     })
   }
 
@@ -60,17 +49,19 @@ export default class Transactions extends Component {
   }
 
   getTransactions = () => {
-    const { transactionVisibleCategory, stateTransactions } = this.state;
+    const { transactionVisibleCategory } = this.state;
+    const { transactions } = this.props;
+
     switch (transactionVisibleCategory) {
       case 0:
       default:
-      return stateTransactions;
+      return transactions;
 
       case 1:
-      return stateTransactions.filter((transaction) => transaction.type === 'income');
+      return transactions.filter((transaction) => transaction.type === 'income');
 
       case 2:
-      return stateTransactions.filter((transaction) => transaction.type === 'expense');
+      return transactions.filter((transaction) => transaction.type === 'expense');
     }
   }
 
@@ -91,14 +82,22 @@ export default class Transactions extends Component {
           <StyledButton block onClick={() => this.setState({modalOpen: true})}>Add new</StyledButton>
         </Footer>
         <Modal isOpen={modalOpen} onRequestClose={() => this.setState({modalOpen: false})}>
-          <AddTransactionForm value={value} 
-            message={message} 
-            type={type} 
-            valueChanged={this.valueChanged} 
-            addTransaction={this.addTransaction} 
+          <AddTransactionForm value={value}
+            message={message}
+            type={type}
+            valueChanged={this.valueChanged}
+            addTransaction={this.addNewTransaction}
           />
         </Modal>
       </React.Fragment>
     )
   }
 }
+
+const mapStateToProps = (store) => {
+  return {
+    transactions: store.transactions
+  }
+}
+
+export default connect(mapStateToProps, { setInitialTransactions, addTransaction, deleteTransactionFromStore })(Transactions)
