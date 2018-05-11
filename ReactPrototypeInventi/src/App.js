@@ -8,6 +8,7 @@ import { createStore } from 'redux';
 import Transactions from './pages/Transactions';
 import Overview from './pages/Overview';
 import rootReducer from './reducers/rootReducer';
+import Balance from './pages/Balance';
 
 const store = createStore(rootReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
@@ -19,6 +20,7 @@ class App extends Component {
         <React.Fragment>
           <Route exact path="/" component={Transactions} />
           <Route path="/overview" component={Overview} />
+          <Route path="/balance" component={Balance} />
         </React.Fragment>
       </Router>
       </Provider>
