@@ -22,12 +22,6 @@ class App extends Component {
     return (
       <Router>
       <div className="page">
-        <header className="App-header">
-          <h1>Welcome to React</h1>
-        </header>
-        <p>
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
         <p>
           <Navigation>
             <Link to="/">Transakce</Link>
