@@ -39,7 +39,7 @@ export const getFilteredTransactions = state => {
 }
 export const getOverview = state => {
   return {
-    "income": getTypedTransactions(state, 'income').reduce((prev, curr) => (prev + curr.value), 0),
+    "income": getTypedTransactions(state, 'income').reduce((prev, curr) => prev + curr.value, 0),
     "expenses": getTypedTransactions(state, 'expense').reduce((prev, curr) => prev + curr.value, 0),
     "total": getTransactions(state).reduce((prev, curr) => curr.type === 'income' ? prev + curr.value : prev - curr.value, 0)
   }
