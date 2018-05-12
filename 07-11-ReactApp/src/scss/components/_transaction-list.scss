@@ -1,36 +1,17 @@
 // #################################
 // ####### TRANSACTION LIST ########
 // #################################
+
 .transaction-list {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    ul {
-        margin: 1rem;
-        padding: 0;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  .transaction {
+    margin-bottom: 6px;
+
+    &:last-of-type {
+      margin-bottom: 0;
     }
-    .select-option-button {
-        background-color: $transaction-btn;
-        color: $option-button-txt;
-        border: none;
-        padding: .5rem;
-        height: 35px;
-        width: 35px;
-        text-transform: uppercase;
-        text-decoration: none;
-        font-weight: 700;
-        border-radius: 8px;
-        .button-add {
-            background-color: $option-button-bg;
-            height: 40px;
-            width: 40px;
-            border-radius: 50%;
-        }
-    }
-    .transaction {
-        margin-bottom: 6px;
-        &:last-of-type {
-            margin-bottom: 0;
-        }
-    }
+  }
 }

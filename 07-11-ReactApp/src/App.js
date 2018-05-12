@@ -1,38 +1,27 @@
 import React, { Component } from 'react';
 import {
   BrowserRouter as Router,
-  Route,
-  Link
+  Route
 } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import TransactionList from './components/TransactionList';
-import Overview from './components/Overview';
-import './scss/app.css';
 import { createStore } from 'redux';
-import transactions from './reducers/transactions';
+import Transactions from './pages/Transactions';
+import Overview from './pages/Overview';
+import rootReducer from './reducers/rootReducer';
+import Balance from './pages/Balance';
 
-const store = createStore(transactions, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+const store = createStore(rootReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
 class App extends Component {
   render() {
     return (
       <Provider store={store}>
       <Router>
-        <div className="page">
-          <header className="App-header">
-            <h1>Peněženka</h1>
-          </header>
-          <main>
-            <div className="select-option">
-              <Link className="select-option-button" to="/">Transakce</Link>
-              <Link className="select-option-button" to="/overview">Přehled</Link>
-            </div>
-            <div className="transaction-list">
-              <Route exact path="/" component={TransactionList} />
-              <Route path="/overview" component={Overview} />
-            </div>
-          </main>
-        </div>
+        <React.Fragment>
+          <Route exact path="/" component={Transactions} />
+          <Route path="/overview" component={Overview} />
+          <Route path="/balance" component={Balance} />
+        </React.Fragment>
       </Router>
       </Provider>
     );

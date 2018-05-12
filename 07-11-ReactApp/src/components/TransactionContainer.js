@@ -3,6 +3,7 @@ import Transaction from './Transaction';
 
 export default class TransactionContainer extends Component {
   state = { expanded: false }
+
   clickHandler = () => {
     this.setState({ expanded: !this.state.expanded })
   }

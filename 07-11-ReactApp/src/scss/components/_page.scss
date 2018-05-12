@@ -4,38 +4,4 @@
 
 .page {
   padding: 20px;
-  background-color: $base-bg;
-  color: $base-text;
-  .App-header {
-    display: flex;
-    justify-content: center;
-  }
-  .select-option {
-    display: flex;
-    justify-content: space-around;
-    .select-option-button {
-      background-color: $option-button-bg;
-      color: $option-button-txt;
-      padding: .5rem;
-      text-transform: uppercase;
-      text-decoration: none;
-      font-weight: 700;
-      border-radius: 8px;
-      margin: 0;
-    }
-  }
-  .button-add {
-    display: flex;
-    justify-content: center;
-    padding: .2rem;
-    margin: 0;
-    .select-option-button{
-      height: 50px;
-      width: 50px;
-      border-radius: 50%;
-    }
-    .fa-plus {
-      font-size: 1.5rem;
-    }
-  }
 }

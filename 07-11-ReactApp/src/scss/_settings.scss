@@ -1,13 +1,10 @@
-// Fonts
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&subset=latin-ext');
-
 // Typography
-$base-font: 'Open Sans', Helvetica, sans-serif;
-$base-font-size: 1rem;
+$base-font: Arial, Helvetica, sans-serif;
+$base-font-size: 16px;
 
 // App
-$base-bg: #4dd0e1;
-$base-text: #000000;
+$base-bg: #E8F0EF;
+$base-text: #707070;
 
 // Page
 $page-header-height: 70px;
@@ -17,11 +14,6 @@ $page-content-padding: 20px;
 $global-border-radius: 5px;
 
 // Components:
-$option-button-bg: #88ffff;
-$option-button-txt: #000000;
-$transaction-bg: #009faf;
-$transaction-txt: #000000;
-$transaction-btn: #c75b39;
 
 // Buttons
 $btn-primary-gradient-from: #977490;
