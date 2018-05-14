@@ -1,10 +1,9 @@
 import React from 'react';
 import Modal from 'react-modal';
-import transactions from '../data/transactions';
-import TransactionContainer from './TransactionContainer';
+import TransactionContainer from '../components/TransactionContainer';
 
-export default class TransactionList extends React.Component {
-    state = { 
+export default ({ transactions, deleteTransaction }) => (
+/*    state = { 
         stateTransactions: [],
         modalOpen: false
     }
@@ -20,6 +19,7 @@ export default class TransactionList extends React.Component {
           this.setState({ stateTransactions: newTransactions })
     }
     
+    
     closeModal = () => {
         this.setState({ modalOpen: false })
     }
@@ -30,7 +30,7 @@ export default class TransactionList extends React.Component {
 
 
     render() {
-        return (
+        return (*/
         <React.Fragment>
             <ul>
                 {
@@ -45,7 +45,7 @@ export default class TransactionList extends React.Component {
                 <input />
             </Modal>
         </React.Fragment>
-    )
-    }
+//    )
+//    }
 
-}
+)

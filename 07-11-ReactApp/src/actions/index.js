@@ -1,6 +1,6 @@
 export const ADD_TRANSACTION = 'ADD_TRANSACTION';
 export const INIT_TRANSACTION = 'INIT_TRANSACTION';
-export const DElETE_TRANSACTION = 'DElETE_TRANSACTION';
+export const DELETE_TRANSACTION = 'DELETE_TRANSACTION';
 
 export const addTransaction = (transaction) => {
   return {
@@ -18,7 +18,7 @@ export const setInitialTransactions = (data) => {
 
 export const deleteTransactionFromStore = (transaction) => {
   return {
-    type: DElETE_TRANSACTION,
+    type: DELETE_TRANSACTION,
     data: transaction
   }
 }
