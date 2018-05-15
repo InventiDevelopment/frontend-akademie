@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3d9f0056-2e49-45a7-b289-b0af86a8147e" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/07-11-ReactApp-Radek-Kubica/.editorconfig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/07-11-ReactApp-Radek-Kubica/.gitignore" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/07-11-ReactApp-Radek-Kubica/README.md" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/07-11-ReactApp-Radek-Kubica/package-lock.json" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/07-11-ReactApp-Radek-Kubica/package.json" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/07-11-ReactApp-Radek-Kubica/public/favicon.ico" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/07-11-ReactApp-Radek-Kubica/public/index.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/07-11-ReactApp-Radek-Kubica/public/manifest.json" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/07-11-ReactApp-Radek-Kubica/src/App.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/07-11-ReactApp-Radek-Kubica/src/components/Transaction.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/07-11-ReactApp-Radek-Kubica/src/components/TransactionContainer.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/07-11-ReactApp-Radek-Kubica/src/components/TransactionList.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/07-11-ReactApp-Radek-Kubica/src/components/addTransaction/AddTransactionPage.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/07-11-ReactApp-Radek-Kubica/src/components/homepage/HomePage.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/07-11-ReactApp-Radek-Kubica/src/components/overview/OverviewPage.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/07-11-ReactApp-Radek-Kubica/src/data/months.json" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/07-11-ReactApp-Radek-Kubica/src/data/overview.json" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/07-11-ReactApp-Radek-Kubica/src/data/transactions.json" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/07-11-ReactApp-Radek-Kubica/src/index.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/07-11-ReactApp-Radek-Kubica/src/registerServiceWorker.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/07-11-ReactApp-Radek-Kubica/src/scss/_base.scss" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/07-11-ReactApp-Radek-Kubica/src/scss/_mixins.scss" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/07-11-ReactApp-Radek-Kubica/src/scss/_settings.scss" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/07-11-ReactApp-Radek-Kubica/src/scss/app.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/07-11-ReactApp-Radek-Kubica/src/scss/app.scss" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/07-11-ReactApp-Radek-Kubica/src/scss/components/_page.scss" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/07-11-ReactApp-Radek-Kubica/src/scss/components/_transaction-list.scss" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/07-11-ReactApp-Radek-Kubica/src/scss/components/_transaction.scss" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="Transaction.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/07-11-ReactApp/src/components/Transaction.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="378">
+              <caret line="14" column="9" lean-forward="false" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
+              <folding>
+                <marker date="1526380302756" expanded="true" signature="7:66" ph="..." />
+                <marker date="1526380302756" expanded="true" signature="375:448" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="months.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/07-11-ReactApp-Radek-Kubica/src/data/months.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TransactionContainer.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/07-11-ReactApp-Radek-Kubica/src/components/TransactionContainer.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="7" column="26" lean-forward="false" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HomePage.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/07-11-ReactApp-Radek-Kubica/src/components/homepage/HomePage.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OverviewPage.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/07-11-ReactApp-Radek-Kubica/src/components/overview/OverviewPage.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AddTransactionPage.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/07-11-ReactApp-Radek-Kubica/src/components/addTransaction/AddTransactionPage.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/07-11-ReactApp-Radek-Kubica/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER">
+    <package-json value="$PROJECT_DIR$/package.json" />
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/07-11-ReactApp-Radek-Kubica/node_modules" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="50" />
+    <option name="y" value="30" />
+    <option name="width" value="1230" />
+    <option name="height" value="994" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>AngularJS</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="frontend-akademie" type="b2602c69:ProjectViewProjectNode" />
+              <item name="frontend-akademie" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="frontend-akademie" type="b2602c69:ProjectViewProjectNode" />
+              <item name="frontend-akademie" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="07-11-ReactApp-Radek-Kubica" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="frontend-akademie" type="b2602c69:ProjectViewProjectNode" />
+              <item name="frontend-akademie" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="07-11-ReactApp-Radek-Kubica" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="frontend-akademie" type="b2602c69:ProjectViewProjectNode" />
+              <item name="frontend-akademie" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="07-11-ReactApp-Radek-Kubica" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="components" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="frontend-akademie" type="b2602c69:ProjectViewProjectNode" />
+              <item name="frontend-akademie" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="07-11-ReactApp-Radek-Kubica" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="components" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="addTransaction" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="frontend-akademie" type="b2602c69:ProjectViewProjectNode" />
+              <item name="frontend-akademie" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="07-11-ReactApp-Radek-Kubica" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="components" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="homepage" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="frontend-akademie" type="b2602c69:ProjectViewProjectNode" />
+              <item name="frontend-akademie" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="07-11-ReactApp-Radek-Kubica" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="components" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="overview" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="frontend-akademie" type="b2602c69:ProjectViewProjectNode" />
+              <item name="frontend-akademie" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="ReactPrototypeInventi" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="frontend-akademie" type="b2602c69:ProjectViewProjectNode" />
+              <item name="frontend-akademie" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="ReactPrototypeInventi" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="frontend-akademie" type="b2602c69:ProjectViewProjectNode" />
+              <item name="frontend-akademie" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="ReactPrototypeInventi" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="components" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="frontend-akademie" type="b2602c69:ProjectViewProjectNode" />
+              <item name="frontend-akademie" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="ReactPrototypeInventi" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="pages" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="settings.editor.selected.configurable" value="database.main" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="C:\Users\rk185291\frontendAkademie\git\frontend-akademie\node_modules\eslint" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.selected.package.standard" value="C:\Users\rk185291\frontendAkademie\git\frontend-akademie\node_modules\eslint" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\rk185291\frontendAkademie\git\frontend-akademie" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3d9f0056-2e49-45a7-b289-b0af86a8147e" name="Default" comment="" />
+      <created>1526380183649</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1526380183649</updated>
+      <workItem from="1526380184941" duration="3587000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="3587000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="89" y="-9" width="1840" height="1098" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24972558" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/07-11-ReactApp/src/components/Transaction.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="14" column="9" lean-forward="false" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
+          <folding>
+            <marker date="1526380302756" expanded="true" signature="7:66" ph="..." />
+            <marker date="1526380302756" expanded="true" signature="375:448" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/07-11-ReactApp-Radek-Kubica/src/data/months.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/07-11-ReactApp-Radek-Kubica/src/components/TransactionContainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="7" column="26" lean-forward="false" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/07-11-ReactApp-Radek-Kubica/src/components/homepage/HomePage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/07-11-ReactApp-Radek-Kubica/src/components/overview/OverviewPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/07-11-ReactApp-Radek-Kubica/src/components/addTransaction/AddTransactionPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/07-11-ReactApp-Radek-Kubica/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
