@@ -6,7 +6,7 @@ import TransactionValue from '../TransactionValue';
 
 const OverviewRoot = styled.div`
   margin: 20px 0;
-  padding: 20px 10px;  
+  padding: 20px 10px;
   border: 1px solid ${ border };
   border-radius: 4px;
   background-color: ${ white };
