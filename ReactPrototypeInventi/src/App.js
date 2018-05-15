@@ -9,6 +9,7 @@ import Transactions from './pages/Transactions';
 import Overview from './pages/Overview';
 import rootReducer from './reducers/rootReducer';
 import Balance from './pages/Balance';
+import initTransactions from './hoc/initTransactions';
 
 const store = createStore(rootReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
@@ -18,8 +19,8 @@ class App extends Component {
       <Provider store={store}>
       <Router>
         <React.Fragment>
-          <Route exact path="/" component={Transactions} />
-          <Route path="/overview" component={Overview} />
+          <Route exact path="/" component={initTransactions(Transactions)} />
+          <Route path="/overview" component={initTransactions(Overview)} />
           <Route path="/balance" component={Balance} />
         </React.Fragment>
       </Router>
