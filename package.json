@@ -27,6 +27,7 @@
   },
   "dependencies": {
     "npm": "^6.0.0",
-    "react-modal": "^3.4.4"
+    "react-modal": "^3.4.4",
+    "react-router": "^4.2.0"
   }
 }
