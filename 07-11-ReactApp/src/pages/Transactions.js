@@ -23,10 +23,6 @@ class Transactions extends Component {
     ...defaultNewTransactionState
   }
 
-  componentDidMount() {
-    this.props.setInitialTransactions(transactions)
-  }
-
   deleteTransaction = (transaction) => {
     this.props.deleteTransactionFromStore(transaction);
   }
