@@ -1,14 +1,14 @@
 [
-  "January",
-  "February",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "December"
+  { "month.name":"January" },
+  { "month.name":"February" },
+  { "month.name":"March" },
+  { "month.name":"April" },
+  { "month.name":"May" },
+  { "month.name":"June" },
+  { "month.name":"July" },
+  { "month.name":"August" },
+  { "month.name":"September" },
+  { "month.name":"October" },
+  { "month.name":"November" },
+  { "month.name":"December" }
 ]
