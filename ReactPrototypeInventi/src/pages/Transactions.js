@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Modal from 'react-modal/lib/components/Modal';
 import { faChartBar } from '@fortawesome/fontawesome-free-regular';
 import getTime from 'date-fns/get_time';
-import transactions from '../data/transactions';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import TransactionList from '../components/TransactionList';
@@ -12,7 +11,7 @@ import StyledIcon from '../components/StyledIcon';
 import AddTransactionForm from '../components/AddTransactionForm';
 import ToggleButtons from '../components/ToggleButtons';
 import connect from 'react-redux/lib/connect/connect';
-import { setInitialTransactions, addTransaction, deleteTransactionFromStore, setTransactionVisibility } from '../actions';
+import { addTransactionToBE, deleteTransactionFromBE, setTransactionVisibility } from '../actions';
 import { getFilteredTransactions } from '../reducers/transactions';
 
 const defaultNewTransactionState = { value: 0, message: '', type: 'income' };
@@ -23,12 +22,8 @@ class Transactions extends Component {
     ...defaultNewTransactionState
   }
 
-  componentDidMount() {
-    this.props.setInitialTransactions(transactions)
-  }
-
   deleteTransaction = (transaction) => {
-    this.props.deleteTransactionFromStore(transaction);
+    this.props.deleteTransactionFromBE(transaction.id);
   }
 
   valueChanged = (event) => {
@@ -36,12 +31,15 @@ class Transactions extends Component {
   }
 
   addNewTransaction = () => {
-    this.props.addTransaction({
+    const currentTime = new Date();
+    this.props.addTransactionToBE({
       value: parseInt(this.state.value, 0),
       name: this.state.message,
       type: this.state.type,
-      created: getTime(new Date())
+      created: getTime(currentTime),
+      id: getTime(currentTime)
     })
+    this.setState({ modalOpen: false })
   }
 
   setTransactinonVisibleCategory = (index) => {
@@ -84,5 +82,5 @@ const mapStateToProps = (store) => {
 }
 
 export default connect(mapStateToProps,
-  { setInitialTransactions, addTransaction, deleteTransactionFromStore, setTransactionVisibility }
+  { addTransactionToBE, deleteTransactionFromBE, setTransactionVisibility }
 )(Transactions)
