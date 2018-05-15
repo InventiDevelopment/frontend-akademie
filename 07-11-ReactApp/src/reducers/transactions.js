@@ -20,3 +20,12 @@ export default (state = [], action) => {
       return state;
   }
 }
+
+export const getTransactions = state => state.transaction;
+export const getOverview = state => {
+  return {
+    "income": getTransactions(state).filter(),
+    "expenses": 1000,
+    "total": 500
+  }
+};
