@@ -1,4 +1,8 @@
-# See https://help.github.com/ignore-files/ for more about ignoring files.
+.DS_Store
+npm-debug.log
+node_modules/
+dist/
+LOCAL_*/ut ignoring files.
 
 # dependencies
 /node_modules
