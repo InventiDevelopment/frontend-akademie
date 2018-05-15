@@ -18,7 +18,7 @@ class Overview extends Component {
           <ToggleButtons buttonNames={["Today", "Monthly", "Overall"]} activeIndex={1} />
         </Header>
         <Content>
-          <TransactionOverview overview={overview} />
+          <TransactionOverview overview={overview} onChange={overview} />
         </Content>
         <Footer>
           <StyledButton block onClick={() => history.push("/")}>To homepage</StyledButton>
