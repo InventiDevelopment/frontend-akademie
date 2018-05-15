@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
-import transactions from '../data/transactions';
 import connect from 'react-redux/lib/connect/connect';
-import { setInitialTransactions } from '../actions';
+import { getTransactionData } from '../actions';
 
 export default (WrappedComponent) => {
   class InitTransactions extends Component {
     componentDidMount() {
-      this.props.setInitialTransactions(transactions)
+      this.props.getTransactionData()
     }
 
     render() {
@@ -14,5 +13,5 @@ export default (WrappedComponent) => {
     }
   }
 
-  return connect(null, { setInitialTransactions })(InitTransactions);
+  return connect(null, { getTransactionData })(InitTransactions);
 }
