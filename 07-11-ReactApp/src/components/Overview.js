@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import transactions from '../data/transactions';
 
 const Overview = styled.div`
     margin: 1rem 0;
@@ -16,8 +17,15 @@ const OverviewButtons = styled.button`
     margin: 0 .5rem;
 `;
 
+const getMonth = transactions.created;
+
 export default () => (
-    <Overview> 
+    onChange(event) {
+        this.setState({value: event.target.value});
+      }
+
+
+    <Overview>
         <OverviewButtons>Denní</OverviewButtons>
         <OverviewButtons>Měsíční</OverviewButtons>
         <OverviewButtons>Celkem</OverviewButtons>

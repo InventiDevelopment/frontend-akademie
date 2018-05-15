@@ -37,6 +37,7 @@ export const getFilteredTransactions = state => {
     return getTransactions(state).filter((transaction) => transaction.type === 'expense');
   }
 }
+
 export const getOverview = state => {
   return {
     "income": getTypedTransactions(state, 'income').reduce((prev, curr) => prev + curr.value, 0),
