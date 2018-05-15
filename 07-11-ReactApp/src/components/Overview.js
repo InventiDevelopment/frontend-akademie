@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import MainModal from "./Modal";
+import Dropdown from "./Dropdown";
 
 const Page = styled.div`
     height: 94vh;
@@ -35,6 +36,7 @@ export default class Overview extends React.Component {
                     <div>
                         <Title><h1>Overview</h1></Title>
                         <Box>
+                        <Dropdown />
                         <BalanceValue><p>5 000 Kč</p></BalanceValue>
                         <p>spent today</p>
                         </Box>

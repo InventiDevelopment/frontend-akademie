@@ -7,16 +7,19 @@
   },
   "dependencies": {
     "date-fns": "^1.29.0",
+    "json-server": "^0.12.2",
     "node-sass-chokidar": "^1.2.2",
     "normalize.css": "^8.0.0",
     "npm-run-all": "^4.1.2",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
     "react-modal": "^3.4.4",
+    "react-redux": "^5.0.7",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
     "react-vis": "^1.9.2",
     "reactstrap": "^5.0.0",
+    "redux": "^4.0.0",
     "styled-components": "^3.2.6"
   },
   "scripts": {

@@ -40,48 +40,29 @@ const TransactionUl = styled.div`
     overflow-y: auto;
 `
 
-export default class TransactionList extends React.Component {
-  state = {
-    stateTransactions: [],
-   }
-
-  componentDidMount() {
-    this.setState({ stateTransactions: transactions })
-  }
-
-  deleteTransaction = (transaction) => {
-    const newTransactions = this.state.stateTransactions.filter(
-      object => JSON.stringify(transaction) !== JSON.stringify(object)
-    )
-    this.setState({ stateTransactions: newTransactions })
-  }
-
-  render() {
-    return (
-    <Page>
-    <div>    
-      <React.Fragment>
-        <Title><h1>Transactions</h1></Title>
-        <Box>
-        <TransactionType>
-            <a>ALL</a>
-            <a>INCOME</a>
-            <a>EXPENSES</a>
-        </TransactionType>
-        <TransactionUl>
-        <ul>
-          {
-            this.state.stateTransactions.map((transaction) =>
-              <TransactionContainer data={transaction} deleteTransaction={this.deleteTransaction} />
-            )
-          }
-        </ul>
-        </TransactionUl>
-        </Box>
-      </React.Fragment>
-    <MainModal />
-    </div>
-    </Page>
-    )
-  }
-}
+export default ({ transactions, deleteTransaction }) => (
+      <Page>
+      <div>    
+        <React.Fragment>
+          <Title><h1>Transactions</h1></Title>
+          <Box>
+          <TransactionType>
+              <a>ALL</a>
+              <a>INCOME</a>
+              <a>EXPENSES</a>
+          </TransactionType>
+          <TransactionUl>
+          <ul>
+            {
+              this.state.stateTransactions.map((transaction) =>
+                <TransactionContainer data={transaction} deleteTransaction={this.deleteTransaction} />
+              )
+            }
+          </ul>
+          </TransactionUl>
+          </Box>
+        </React.Fragment>
+      <MainModal />
+      </div>
+      </Page>
+      )

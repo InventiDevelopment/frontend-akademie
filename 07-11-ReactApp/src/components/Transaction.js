@@ -1,5 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
+import parse from 'date-fns/parse';
+import format from 'date-fns/format';
+import { faEraser } from '@fortawesome/fontawesome-free-solid'
+import TransactionValue from "./TransactionValue";
 
 const TransactionRoot = styled.div`
     margin-bottom: 6px;
@@ -9,14 +13,26 @@ const TransactionRoot = styled.div`
     background-color: white;
 `;
 
+const TransactionRow = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  ${({ expanded }) => expanded && `
+  margin-top: 10px;
+    `}
+`;
+
 export default ({ data, expanded, toggleExpanded, deleteTransaction }) => (
-    <TransactionRoot>
-        <div onClick={toggleExpanded}>
-            {data.name}
-            {data.value}
-        </div>
-        { expanded &&
-            <button onClick={() => deleteTransaction(data)}>Delete</button>
-        }
-    </TransactionRoot>
+    <TransactionRoot onClick={toggleExpanded}>
+        <TransactionRow>
+        <div>{data.name}</div>
+        <TransactionValue type={data.type}>{data.value}</TransactionValue>
+        </TransactionRow>
+            {expanded &&
+        <TransactionRow expanded>
+            <div>{format(parse(data.created), 'H:mm DD:MM:YYYY')}</div>
+    </TransactionRow>
+    }
+  </TransactionRoot>
 )

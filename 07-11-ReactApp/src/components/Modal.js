@@ -3,10 +3,11 @@ import Modal from 'react-modal';
 import styled from 'styled-components';
 
 const ModalWindow = styled.div`
-    height: 100px;
+    padding: 10px;
+    height: 400px;
     text-align: center;
-    color: black;
-    background-image: linear-gradient(to bottom left, #2BD3C9, #2786E2);
+    color: white;
+    background-image: linear-gradient(44deg,#3550d9,#b430d1);
 `;
 
 const ModalButton = styled.div`
@@ -15,18 +16,25 @@ const ModalButton = styled.div`
 `
 
 const Title = styled.div`
+    margin: 10px;
     font-size: 0.9rem;
+    text-shadow: 1px 3px 20px rgba(0,0,0,0.2),
+    0px -5px 35px rgba(255,255,255,0);
 `
 
 const FormButtons = styled.div`
     margin: 40px;
-    display: flex;
-    justify-content: space-between;
+
 `;
 
 const EachButton = styled.div`
-    border: 1px solid black;
-    padding: 10px;
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 8px;
+    margin: 10px auto;
+    background-color: white;
+    font-size: 1.1rem;
+
 `;
 
 export default class MainModal extends React.Component {
@@ -46,7 +54,7 @@ export default class MainModal extends React.Component {
         return(
             <footer>
                 <ModalButton><button onClick={this.openModal}><i class="fas fa-plus-circle"></i></button></ModalButton>
-                <Modal isOpen={this.state.modalOpen} onRequestClose={this.closeModal}>
+                <Modal isOpen={this.state.modalOpen} onRequestClose={this.closeModal} shouldCloseOnOverlayClick={true} className="modal">
                 <ModalWindow>
                     <Title><h1>New transaction</h1></Title>
                     <input placeholder="Name"/>
@@ -55,10 +63,11 @@ export default class MainModal extends React.Component {
                     <FormButtons>
                     <EachButton><button>Add</button></EachButton>
                     <EachButton><button>Cancel</button></EachButton>
-                    </FormButtons> 
-                </ModalWindow>       
+                    </FormButtons>    
+                </ModalWindow>  
                 </Modal>
             </footer>
         )
     }
 }
+
