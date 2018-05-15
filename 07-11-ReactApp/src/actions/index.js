@@ -40,7 +40,7 @@ export const getTransactionData = () => {
         dispatch(setInitialTransactions(response.data))
       })
       .catch(error => {
-        dispatch(setInitialTransactions({}))
+        dispatch(setInitialTransactions([]))
       })
   }
 }
