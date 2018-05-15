@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
-import { increment } from './actions'
+import { increment, selectMonth } from './actions'
 import { getBalance } from './reducers';
 
 class Balance extends Component {
@@ -22,4 +22,4 @@ const mapStateToProps = store => {
   }
 }
 
-export default connect(mapStateToProps, { increment })(Balance);
+export default connect(mapStateToProps, { increment, selectMonth })(Balance);

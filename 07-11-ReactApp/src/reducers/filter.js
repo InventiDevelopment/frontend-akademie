@@ -1,4 +1,5 @@
 import { SET_TRANSACTION_VISIBILITY } from "../actions";
+import { SELECT_MONTH } from "../pages/Balance/actions";
 
 export default (state = {}, action) => {
   switch (action.type) {
@@ -6,6 +7,11 @@ export default (state = {}, action) => {
       return {
         ...state,
         transactionVisibility: action.data
+      }
+    case SELECT_MONTH:
+      return {
+        ...state,
+        selectMonth: action.data
       }
 
     default:

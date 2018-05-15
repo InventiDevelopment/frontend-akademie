@@ -1,3 +1,5 @@
+import {api} from "../util/api";
+
 export const ADD_TRANSACTION = 'ADD_TRANSACTION';
 export const INIT_TRANSACTION = 'INIT_TRANSACTION';
 export const DElETE_TRANSACTION = 'DElETE_TRANSACTION';
@@ -28,5 +30,14 @@ export const setTransactionVisibility = (data) => {
   return {
     type: SET_TRANSACTION_VISIBILITY,
     data
+  }
+}
+
+export const getTransactionData = () => {
+  return dispatch => {
+    return api.get('/transactions')
+      .then(response => {
+        dispatch(setInitialTransactions(response.data))
+      })
   }
 }
