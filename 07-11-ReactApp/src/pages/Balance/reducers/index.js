@@ -11,4 +11,3 @@ export default (state = 0, action) => {
 }
 
 export const getBalance = (state) => state.balance;
-export const getMonth = (state) => state.month;

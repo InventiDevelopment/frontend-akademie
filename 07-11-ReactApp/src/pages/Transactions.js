@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Modal from 'react-modal/lib/components/Modal';
 import { faChartBar } from '@fortawesome/fontawesome-free-regular';
 import getTime from 'date-fns/get_time';
-import transactions from '../data/transactions';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import TransactionList from '../components/TransactionList';
@@ -12,7 +11,7 @@ import StyledIcon from '../components/StyledIcon';
 import AddTransactionForm from '../components/AddTransactionForm';
 import ToggleButtons from '../components/ToggleButtons';
 import connect from 'react-redux/lib/connect/connect';
-import { setInitialTransactions, addTransaction, deleteTransactionFromStore, setTransactionVisibility } from '../actions';
+import { addTransaction, deleteTransactionFromStore, setTransactionVisibility } from '../actions';
 import { getFilteredTransactions } from '../reducers/transactions';
 
 const defaultNewTransactionState = { value: 0, message: '', type: 'income' };
@@ -80,5 +79,5 @@ const mapStateToProps = (store) => {
 }
 
 export default connect(mapStateToProps,
-  { setInitialTransactions, addTransaction, deleteTransactionFromStore, setTransactionVisibility }
+  { addTransaction, deleteTransactionFromStore, setTransactionVisibility }
 )(Transactions)

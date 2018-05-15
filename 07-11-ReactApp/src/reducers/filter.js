@@ -14,4 +14,3 @@ export default (state = {}, action) => {
 }
 
 export const getTransactionVisibilityFilter = state => state.filter.transactionVisibility;
-
