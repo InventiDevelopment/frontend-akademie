@@ -1,47 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3d9f0056-2e49-45a7-b289-b0af86a8147e" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/07-11-ReactApp-Radek-Kubica/src/components/homepage/common/header.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/07-11-ReactApp-Radek-Kubica/src/components/menu.js" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/07-11-ReactApp-Radek-Kubica/package-lock.json" afterPath="$PROJECT_DIR$/07-11-ReactApp-Radek-Kubica/package-lock.json" />
-      <change beforePath="$PROJECT_DIR$/07-11-ReactApp-Radek-Kubica/package.json" afterPath="$PROJECT_DIR$/07-11-ReactApp-Radek-Kubica/package.json" />
-      <change beforePath="$PROJECT_DIR$/07-11-ReactApp-Radek-Kubica/src/App.js" afterPath="$PROJECT_DIR$/07-11-ReactApp-Radek-Kubica/src/App.js" />
-      <change beforePath="$PROJECT_DIR$/07-11-ReactApp-Radek-Kubica/src/components/homepage/HomePage.js" afterPath="$PROJECT_DIR$/07-11-ReactApp-Radek-Kubica/src/components/homepage/HomePage.js" />
-      <change beforePath="$PROJECT_DIR$/07-11-ReactApp-Radek-Kubica/src/components/overview/OverviewPage.js" afterPath="$PROJECT_DIR$/07-11-ReactApp-Radek-Kubica/src/components/overview/OverviewPage.js" />
-      <change beforePath="$PROJECT_DIR$/07-11-ReactApp-Radek-Kubica/src/index.js" afterPath="$PROJECT_DIR$/07-11-ReactApp-Radek-Kubica/src/index.js" />
-      <change beforePath="$PROJECT_DIR$/ReactPrototypeInventi/package-lock.json" afterPath="$PROJECT_DIR$/ReactPrototypeInventi/package-lock.json" />
-      <change beforePath="$PROJECT_DIR$/ReactPrototypeInventi/package.json" afterPath="$PROJECT_DIR$/ReactPrototypeInventi/package.json" />
-      <change beforePath="$PROJECT_DIR$/ReactPrototypeInventi/src/scss/app.css" afterPath="$PROJECT_DIR$/ReactPrototypeInventi/src/scss/app.css" />
-      <change beforePath="$PROJECT_DIR$/ReactPrototypeInventiLocalTest/.editorconfig" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ReactPrototypeInventiLocalTest/.gitignore" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ReactPrototypeInventiLocalTest/README.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ReactPrototypeInventiLocalTest/package-lock.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ReactPrototypeInventiLocalTest/package.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ReactPrototypeInventiLocalTest/public/favicon.ico" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ReactPrototypeInventiLocalTest/public/index.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ReactPrototypeInventiLocalTest/public/manifest.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ReactPrototypeInventiLocalTest/src/App.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ReactPrototypeInventiLocalTest/src/components/Transaction.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ReactPrototypeInventiLocalTest/src/components/TransactionContainer.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ReactPrototypeInventiLocalTest/src/components/TransactionList.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ReactPrototypeInventiLocalTest/src/data/months.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ReactPrototypeInventiLocalTest/src/data/overview.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ReactPrototypeInventiLocalTest/src/data/transactions.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ReactPrototypeInventiLocalTest/src/index.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ReactPrototypeInventiLocalTest/src/registerServiceWorker.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ReactPrototypeInventiLocalTest/src/scss/_base.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ReactPrototypeInventiLocalTest/src/scss/_mixins.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ReactPrototypeInventiLocalTest/src/scss/_settings.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ReactPrototypeInventiLocalTest/src/scss/app.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ReactPrototypeInventiLocalTest/src/scss/app.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ReactPrototypeInventiLocalTest/src/scss/components/_page.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ReactPrototypeInventiLocalTest/src/scss/components/_transaction-list.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ReactPrototypeInventiLocalTest/src/scss/components/_transaction.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" afterPath="$PROJECT_DIR$/package-lock.json" />
-      <change beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-    </list>
+    <list default="true" id="3d9f0056-2e49-45a7-b289-b0af86a8147e" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -351,12 +311,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1526380183649</updated>
-      <workItem from="1526380184941" duration="15744000" />
+      <workItem from="1526380184941" duration="15890000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15744000" />
+    <option name="totallyTimeSpent" value="15890000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="89" y="-9" width="1840" height="1098" extended-state="6" />
