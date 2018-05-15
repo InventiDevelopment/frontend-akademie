@@ -3,7 +3,6 @@ import { SET_TRANSACTION_VISIBILITY } from "../actions";
 export default (state = {}, action) => {
   switch (action.type) {
     case SET_TRANSACTION_VISIBILITY:
-      console.log(action);
       return {
         ...state,
         transactionVisibility: action.data
@@ -13,3 +12,5 @@ export default (state = {}, action) => {
       return state;
   }
 }
+
+export const getTransactionVisibilityFilter = state => state.filter.transactionVisibility;

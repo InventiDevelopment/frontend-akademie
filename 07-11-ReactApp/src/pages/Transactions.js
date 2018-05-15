@@ -13,14 +13,13 @@ import AddTransactionForm from '../components/AddTransactionForm';
 import ToggleButtons from '../components/ToggleButtons';
 import connect from 'react-redux/lib/connect/connect';
 import { setInitialTransactions, addTransaction, deleteTransactionFromStore, setTransactionVisibility } from '../actions';
-import { getTransactions } from './../reducers/transactions';
+import { getFilteredTransactions } from '../reducers/transactions';
 
 const defaultNewTransactionState = { value: 0, message: '', type: 'income' };
 
 class Transactions extends Component {
   state = {
     modalOpen: false,
-    transactionVisibleCategory: 0,
     ...defaultNewTransactionState
   }
 
@@ -47,25 +46,6 @@ class Transactions extends Component {
 
   setTransactinonVisibleCategory = (index) => {
     this.props.setTransactionVisibility(index);
-
-    this.setState({ transactionVisibleCategory: index });
-  }
-
-  getTransactions = () => {
-    const { transactionVisibleCategory } = this.state;
-    const { transactions } = this.props;
-
-    switch (transactionVisibleCategory) {
-      case 0:
-      default:
-      return transactions;
-
-      case 1:
-      return transactions.filter((transaction) => transaction.type === 'income');
-
-      case 2:
-      return transactions.filter((transaction) => transaction.type === 'expense');
-    }
   }
 
   render() {
@@ -79,7 +59,7 @@ class Transactions extends Component {
           </StyledButton>
         </Header>
         <Content>
-          <TransactionList transactions={this.getTransactions()} deleteTransaction={this.deleteTransaction} />
+          <TransactionList transactions={this.props.transactions} deleteTransaction={this.deleteTransaction} />
         </Content>
         <Footer>
           <StyledButton block onClick={() => this.setState({modalOpen: true})}>Add new</StyledButton>
@@ -99,10 +79,10 @@ class Transactions extends Component {
 
 const mapStateToProps = (store) => {
   return {
-    transactions: getTransactions(store)
+    transactions: getFilteredTransactions(store)
   }
 }
 
 export default connect(mapStateToProps,
   { setInitialTransactions, addTransaction, deleteTransactionFromStore, setTransactionVisibility }
-  )(Transactions)
+)(Transactions)

@@ -1,14 +1,16 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
-import { increment } from './actions';
+import { increment } from './actions'
 import { getBalance } from './reducers';
 
 class Balance extends Component {
-  render(){
-    return(
+  render() {
+    const { increment, balance } = this.props;
+
+    return (
       <div>
-        <button onClick={this.props.increment}>Ahoj</button>
-        <bold></bold>
+        <button onClick={ increment }>Ahoj</button>
+        <bold>{ balance }</bold>
       </div>
     )
   }
@@ -20,4 +22,4 @@ const mapStateToProps = store => {
   }
 }
 
-export default connect(null, { increment })(Balance);
+export default connect(mapStateToProps, { increment })(Balance);

@@ -27,6 +27,6 @@ export const deleteTransactionFromStore = (transaction) => {
 export const setTransactionVisibility = (data) => {
   return {
     type: SET_TRANSACTION_VISIBILITY,
-    data: data
+    data
   }
 }

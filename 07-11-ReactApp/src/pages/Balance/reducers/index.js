@@ -1,12 +1,13 @@
-import { INCREMENT } from "./../actions";
+import { INCREMENT } from "../actions";
 
 export default (state = 0, action) => {
-  switch (action.type){
+  switch(action.type) {
     case INCREMENT:
       return state + 1;
+
     default:
       return state;
   }
 }
 
-export const getBalance = state => state.balance;
+export const getBalance = (state) => state.balance;

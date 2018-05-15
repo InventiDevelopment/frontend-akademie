@@ -1,8 +1,7 @@
 export const INCREMENT = 'INCREMENT';
 
-export const increment = (transaction) => {
+export const increment = () => {
   return {
     type: INCREMENT,
-    data: transaction
   }
 }
