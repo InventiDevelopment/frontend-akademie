@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import months from '../../data/months';
 import StyledSelect from '../StyledSelect';
-import Overview from '../Overview';
 
 const SelectMonthRoot = styled.div`
   text-align: center;
@@ -15,9 +14,9 @@ const SelectMonthLabel = styled.label`
 export default () => (
   <SelectMonthRoot class="select-month">
     <SelectMonthLabel>Current Month:</SelectMonthLabel>
-    <StyledSelect class="input" onChange = {this.props.onChange}>
+    <StyledSelect class="input">
       {months.map((month, key) => (
-        <option key={key} value={month.value}>{ month.name }</option>
+        <option key={key} value={month}>{ month }</option>
       ))}
     </StyledSelect>
   </SelectMonthRoot>
