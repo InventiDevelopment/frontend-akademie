@@ -14,7 +14,7 @@ const SelectMonthLabel = styled.label`
 export default ({ month }) => (
   <SelectMonthRoot class="select-month">
     <SelectMonthLabel>Current Month:</SelectMonthLabel>
-    <StyledSelect class="input" onChange={this.month}>
+    <StyledSelect class="input" onChange={month}>
       {months.map((month, key) => (
         <option key={key} value={month.value}>{ month.name }</option>
       ))}

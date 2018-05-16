@@ -1,5 +1,6 @@
 import { ADD_TRANSACTION, INIT_TRANSACTION, DElETE_TRANSACTION } from "../actions";
-import { getTransactionVisibilityFilter } from "./filter";
+import { getTransactionVisibilityFilter, getMonthFilter } from "./filter";
+import { getMonth } from "date-fns";
 
 export default (state = [], action) => {
   switch (action.type) {
@@ -38,9 +39,11 @@ export const getFilteredTransactions = state => {
   }
 }
 export const getOverview = state => {
+const filterTransaction = getTransactions(state).filter((transaction) => getMonthFilter(state) == getMonth(transaction.created));
   return {
     "income": getTypedTransactions(state, 'income').reduce((prev, curr) => (prev + curr.value), 0),
     "expenses": getTypedTransactions(state, 'expense').reduce((prev, curr) => prev + curr.value, 0),
     "total": getTransactions(state).reduce((prev, curr) => curr.type === 'income' ? prev + curr.value : prev - curr.value, 0)
   }
 };
+//hodnoty inocome, expences odvijela od transakci - zmena getTypedTransaction

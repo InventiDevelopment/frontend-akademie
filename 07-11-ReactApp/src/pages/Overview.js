@@ -7,8 +7,12 @@ import StyledButton from '../components/StyledButton';
 import ToggleButtons from '../components/ToggleButtons';
 import { connect } from 'react-redux';
 import { getOverview } from '../reducers/transactions';
+import { monthChanged } from '../actions';
 
 class Overview extends Component {
+  monthSelected = (event) => {
+    this.props.monthChanged (event.target.value);
+  }
   render() {
     const { history, overview } = this.props;
 
@@ -18,7 +22,7 @@ class Overview extends Component {
           <ToggleButtons buttonNames={["Today", "Monthly", "Overall"]} activeIndex={1} />
         </Header>
         <Content>
-          <TransactionOverview overview={overview} />
+          <TransactionOverview overview={overview} monthSelected={this.monthSelected} />
         </Content>
         <Footer>
           <StyledButton block onClick={() => history.push("/")}>To homepage</StyledButton>
@@ -34,4 +38,6 @@ const mapStateToProps = store => {
   }
 }
 
-export default connect(mapStateToProps)(Overview);
+export default connect(mapStateToProps,
+  { monthChanged }
+)(Overview);

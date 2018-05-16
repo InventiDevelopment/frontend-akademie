@@ -4,6 +4,7 @@ export const ADD_TRANSACTION = 'ADD_TRANSACTION';
 export const INIT_TRANSACTION = 'INIT_TRANSACTION';
 export const DElETE_TRANSACTION = 'DElETE_TRANSACTION';
 export const SET_TRANSACTION_VISIBILITY = 'SET_TRANSACTION_VISIBILITY';
+export const CHANGED_MONTH = 'CHANGED_MONTH';
 
 export const addTransaction = (transaction) => {
   return {
@@ -29,6 +30,13 @@ export const deleteTransactionFromStore = (transaction) => {
 export const setTransactionVisibility = (data) => {
   return {
     type: SET_TRANSACTION_VISIBILITY,
+    data
+  }
+}
+
+export const monthChanged = (data) => {
+  return {
+    type: CHANGED_MONTH,
     data
   }
 }
