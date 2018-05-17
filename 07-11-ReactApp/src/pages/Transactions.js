@@ -26,6 +26,10 @@ class Transactions extends Component {
     this.props.deleteTransactionFromBE(transaction.id);
   }
 
+  valueChanged = (event) => {
+    this.setState({ [event.target.id]: event.target.value })
+  }
+
   addNewTransaction = () => {
     const currentTime = new Date();
     this.props.addTransactionToBE({
