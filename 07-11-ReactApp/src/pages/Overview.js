@@ -2,10 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 import SelectMonth from '../components/SelectMonth';
 import OverviewTotal from '../components/OverviewTotal';
+import OverviewButtons from '../components/OverviewButtons';
 import {connect} from 'react-redux';
 import {setSelectedMonth, setTransactionTimePeriod} from '../actions'
 import { getOverview } from '../reducers/transactions';
-import FilterButton from '../components/FilterButton';
 import {periodVisibilityFilter} from '../reducers/filter'
 
 const Section = styled.section`
@@ -37,7 +37,7 @@ class Overview extends React.Component {
           {this.props.index === 0?<SelectMonth newValue={this.newValue} setMonth={this.setMonth}/>:
           <div></div>}
         </Section>
-        <FilterButton buttonNames={["Monthly", "Daily", "Yearly"]} onClick ={this.setTransactionPeriod}/>
+        <OverviewButtons buttonNames={["Monthly", "Daily", "Yearly"]} onClick ={this.setTransactionPeriod}/>
       </React.Fragment>
     )
   }

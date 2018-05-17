@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c33d1e60-e537-45bc-89cc-06e3586bafd0" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/07-11-ReactApp/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/07-11-ReactApp/db.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/07-11-ReactApp/src/actions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/07-11-ReactApp/src/actions/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/07-11-ReactApp/src/components/FilterButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/07-11-ReactApp/src/components/FilterButton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/07-11-ReactApp/src/components/OverviewType.js" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/07-11-ReactApp/src/components/OverviewButtons.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/07-11-ReactApp/src/pages/Overview.js" beforeDir="false" afterPath="$PROJECT_DIR$/07-11-ReactApp/src/pages/Overview.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/07-11-ReactApp/src/pages/TransactionPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/07-11-ReactApp/src/pages/TransactionPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/07-11-ReactApp/src/reducers/filter.js" beforeDir="false" afterPath="$PROJECT_DIR$/07-11-ReactApp/src/reducers/filter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/07-11-ReactApp/src/reducers/transactions.js" beforeDir="false" afterPath="$PROJECT_DIR$/07-11-ReactApp/src/reducers/transactions.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -54,8 +47,20 @@
       <file leaf-file-name="Overview.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/07-11-ReactApp/src/pages/Overview.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="406">
-              <caret line="49" column="92" lean-forward="true" selection-start-line="49" selection-start-column="92" selection-end-line="49" selection-end-column="92" />
+            <state relative-caret-position="208">
+              <caret line="39" column="24" selection-start-line="39" selection-start-column="24" selection-end-line="39" selection-end-column="24" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OverviewButtons.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/07-11-ReactApp/src/components/OverviewButtons.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="429">
+              <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -67,7 +72,7 @@
         <entry file="file://$PROJECT_DIR$/07-11-ReactApp/src/components/FilterButton.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="369">
-              <caret line="53" column="85" selection-start-line="53" selection-start-column="85" selection-end-line="53" selection-end-column="85" />
+              <caret line="53" column="85" selection-end-line="59" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -141,7 +146,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/07-11-ReactApp/src/components/AddButton.js" />
         <option value="$PROJECT_DIR$/07-11-ReactApp/src/components/ConfirmModal.js" />
         <option value="$PROJECT_DIR$/07-11-ReactApp/src/components/EditModal.js" />
         <option value="$PROJECT_DIR$/07-11-ReactApp/src/components/OverviewText.js" />
@@ -191,6 +195,7 @@
         <option value="$PROJECT_DIR$/07-11-ReactApp/src/actions/index.js" />
         <option value="$PROJECT_DIR$/07-11-ReactApp/src/reducers/filter.js" />
         <option value="$PROJECT_DIR$/07-11-ReactApp/src/reducers/transactions.js" />
+        <option value="$PROJECT_DIR$/07-11-ReactApp/src/components/OverviewButtons.js" />
         <option value="$PROJECT_DIR$/07-11-ReactApp/src/pages/Overview.js" />
       </list>
     </option>
@@ -388,7 +393,7 @@
       <workItem from="1526522191846" duration="1724000" />
       <workItem from="1526525668198" duration="28000" />
       <workItem from="1526526849768" duration="483000" />
-      <workItem from="1526559983896" duration="4727000" />
+      <workItem from="1526559983896" duration="5092000" />
     </task>
     <task id="LOCAL-00001" summary="7. akademie">
       <created>1524592895894</created>
@@ -460,11 +465,18 @@
       <option name="project" value="LOCAL" />
       <updated>1526561381496</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="&quot;added more overview filtering&quot;">
+      <created>1526569648294</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1526569648294</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="145944000" />
+    <option name="totallyTimeSpent" value="146309000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -476,7 +488,7 @@
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.24525547" />
       <window_info id="npm" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.084671535" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.24963504" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29127517" />
       <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
@@ -535,7 +547,8 @@
     <MESSAGE value="&quot;select month, edit transaction&quot;" />
     <MESSAGE value="&quot;fixed editing&quot;" />
     <MESSAGE value="&quot;fixed editing bug&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;fixed editing bug&quot;" />
+    <MESSAGE value="&quot;added more overview filtering&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;added more overview filtering&quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -543,13 +556,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/07-11-ReactApp/src/reducers/transactions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="50" column="1" selection-start-line="50" selection-start-column="1" selection-end-line="50" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/07-11-ReactApp/src/scss/app.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
@@ -738,16 +744,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/07-11-ReactApp/src/components/FilterButton.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="53" column="85" selection-start-line="53" selection-start-column="85" selection-end-line="53" selection-end-column="85" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/07-11-ReactApp/src/pages/TransactionPage.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -782,10 +778,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/07-11-ReactApp/src/components/FilterButton.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="369">
+          <caret line="53" column="85" selection-end-line="59" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/07-11-ReactApp/src/components/OverviewButtons.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="429">
+          <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/07-11-ReactApp/src/pages/Overview.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="49" column="92" lean-forward="true" selection-start-line="49" selection-start-column="92" selection-end-line="49" selection-end-column="92" />
+        <state relative-caret-position="208">
+          <caret line="39" column="24" selection-start-line="39" selection-start-column="24" selection-end-line="39" selection-end-column="24" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
