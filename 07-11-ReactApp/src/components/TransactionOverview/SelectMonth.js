@@ -16,7 +16,7 @@ export default ({onChange}) => (
     <SelectMonthLabel>Current Month:</SelectMonthLabel>
     <StyledSelect class="input" onChange={onChange}>
       {months.map((month, key) => (
-        <option key={key} value={month}>{ month }</option>
+        <option key={key} value={month.id}>{ month.month }</option>
       ))}
     </StyledSelect>
   </SelectMonthRoot>

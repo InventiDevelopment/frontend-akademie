@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import Modal from 'react-modal/lib/components/Modal';
 import { faChartBar } from '@fortawesome/fontawesome-free-regular';
-import getTime from 'date-fns/get_time';
-import transactions from '../data/transactions';
+//import getTime from 'date-fns/get_time';
+//import transactions from '../data/transactions';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import TransactionList from '../components/TransactionList';
@@ -12,7 +12,7 @@ import StyledIcon from '../components/StyledIcon';
 import AddTransactionForm from '../components/AddTransactionForm';
 import ToggleButtons from '../components/ToggleButtons';
 import connect from 'react-redux/lib/connect/connect';
-import { setInitialTransactions, addTransaction, addTransactionToBE, deleteTransactionFromBE, setTransactionVisibility } from '../actions';
+import { setInitialTransactions, addTransactionToBE, deleteTransactionFromBE, setTransactionVisibility } from '../actions';
 import { getFilteredTransactions } from '../reducers/transactions';
 
 const defaultNewTransactionState = { value: 0, message: '', type: 'income' };
@@ -24,7 +24,7 @@ class Transactions extends Component {
   }
 
   deleteTransaction = (transaction) => {
-    this.props.deleteTransactionFromStore(transaction);
+    this.props.deleteTransactionFromBE(transaction.id);
   }
 
   valueChanged = (event) => {
@@ -40,6 +40,7 @@ class Transactions extends Component {
       created: currentTime,
       id: currentTime
     })
+    this.setState({ modalOpen: false })
   }
 
   setTransactinonVisibleCategory = (index) => {
@@ -82,5 +83,5 @@ const mapStateToProps = (store) => {
 }
 
 export default connect(mapStateToProps,
-  { setInitialTransactions, addTransaction, addTransactionToBE, deleteTransactionFromBE, setTransactionVisibility }
+  { setInitialTransactions, addTransactionToBE, deleteTransactionFromBE, setTransactionVisibility }
 )(Transactions)

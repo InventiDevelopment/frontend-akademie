@@ -41,12 +41,11 @@ export const getTransactionData = () => {
       })
       .catch(error => {
         dispatch(setInitialTransactions([]))
-<<<<<<< HEAD
-=======
       })
   }
 }
 
+/*
 export const addTransactionToBE = (transaction) => {
   return dispatch => {
     return api.post(`/transactions`, transaction)
@@ -54,14 +53,13 @@ export const addTransactionToBE = (transaction) => {
         dispatch(getTransactionData())
       })
   }
-}
+}*/
 
 export const deleteTransactionFromBE = (transactionId) => {
   return dispatch => {
     return api.delete(`/transactions/${transactionId}`)
       .then(response => {
         dispatch(getTransactionData())
->>>>>>> master
       })
   }
 }
