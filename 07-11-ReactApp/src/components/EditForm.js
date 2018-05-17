@@ -3,6 +3,7 @@ import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 import Modal from 'react-modal';
 import faClose from '@fortawesome/fontawesome-free-solid/faTimes';
 import styled from 'styled-components';
+import moment from 'moment/moment'
 
 
 const ModalInside = styled.div`
@@ -71,9 +72,10 @@ const Select = styled.select`
 `
 
 export default class EditForm extends React.Component{
-  saveAction = () => {
+  saveAction = (transaction, title, val, created) => {
     this.props.closeModal()
-    this.props.editTransaction(this.props.data)
+    const date = moment(new Date(created)).format(created.format || 'HH:mm DD. MM. YYYY')
+    this.props.editTransaction(transaction, title, val, created)
   }
 
   render(){
@@ -103,7 +105,7 @@ export default class EditForm extends React.Component{
             </Select>
           </FormItem>
           <ModalButton>
-            <SaveButton onClick={() => this.saveAction()}>Save</SaveButton>
+            <SaveButton onClick={() => this.saveAction(data, data.name, data.value, data.created)}>Save</SaveButton>
             <CloseButton onClick={closeModal}><FontAwesomeIcon icon={faClose}/></CloseButton>
           </ModalButton>
         </ModalInside>

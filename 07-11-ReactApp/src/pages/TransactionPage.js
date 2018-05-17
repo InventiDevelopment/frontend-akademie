@@ -79,15 +79,23 @@ class TransactionPage extends React.Component {
   }
 
 
-  editTransaction = (transaction)=> {
+  editTransaction = (transaction, name, value, created)=> {
+    let title = name;
+    let val = value;
+    let date = created;
+    this.state.name === ''? title = title: title = this.state.name;
+    this.state.value === 0? val = val: val = this.state.value;
+    this.state.date === ''? date = date: date = this.state.created;
     this.props.editTransactionInBE({
-      name: this.state.name,
-      value: parseInt(this.state.value, 0),
+      name: title,
+      value: parseInt(val),
       type: this.state.type,
-      created: this.state.created,
+      created: date,
       id: transaction.id
-    })
-}
+      }
+    )
+    }
+
 
   setTransactionVisible = (index) => {
     this.props.setTransactionVisibility(index);
