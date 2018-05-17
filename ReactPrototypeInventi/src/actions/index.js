@@ -35,12 +35,30 @@ export const setTransactionVisibility = (data) => {
 
 export const getTransactionData = () => {
   return dispatch => {
-    return api.get('/transactions')
+    return api.get(`/transactions`)
       .then(response => {
         dispatch(setInitialTransactions(response.data))
       })
       .catch(error => {
-        dispatch(setInitialTransactions({}))
+        dispatch(setInitialTransactions([]))
+      })
+  }
+}
+
+export const addTransactionToBE = (transaction) => {
+  return dispatch => {
+    return api.post(`/transactions`, transaction)
+      .then(response => {
+        dispatch(getTransactionData())
+      })
+  }
+}
+
+export const deleteTransactionFromBE = (transactionId) => {
+  return dispatch => {
+    return api.delete(`/transactions/${transactionId}`)
+      .then(response => {
+        dispatch(getTransactionData())
       })
   }
 }
