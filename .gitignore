@@ -3,4 +3,4 @@ npm-debug.log
 node_modules/
 dist/
 LOCAL_*/
-.idea/
+.idea
