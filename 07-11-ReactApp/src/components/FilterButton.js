@@ -42,8 +42,8 @@ export default class FilterButton extends React.Component{
   setActive = (key) => {
     activeIndex = key
   }
-  setVisibility = (key) => {
-    this.props.setTransactionVisibility(key)
+  setOnClickAction= (key) => {
+    this.props.onClick(key)
     this.setActive(key)
 
 }
@@ -51,7 +51,7 @@ export default class FilterButton extends React.Component{
     return(
       <ButtonDiv>
         {this.props.buttonNames.map((name, key) => (
-          <Button  active={activeIndex === key} onClick={() => this.setVisibility(key)}>{name}</Button>
+          <Button  active={activeIndex === key} onClick={() => this.setOnClickAction(key)}>{name}</Button>
         ))}
       </ButtonDiv>
     )

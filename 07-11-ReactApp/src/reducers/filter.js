@@ -1,4 +1,4 @@
-import {SET_VISIBILITY, SET_MONTH} from '../actions'
+import {SET_VISIBILITY, SET_MONTH, SET_PERIOD} from '../actions'
 
 export default (state = {}, action) => {
   switch (action.type){
@@ -9,9 +9,15 @@ export default (state = {}, action) => {
       }
 
     case SET_MONTH:
+    return{
+      ...state,
+      monthVisibility: action.data
+    }
+
+    case SET_PERIOD:
       return{
         ...state,
-        monthVisibility: action.data
+        periodVisibility: action.data
       }
 
     default:
@@ -21,5 +27,7 @@ export default (state = {}, action) => {
 
 export const transactionVisibilityFilter = state => state.filter.transactionVisibility;
 export const monthVisibilityFilter = state => (state.filter.monthVisibility === undefined) ? 0 : state.filter.monthVisibility;
+export const periodVisibilityFilter = state => state.filter.periodVisibility;
+
 
 

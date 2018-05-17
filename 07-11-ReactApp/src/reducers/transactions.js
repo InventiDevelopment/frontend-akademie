@@ -1,6 +1,6 @@
 import { INIT_TRANSACTION} from "../actions";
-import { transactionVisibilityFilter, monthVisibilityFilter} from "./filter";
-import { getMonth } from 'date-fns'
+import { transactionVisibilityFilter, monthVisibilityFilter, periodVisibilityFilter} from "./filter";
+import { getDay, getMonth } from 'date-fns'
 
 export default (state = [], action) => {
   switch (action.type) {
@@ -13,10 +13,15 @@ export default (state = [], action) => {
 
   }
 }
-
+const currentDay = getDay(new Date())
 export const getTransactions = state => state.transactions;
 const getMonthTransaction = (state) => state.transactions.filter((transaction) => getMonth(transaction.created) === (monthVisibilityFilter(state)))
-const getTypedTransactions = (state, transactionType) => getMonthTransaction(state).filter((transaction) => transaction.type === transactionType)
+const getTypedTransactions = (state, transactionType) => getTransactions(state).filter((transaction) => transaction.type === transactionType)
+const getTypedMonthTransactions = (state, transactionType) => getMonthTransaction(state).filter((transaction) => transaction.type === transactionType)
+const getTodayTransactions = (state) => state.transactions.filter((transaction) => getDay(transaction.created) === currentDay);
+const getTodayTypedTransactions = (state, transactionType) => getTodayTransactions(state).filter((transaction) => transaction.type === transactionType)
+
+
 
 
 
@@ -37,11 +42,29 @@ export const getFilteredTransactions = state => {
 
 
 export const getOverview = state => {
-  return {
-    "income": getTypedTransactions(state, 'income').reduce((prev, curr) => (prev + curr.value), 0),
-    "expenses": getTypedTransactions(state, 'expense').reduce((prev, curr) => prev + curr.value, 0),
-    "total": getMonthTransaction(state).reduce((prev, curr) => curr.type === 'income' ? prev + curr.value : prev - curr.value, 0)
+  switch (periodVisibilityFilter(state)){
+    case 0:
+    default:
+      return {
+        "income": getTypedMonthTransactions(state, 'income').reduce((prev, curr) => (prev + curr.value), 0),
+        "expenses": getTypedMonthTransactions(state, 'expense').reduce((prev, curr) => prev + curr.value, 0),
+        "total": getMonthTransaction(state).reduce((prev, curr) => curr.type === 'income' ? prev + curr.value : prev - curr.value, 0)
+      }
+    case 1:
+      return {
+        "income": getTodayTypedTransactions(state, 'income').reduce((prev, curr) => (prev + curr.value), 0),
+        "expenses": getTodayTypedTransactions(state, 'expense').reduce((prev, curr) => prev + curr.value, 0),
+        "total": getTodayTransactions(state).reduce((prev, curr) => curr.type === 'income' ? prev + curr.value : prev - curr.value, 0)
+      }
+    case 2:
+      return {
+        "income": getTypedTransactions(state, 'income').reduce((prev, curr) => (prev + curr.value), 0),
+        "expenses": getTypedTransactions(state, 'expense').reduce((prev, curr) => prev + curr.value, 0),
+        "total": getTransactions(state).reduce((prev, curr) => curr.type === 'income' ? prev + curr.value : prev - curr.value, 0)
+      }
+
   }
+
 };
 
 export const getTotal = state => {

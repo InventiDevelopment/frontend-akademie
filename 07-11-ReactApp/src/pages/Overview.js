@@ -1,11 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
-import OverviewType from '../components/OverviewType';
 import SelectMonth from '../components/SelectMonth';
 import OverviewTotal from '../components/OverviewTotal';
 import {connect} from 'react-redux';
-import {setSelectedMonth} from '../actions'
+import {setSelectedMonth, setTransactionTimePeriod} from '../actions'
 import { getOverview } from '../reducers/transactions';
+import FilterButton from '../components/FilterButton';
+import {periodVisibilityFilter} from '../reducers/filter'
 
 const Section = styled.section`
   margin-top: 11vh;
@@ -23,15 +24,20 @@ class Overview extends React.Component {
     this.props.setSelectedMonth(month);
   }
 
+  setTransactionPeriod = (index) => {
+    this.props.setTransactionTimePeriod(index);
+  }
+
   render(){
     return(
       <React.Fragment>
         <Section>
           <Line/>
           <OverviewTotal overview={this.props.overview}/>
-          <SelectMonth newValue={this.newValue} setMonth={this.setMonth}/>
+          {this.props.index === 0?<SelectMonth newValue={this.newValue} setMonth={this.setMonth}/>:
+          <div></div>}
         </Section>
-        <OverviewType/>
+        <FilterButton buttonNames={["Monthly", "Daily", "Yearly"]} onClick ={this.setTransactionPeriod}/>
       </React.Fragment>
     )
   }
@@ -41,7 +47,8 @@ class Overview extends React.Component {
 const mapStateToProps = store => {
   return {
     overview: getOverview(store),
+    index: (periodVisibilityFilter(store) === undefined) ? 0 : periodVisibilityFilter(store)
   }
 }
 
-export default connect(mapStateToProps, {setSelectedMonth})(Overview);
+export default connect(mapStateToProps, {setSelectedMonth, setTransactionTimePeriod})(Overview);

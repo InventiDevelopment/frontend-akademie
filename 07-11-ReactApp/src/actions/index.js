@@ -2,7 +2,9 @@ import {api} from '../util/api';
 
 export const INIT_TRANSACTION = 'INIT_TRANSACTION';
 export const SET_VISIBILITY = 'SET_TRANSACTION_VISIBILITY';
-export const SET_MONTH = 'SET_MONTH'
+export const SET_MONTH = 'SET_MONTH';
+export const SET_PERIOD = 'SET_PERIOD';
+
 
 
 export const setInitialTransactions = (data) => {
@@ -23,6 +25,13 @@ export const setTransactionVisibility = (data) => {
 export const setSelectedMonth = (data) => {
   return {
     type: SET_MONTH,
+    data
+  }
+}
+
+export const setTransactionTimePeriod = (data) => {
+  return {
+    type: SET_PERIOD,
     data
   }
 }

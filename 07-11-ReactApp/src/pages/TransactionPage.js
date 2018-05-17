@@ -109,7 +109,7 @@ class TransactionPage extends React.Component {
             <TopSection>
               <Line/>
               <TotalBalance overview={this.props.overview}/>
-              <FilterButton buttonNames={["All", "Income", "Expenses"]} setTransactionVisibility={this.setTransactionVisible}/>
+              <FilterButton buttonNames={["All", "Income", "Expenses"]} onClick={this.setTransactionVisible}/>
             </TopSection>
             <TransactionList transactions={this.props.transactions}
                              deleteTransaction={this.deleteTransaction}
@@ -118,7 +118,7 @@ class TransactionPage extends React.Component {
                              value={this.state.value}
                              type={this.state.type}
                              created={this.state.created}
-                             newValue={this.newValue}/>/>
+                             newValue={this.newValue}/>
           </div>
         </Section>
         <AddButton openModal={this.openAddModal}/>
