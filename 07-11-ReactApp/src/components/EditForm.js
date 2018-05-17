@@ -72,10 +72,9 @@ const Select = styled.select`
 `
 
 export default class EditForm extends React.Component{
-  saveAction = (transaction, title, val, created) => {
+  saveAction = (transaction, title, val) => {
     this.props.closeModal()
-    const date = moment(new Date(created)).format(created.format || 'HH:mm DD. MM. YYYY')
-    this.props.editTransaction(transaction, title, val, created)
+    this.props.editTransaction(transaction, title, val)
   }
 
   render(){
@@ -95,7 +94,8 @@ export default class EditForm extends React.Component{
           </FormItem>
           <FormItem>
             <label>Date created</label>
-            <ModalInput id="created" onChange={newValue} defaultValue={data.created}  type="datetime-local"></ModalInput>
+            <ModalInput id="created" onChange={newValue} type="datetime-local">
+            </ModalInput>
           </FormItem>
           <FormItem>
             <span>Type</span>

@@ -55,46 +55,37 @@ class TransactionPage extends React.Component {
   }
 
   addTransaction = ()=>{
+    let date = this.state.created;
+    if(date === '') date = getTime(new Date())
     if(this.state.name !== '') {
-      if(this.state.created === ''){
-        this.props.addTransactionToBE({
-          name: this.state.name,
-          value: parseInt(this.state.value, 0),
-          type: this.state.type,
-          created: getTime(new Date()),
-          id: getTime(new Date())
-        })
-      }
-      else {
       this.props.addTransactionToBE({
         name: this.state.name,
         value: parseInt(this.state.value, 0),
         type: this.state.type,
-        created: this.state.created,
+        created: date,
         id: this.state.created
       })
-      }
-      this.setState({addModalOpen: false})}
+      this.setState({addModalOpen: false})
+      this.setState({...transactionState})}
     else alert("Please fill out all fields")
   }
 
 
-  editTransaction = (transaction, name, value, created)=> {
-    let title = name;
-    let val = value;
-    let date = created;
-    this.state.name === ''? title = title: title = this.state.name;
-    this.state.value === 0? val = val: val = this.state.value;
-    this.state.date === ''? date = date: date = this.state.created;
+  editTransaction = (transaction, name, value)=> {
+    let title = this.state.name;
+    let val = this.state.value;
+    let date = this.state.created;
+    if(title === '') title = name;
+    if(val === 0) val = value;
+    if(date === '') date = getTime(new Date());
     this.props.editTransactionInBE({
       name: title,
-      value: parseInt(val),
+      value: parseInt(val, 0),
       type: this.state.type,
       created: date,
       id: transaction.id
-      }
-    )
-    }
+      })
+    this.setState({...transactionState})}
 
 
   setTransactionVisible = (index) => {
@@ -152,4 +143,5 @@ const mapStateToProps = (store) => {
     overview: getTotal(store)
   }
 }
-export default connect(mapStateToProps, {addTransactionToBE, editTransactionInBE, deleteTransactionFromBE, setTransactionVisibility})(TransactionPage)
+export default connect
+(mapStateToProps, {addTransactionToBE, editTransactionInBE, deleteTransactionFromBE, setTransactionVisibility})(TransactionPage)
