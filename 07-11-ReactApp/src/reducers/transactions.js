@@ -24,9 +24,9 @@ export default (state = [], action) => {
 }
 
 export const getTransactions = state => state.transactions;
+
 const getMonthTransaction = state => state.transactions.filter((transaction) => getMonth(transaction.created) === (getMonthVisibilityFilter(state)))
 const getTypedTransactions = (state, transactionType) => getMonthTransaction(state).filter((transaction) => transaction.type === transactionType)
-
 
 export const getFilteredTransactions = state => {
   switch (getTransactionVisibilityFilter(state)) {
@@ -41,6 +41,7 @@ export const getFilteredTransactions = state => {
     return getTransactions(state).filter((transaction) => transaction.type === 'expense');
   }
 }
+
 export const getOverview = state => {
   return {
     "income": getTypedTransactions(state, 'income').reduce((prev, curr) => (prev + curr.value), 0),

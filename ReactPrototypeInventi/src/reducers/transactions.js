@@ -23,20 +23,23 @@ export default (state = [], action) => {
 }
 
 export const getTransactions = state => state.transactions;
+
 const getTypedTransactions = (state, transactionType) => getTransactions(state).filter((transaction) => transaction.type === transactionType)
+
 export const getFilteredTransactions = state => {
   switch (getTransactionVisibilityFilter(state)) {
     case 0:
     default:
-    return getTransactions(state);
+    return getTransactions(state).reverse();
 
     case 1:
-    return getTransactions(state).filter((transaction) => transaction.type === 'income');
+    return getTransactions(state).filter((transaction) => transaction.type === 'income').reverse();
 
     case 2:
-    return getTransactions(state).filter((transaction) => transaction.type === 'expense');
+    return getTransactions(state).filter((transaction) => transaction.type === 'expense').reverse();
   }
 }
+
 export const getOverview = state => {
   return {
     "income": getTypedTransactions(state, 'income').reduce((prev, curr) => (prev + curr.value), 0),
