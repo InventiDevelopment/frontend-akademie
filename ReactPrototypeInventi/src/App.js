@@ -1,31 +1,32 @@
 import React, { Component } from 'react';
 import {
   BrowserRouter as Router,
-  Route,
-  Link
+  Route
 } from 'react-router-dom';
-import TransactionList from './components/TransactionList';
-import Overview from './components/Overview';
+import { Provider } from 'react-redux';
+import { createStore, compose, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
+import Transactions from './pages/Transactions';
+import Overview from './pages/Overview';
+import rootReducer from './reducers/rootReducer';
+import Balance from './pages/Balance';
+import initTransactions from './hoc/initTransactions';
+
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const store = createStore(rootReducer, composeEnhancers(applyMiddleware(thunk)));
 
 class App extends Component {
   render() {
     return (
+      <Provider store={store}>
       <Router>
-        <div className="page">
-          <header className="App-header">
-            <h1>Welcome to React</h1>
-          </header>
-          <p>
-            To get started, edit <code>src/App.js</code> and save to reload.
-          </p>
-          <p>
-            <Link to="/">To homepage</Link>
-            <Link to="/overview">To overview</Link>
-          </p>
-          <Route exact path="/" component={TransactionList} />
-          <Route path="/overview" component={Overview} />
-        </div>
+        <React.Fragment>
+          <Route exact path="/" component={initTransactions(Transactions)} />
+          <Route path="/overview" component={initTransactions(Overview)} />
+          <Route path="/balance" component={Balance} />
+        </React.Fragment>
       </Router>
+      </Provider>
     );
   }
 }
