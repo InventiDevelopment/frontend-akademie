@@ -38,28 +38,26 @@ const DateDiv = styled.div`
   
   
 `
-export default class Transaction extends React.Component{
-  render(){
-    return(
+export default ({data, expanded, toggleExpanded, deleteTransaction, editTransaction, newValue}) => (
       <div>
         <TransactionRoot>
-          <TransactionRow onClick={this.props.toggleExpanded}>
+          <TransactionRow onClick={toggleExpanded}>
             <div>
-              {this.props.data.name}
+              {data.name}
             </div>
-            {this.props.data.type === 'income'? <IncomeDiv>+ {this.props.data.value} CZK</IncomeDiv>:
-              <ExpenseDiv>- {this.props.data.value} CZK </ExpenseDiv>}
+            {data.type === 'income'? <IncomeDiv>+ {data.value} CZK</IncomeDiv>:
+              <ExpenseDiv>- {data.value} CZK </ExpenseDiv>}
           </TransactionRow>
-          { this.props.expanded &&
+          { expanded &&
           <TransactionRowExpanded>
-            <DateDiv> {moment(new Date(this.props.data.created)).format(this.props.data.created.format || 'HH:mm DD. MM. YYYY')} </DateDiv>
-            <TransactionButtons deleteTransaction={this.props.deleteTransaction} data={this.props.data}
-                                editTransaction={this.props.editTransaction}/>
+            <DateDiv> {moment(new Date(data.created)).format(data.created.format || 'HH:mm DD. MM. YYYY')} </DateDiv>
+            <TransactionButtons deleteTransaction={deleteTransaction}
+                                data={data}
+                                editTransaction={editTransaction}
+                                newValue={newValue}
+            />
           </TransactionRowExpanded>
           }
         </TransactionRoot>
       </div>
-    )
-  }
-}
-
+)

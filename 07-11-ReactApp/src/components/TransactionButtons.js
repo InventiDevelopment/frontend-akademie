@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import styled from 'styled-components';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import EditForm from './EditForm';
 import faPencil from '@fortawesome/fontawesome-free-solid/faPencilAlt';
 import faDelete from '@fortawesome/fontawesome-free-solid/faTrash';
-import EditModal from './EditModal';
 import ConfirmModal from './ConfirmModal';
 
 const EditButton = styled.button`
@@ -30,29 +30,38 @@ const DelButton = styled.button`
 
 
 export default class TransactionButtons extends Component {
-  state={editModalOpen: false,
-  closeModalOpen:false}
-  openEditModal = () =>{
-    this.setState({editModalOpen: true},)
-  }
-  closeEditModal = () =>{
-    this.setState({editModalOpen: false})
-  }
+  state={
+  closeModalOpen:false,
+  editModalOpen: false}
+
   openDeleteModal = () =>{
     this.setState({closeModalOpen: true})
   }
   closeDeleteModal = () =>{
     this.setState({closeModalOpen: false})
   }
+
+  openEditModal = () =>{
+    this.setState({editModalOpen: true})
+  }
+  closeEditModal = () =>{
+    this.setState({editModalOpen: false})
+  }
+
   render() {
     return(
     <div>
       <EditButton onClick = {() => this.openEditModal()}><FontAwesomeIcon icon={faPencil}/></EditButton>
       <DelButton onClick={() => this.openDeleteModal()}><FontAwesomeIcon icon={faDelete}/></DelButton>
-      <EditModal editTransaction={this.props.editTransaction} data={this.props.data} closeEditModal={this.closeEditModal}
-      editModalOpen={this.state.editModalOpen}/>
-      <ConfirmModal deleteTransaction={this.props.deleteTransaction} data={this.props.data}
-      closeDeleteModal={this.closeDeleteModal} closeModalOpen={this.state.closeModalOpen}/>
+      <ConfirmModal deleteTransaction={this.props.deleteTransaction}
+                    data={this.props.data}
+                    closeDeleteModal={this.closeDeleteModal}
+                    closeModalOpen={this.state.closeModalOpen}/>
+        <EditForm data={this.props.data}
+                  closeModal={this.closeEditModal}
+                  modalOpen={this.state.editModalOpen}
+                  editTransaction={this.props.editTransaction}
+                  newValue={this.props.newValue}/>
     </div>
     )
   }

@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
-import transactions from './data/transactions';
-import TransactionPage from './components/TransactionPage';
-import Overview from './components/Overview';
 import { BrowserRouter, Route, Link } from 'react-router-dom';
+import TransactionPage from './pages/TransactionPage';
+import Overview from './pages/Overview';
 import styled from 'styled-components';
-import {createStore} from 'redux';
+import {createStore, compose, applyMiddleware} from 'redux';
 import {Provider} from 'react-redux';
-import transakce from './reducers/transactions'
+import rootReducer from './reducers/rootReducer';
+import thunk from 'redux-thunk';
+import initTransactions from './hoc/initTransactions';
 
 const MenuRoot = styled.div`
    top: 0;
@@ -33,38 +34,10 @@ const MenuItem = styled.div`
   text-transform: uppercase;
   width: 100%;`;
 
-const store = createStore(transakce, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const store = createStore(rootReducer, composeEnhancers(applyMiddleware(thunk)));
 
 class App extends Component {
-  state = { stateTransactions: []}
-
-  componentDidMount(){
-    this.setState({stateTransactions: transactions})
-  }
-
-  deleteTransaction = (transaction)=> {
-    const newTransactions = this.state.stateTransactions.filter(
-      object => JSON.stringify(transaction) !== JSON.stringify(object))
-    this.setState({stateTransactions: newTransactions})
-  }
-
-
-  addTransaction = (inName, inVal, inType, inCreated)=>{
-    const newTrans = {name: inName, type: inType, value: parseInt(inVal), created: inCreated}
-    const newArray = this.state.stateTransactions.slice();
-    newArray.unshift(newTrans);
-    this.setState({stateTransactions: newArray})
-  }
-
-  editTransaction = (transaction, inName, inVal, inType, inCreated)=>{
-    const newArray = this.state.stateTransactions.slice();
-    const edited = newArray.indexOf(transaction)
-    newArray[edited].name = inName;
-    newArray[edited].value = parseInt(inVal);
-    newArray[edited].type = inType;
-    newArray[edited].created = inCreated;
-    this.setState({stateTransactions: newArray})
-  }
   render() {
     return (
       <Provider store={store}>
@@ -76,11 +49,8 @@ class App extends Component {
                 <MenuItem><Link to="/overview">Overview</Link></MenuItem>
               </MenuRoot>
              </header>
-            <Route exact path={"/"} component={() => <TransactionPage editTransaction={this.editTransaction}
-                                                                      addTransaction={this.addTransaction}
-                                                                      deleteTransaction={this.deleteTransaction}
-                                                                      stateTransactions={this.state.stateTransactions}/>}/>
-            <Route path="/overview" component={ () => <Overview stateTransactions={this.state.stateTransactions}/>}/>
+            <Route exact path={"/"} component={ initTransactions(TransactionPage) } />
+            <Route path="/overview" component={ initTransactions(Overview) } />
           </React.Fragment>
         </BrowserRouter>
       </Provider>

@@ -15,27 +15,19 @@ let ExpenseDiv = styled.div`
 
 
 
-export default class TotalBalance extends React.Component{
-  calcTotal = () =>{
-    return this.props.stateTransactions.reduce((prev, curr) => {return curr.type === 'income'? prev + curr.value: prev - curr.value},0)
-  }
-
-  render(){
-    return(
+export default ({overview}) => (
       <BalanceDiv>
         <div>Total Balance</div>
-        {this.calcTotal() < 0?
-          <ExpenseDiv>
-            <span>{this.calcTotal()}</span>
+        {overview.total < 0?
+        <ExpenseDiv>
+            <span></span>
             <span> CZK</span>
           </ExpenseDiv>:
           <IncomeDiv>
             <span>+ </span>
-            <span>{this.calcTotal()}</span>
+            <span> {overview.total} </span>
             <span> CZK</span>
           </IncomeDiv>
         }
       </BalanceDiv>
-    )
-  }
-}
+)

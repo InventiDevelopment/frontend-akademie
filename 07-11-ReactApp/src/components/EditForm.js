@@ -1,16 +1,18 @@
 import React from 'react';
-import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 import Modal from 'react-modal';
 import faClose from '@fortawesome/fontawesome-free-solid/faTimes';
 import styled from 'styled-components';
 
+
 const ModalInside = styled.div`
-    background-color: #F1EADE;
-    padding: 15px;
-    margin: 15px;
-    border-radius: 10px;
+   background-color: #F1EADE;
+   padding: 15px;
+   margin: 15px;
+   border-radius: 10px;
 `
-const customStyles = {
+
+const customModal = {
   content : {
     top                   : '0',
     left                  : '0',
@@ -18,7 +20,8 @@ const customStyles = {
     bottom                : '0',
     'background-color'      : 'rgba(0, 0, 0, .5)',
   }
-};
+}
+
 const FormItem = styled.div`
     display: block;
     padding-top: 10px;
@@ -65,59 +68,47 @@ const Select = styled.select`
   border: 0;
   border-radius: 10px;
   text-align-last: center;
- `
+`
 
-export default class AddModal extends React.Component {
-  state = {name: '',
-  type: 'income',
-  value: 0,
-  created: ''}
-
-  closeClickHandler =() => {
-    this.props.closeModal();
-    this.setState({type: 'income'})
-  }
-
-  saveActions = () => {
-    this.props.addTransaction(this.state.name,this.state.value, this.state.type,this.state.created)
-    this.setState({type: 'income'})
+export default class EditForm extends React.Component{
+  saveAction = () => {
     this.props.closeModal()
+    this.props.editTransaction(this.props.data)
   }
 
-  saveClickHandler =() => {
-    this.state.name && this.state.value && this.state.created !== null?
-    this.saveActions(): alert("Please fill out all the fields")
-    }
-
-  render () {
+  render(){
+    const {newValue, editTransaction, closeModal, data, modalOpen} = this.props
     return(
-      <Modal  isOpen={this.props.modalOpen} style={customStyles}>
+      <Modal isOpen={modalOpen} style={customModal}>
         <ModalInside>
           <FormItem>
             <label>Name</label>
-            <ModalInput onChange={event => this.setState({name: event.target.value})} type="text>"></ModalInput>
+            <ModalInput id="name" onChange={newValue}
+                        defaultValue={data.name} type="text>"></ModalInput>
           </FormItem>
           <FormItem>
             <label>Value</label>
-            <ModalInput onChange={event => this.setState({value: event.target.value})} type="number"></ModalInput>
+            <ModalInput id="value" onChange={newValue}
+                        defaultValue={data.value} type="number"></ModalInput>
           </FormItem>
           <FormItem>
             <label>Date created</label>
-            <ModalInput onChange={event => this.setState({created: event.target.value})} type="datetime-local"></ModalInput>
+            <ModalInput id="created" onChange={newValue} defaultValue={data.created}  type="datetime-local"></ModalInput>
           </FormItem>
           <FormItem>
             <span>Type</span>
-            <Select onChange={event => this.setState({type: event.target.value})}>
+            <Select id="type" onChange={newValue} defaultValue={data.type}>
               <option value="income">Income</option>
               <option value="expense">Expense</option>
             </Select>
           </FormItem>
           <ModalButton>
-            <SaveButton onClick={()=> this.saveClickHandler()}>Save</SaveButton>
-            <CloseButton onClick={()=> this.closeClickHandler()}><FontAwesomeIcon icon={faClose}/></CloseButton>
+            <SaveButton onClick={() => this.saveAction()}>Save</SaveButton>
+            <CloseButton onClick={closeModal}><FontAwesomeIcon icon={faClose}/></CloseButton>
           </ModalButton>
         </ModalInside>
       </Modal>
+
     )
   }
 }

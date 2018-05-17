@@ -25,14 +25,10 @@ const ButtonDiv = styled.div`
   width: 100%;
 `;
 
-export default class AddButton extends React.Component {
-  render () {
-    return (
+export default ({openModal}) => (
       <Footer>
         <ButtonDiv>
-          <Button onClick={() => this.props.openModal()}>Add new</Button>
+          <Button block onClick={openModal}>Add new</Button>
         </ButtonDiv>
       </Footer>
-    )
-  }
-}
+)

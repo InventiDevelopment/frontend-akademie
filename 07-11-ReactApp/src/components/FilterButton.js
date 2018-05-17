@@ -21,8 +21,6 @@ const Button = styled.button`
         border-right: #F1EADE;
         border-right-style: solid;
         border-right-width: 1.5px;
-        color: #D2C1C1;
-        background-color: #745654;
     }
 
     &:last-of-type {
@@ -33,12 +31,29 @@ const Button = styled.button`
         border-left-style: solid;
         border-left-width: 1.5px;
     }
+    ${({active}) => active && ` 
+      color: #D2C1C1;
+      background-color: #745654;
+  `}
+    
 `;
+let activeIndex = 0;
+export default class FilterButton extends React.Component{
+  setActive = (key) => {
+    activeIndex = key
+  }
+  setVisibility = (key) => {
+    this.props.setTransactionVisibility(key)
+    this.setActive(key)
 
-export default () => (
-  <ButtonDiv>
-    <Button>All</Button>
-    <Button>Income</Button>
-    <Button>Expense</Button>
-  </ButtonDiv>
-)
+}
+  render(){
+    return(
+      <ButtonDiv>
+        {this.props.buttonNames.map((name, key) => (
+          <Button  active={activeIndex === key} onClick={() => this.setVisibility(key)}>{name}</Button>
+        ))}
+      </ButtonDiv>
+    )
+  }
+}
