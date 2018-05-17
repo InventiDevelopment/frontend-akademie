@@ -4,7 +4,7 @@
       "name": "Lorem voluptate",
       "type": "income",
       "value": 643,
-      "created": 1487911188000,
+      "created": 0,
       "id": 1487911188000
     },
     {
@@ -461,6 +461,76 @@
       "type": "income",
       "created": 1526406317360,
       "id": 1522370056002
+    },
+    {
+      "name": "kabel",
+      "value": 2000,
+      "type": "income",
+      "created": "2018-05-10T11:23",
+      "id": "2018-05-10T11:23"
+    },
+    {
+      "name": "kabelka",
+      "value": 323,
+      "type": "Expense",
+      "created": "2018-05-01T11:23",
+      "id": "2018-05-01T11:23"
+    },
+    {
+      "name": "kabelka",
+      "value": 3231,
+      "type": "Expense",
+      "created": "2018-05-04T01:23",
+      "id": "2018-05-04T01:23"
+    },
+    {
+      "value": 2,
+      "name": "dassa",
+      "type": "income",
+      "created": 1526561525817,
+      "id": 1526561525817
+    },
+    {
+      "value": 2,
+      "name": "sdadas",
+      "type": "income",
+      "created": 1526562198115,
+      "id": 1526562198115
+    },
+    {
+      "value": 120,
+      "name": "koax",
+      "type": "income",
+      "created": 1526562334519,
+      "id": 1526562334519
+    },
+    {
+      "value": 1202,
+      "name": "lyže",
+      "type": "income",
+      "created": 1526562350766,
+      "id": 1526562350766
+    },
+    {
+      "value": 1202,
+      "name": "ponožky",
+      "type": "expense",
+      "created": 1526562358421,
+      "id": 1526562358421
+    },
+    {
+      "value": 900,
+      "name": "Trika",
+      "type": "income",
+      "created": 1526562467987,
+      "id": 1526562467987
+    },
+    {
+      "value": 400,
+      "name": "kalhota",
+      "type": "expense",
+      "created": 1526562490466,
+      "id": 1526562490466
     }
   ]
 }

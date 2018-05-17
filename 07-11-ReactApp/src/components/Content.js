@@ -5,5 +5,4 @@ export default styled.section`
   margin-top: 70px;
   margin-bottom: 80px;
   overflow-y: auto;
-  height: ${ window.outerHeight - 150 }px
 `;

@@ -1,5 +1,6 @@
 import { ADD_TRANSACTION, INIT_TRANSACTION, DElETE_TRANSACTION } from "../actions";
-import { getTransactionVisibilityFilter } from "./filter";
+import { getTransactionVisibilityFilter, getMonthVisibilityFilter } from "./filter";
+import {getMonth} from "date-fns";
 
 export default (state = [], action) => {
   switch (action.type) {
@@ -23,7 +24,10 @@ export default (state = [], action) => {
 }
 
 export const getTransactions = state => state.transactions;
-const getTypedTransactions = (state, transactionType) => getTransactions(state).filter((transaction) => transaction.type === transactionType)
+const getMonthTransaction = state => state.transactions.filter((transaction) => getMonth(transaction.created) === (getMonthVisibilityFilter(state)))
+const getTypedTransactions = (state, transactionType) => getMonthTransaction(state).filter((transaction) => transaction.type === transactionType)
+
+
 export const getFilteredTransactions = state => {
   switch (getTransactionVisibilityFilter(state)) {
     case 0:
@@ -41,6 +45,6 @@ export const getOverview = state => {
   return {
     "income": getTypedTransactions(state, 'income').reduce((prev, curr) => (prev + curr.value), 0),
     "expenses": getTypedTransactions(state, 'expense').reduce((prev, curr) => prev + curr.value, 0),
-    "total": getTransactions(state).reduce((prev, curr) => curr.type === 'income' ? prev + curr.value : prev - curr.value, 0)
+    "total": getMonthTransaction(state).reduce((prev, curr) => curr.type === 'income' ? prev + curr.value : prev - curr.value, 0)
   }
 };
