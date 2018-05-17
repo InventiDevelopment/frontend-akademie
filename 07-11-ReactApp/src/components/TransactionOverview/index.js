@@ -4,7 +4,7 @@ import OverviewTotal from './OverviewTotal';
 
 export default ({ overview }) => (
   <React.Fragment>
-    <SelectMonth onChange={overview} />
+    <SelectMonth />
     <OverviewTotal overview={overview}/>
   </React.Fragment>
 )
