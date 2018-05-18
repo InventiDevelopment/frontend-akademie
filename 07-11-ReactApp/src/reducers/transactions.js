@@ -1,6 +1,6 @@
 import { INIT_TRANSACTION} from "../actions";
 import { transactionVisibilityFilter, monthVisibilityFilter, periodVisibilityFilter} from "./filter";
-import { getDay, getMonth } from 'date-fns'
+import { getDate, getMonth } from 'date-fns'
 
 export default (state = [], action) => {
   switch (action.type) {
@@ -13,12 +13,14 @@ export default (state = [], action) => {
 
   }
 }
-const currentDay = getDay(new Date())
+
 export const getTransactions = state => state.transactions;
 const getMonthTransaction = (state) => state.transactions.filter((transaction) => getMonth(transaction.created) === (monthVisibilityFilter(state)))
 const getTypedTransactions = (state, transactionType) => getTransactions(state).filter((transaction) => transaction.type === transactionType)
 const getTypedMonthTransactions = (state, transactionType) => getMonthTransaction(state).filter((transaction) => transaction.type === transactionType)
-const getTodayTransactions = (state) => state.transactions.filter((transaction) => getDay(transaction.created) === currentDay);
+const getTodayTransactions =
+  (state) => state.transactions.filter((transaction) => getDate(transaction.created) === getDate(new Date())
+  && getMonth(transaction.created) === getMonth(new Date()));
 const getTodayTypedTransactions = (state, transactionType) => getTodayTransactions(state).filter((transaction) => transaction.type === transactionType)
 
 

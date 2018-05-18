@@ -32,7 +32,7 @@ export default class SelectMonth extends React.Component{
   render(){
     return(
       <MonthDiv>
-        <Select onChange={(event) => {this.props.setMonth(parseInt(event.target.value))}}>
+        <Select onChange={(event) => {this.props.setMonth(parseInt(event.target.value, 0))}}>
           {
             months.map((month, key) =>
               <Option value={key}>{month}</Option>

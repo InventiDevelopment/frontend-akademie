@@ -143,5 +143,5 @@ const mapStateToProps = (store) => {
     overview: getTotal(store)
   }
 }
-export default connect
-(mapStateToProps, {addTransactionToBE, editTransactionInBE, deleteTransactionFromBE, setTransactionVisibility})(TransactionPage)
+export default connect(mapStateToProps,
+  {addTransactionToBE, editTransactionInBE, deleteTransactionFromBE, setTransactionVisibility})(TransactionPage)

@@ -20,7 +20,7 @@ export default ({overview}) => (
         <div>Total Balance</div>
         {overview.total < 0?
         <ExpenseDiv>
-            <span></span>
+            <span>{overview.total}</span>
             <span> CZK</span>
           </ExpenseDiv>:
           <IncomeDiv>

@@ -75,8 +75,8 @@ export default({name, value, type, created, newValue, addTransaction, closeModal
     <FormItem>
       <span>Type</span>
       <Select id="type" onChange={newValue} value={type}>
-        <option>Income</option>
-        <option>Expense</option>
+        <option value="income">Income</option>
+        <option value="expense">Expense</option>
       </Select>
     </FormItem>
     <ModalButton>
