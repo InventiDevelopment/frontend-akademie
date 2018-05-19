@@ -13,8 +13,8 @@ const ToggleButton = styled.button`
   border-style: none;
   font-size: 14px;
   font-weight: 600;
-  background-color: #D1E3E1;
-  color: #8DACA9;
+  background-color: #8c7b75;
+  color: #00000;
 
   &:first-of-type {
     border-top-left-radius: ${ globalBorderRadius };
@@ -27,7 +27,7 @@ const ToggleButton = styled.button`
   }
 
   ${({ active }) => active && `
-    background-color: #8DACA9;
+    background-color: #554a47;
     color: #E6EFEE;
   `}
 `;

@@ -15,6 +15,7 @@ import { addTransactionToBE, deleteTransactionFromBE, setTransactionVisibility }
 import { getFilteredTransactions } from '../reducers/transactions';
 
 const defaultNewTransactionState = { value: 0, message: '', type: 'income' };
+const activeIndex = 0;
 
 class Transactions extends Component {
   state = {
@@ -42,7 +43,7 @@ class Transactions extends Component {
     this.setState({ modalOpen: false })
   }
 
-  setTransactinonVisibleCategory = (index) => {
+  setTransactionVisibleCategory = (index) => {
     this.props.setTransactionVisibility(index);
   }
 
@@ -51,7 +52,7 @@ class Transactions extends Component {
     return (
       <React.Fragment>
         <Header centered>
-          <ToggleButtons margin="0 20px 0 0" buttonNames={["All", "In", "Out"]} onClick={this.setTransactinonVisibleCategory} activeIndex={transactionVisibleCategory} />
+          <ToggleButtons margin="0 20px 0 0" buttonNames={["All", "In", "Out"]} onClick={this.setTransactionVisibleCategory} activeIndex={transactionVisibleCategory} />
           <StyledButton icon onClick={() => this.props.history.push("/overview")}>
             <StyledIcon icon={faChartBar} />
           </StyledButton>

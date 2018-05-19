@@ -12,7 +12,7 @@ export default styled.button`
   text-decoration: none;
   text-shadow: 0 1px 3px rgba(0,0,0,.2);
   box-shadow: 0 0 8px rgba(0,0,0,.35);
-  background: linear-gradient(to top, #977490, #C5A7BF);
+  background: #78909c;
 
   ${({ block }) => block && `
     display: block;

@@ -2,8 +2,8 @@
 export const white = '#FFFFFF';
 
 // HTML emelents
-export const backgroundColor = '#E8F0EF';
-export const border= '#D3E0DF';
+export const backgroundColor = '#bcaaa4';
+export const border= '#DDDDDD';
 
 // Transaction value
 export const transactionExpense = '#BC5757';

@@ -1,9 +1,10 @@
 // Typography
-$base-font: Arial, Helvetica, sans-serif;
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin-ext');
+$base-font: 'PT Sans', Helvetica, sans-serif;
 $base-font-size: 16px;
 
 // App
-$base-bg: #E8F0EF;
+$base-bg: #efdcd5;
 $base-text: #707070;
 
 // Page
