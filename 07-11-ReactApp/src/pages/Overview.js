@@ -6,9 +6,17 @@ import TransactionOverview from '../components/TransactionOverview';
 import StyledButton from '../components/StyledButton';
 import ToggleButtons from '../components/ToggleButtons';
 import { connect } from 'react-redux';
-import { getOverview } from '../reducers/transactions';
+import transactions, { getOverview } from '../reducers/transactions';
+import transaction from '../data/transactions.json';
+import getMonth from 'date-fns';
 
+
+const setMonth = new Date().getMonth(transaction.created, 0);
 class Overview extends Component {
+  setMonth = (event) => {
+    this.setState({ [event.target.id]: event.target.value })
+  }
+
   render() {
     const { history, overview } = this.props;
 
