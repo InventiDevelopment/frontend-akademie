@@ -11,12 +11,13 @@ import { connect } from 'react-redux';
 import transactions, { getOverview } from '../reducers/transactions';
 import transaction from '../data/transactions.json';
 import getMonth from 'date-fns';
+import month from '../data/months.json';
 
 
 const onChange = new Date().getMonth(transaction.created, 0);
 class Overview extends Component {
-  setMonth = (event) => {
-    this.setState({ [event.target.id]: event.target.value })
+  setMonth = (month) => {
+    this.setState({ [month.target.value]: month.target.name })
   }
 
   render() {
