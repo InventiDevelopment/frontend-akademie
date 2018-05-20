@@ -1,5 +1,6 @@
 
 export const white = '#FFFFFF';
+export const lightBrown = '#efdcd5';
 
 // HTML emelents
 export const backgroundColor = '#bcaaa4';

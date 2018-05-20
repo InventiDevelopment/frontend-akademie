@@ -1,14 +1,15 @@
 import styled from 'styled-components';
+import { globalBorderRadiusButton } from '../constants/other';
 import { globalBorderRadius } from '../constants/other';
 
 export default styled.button`
   appearance: none;
-  padding: 10px 20px;
   border-style: none;
   border-radius: ${ globalBorderRadius };
   font-weight: bold;
   text-align: center;
   color: #FFFFFF;
+  padding: 10px;
   text-decoration: none;
   text-shadow: 0 1px 3px rgba(0,0,0,.2);
   box-shadow: 0 0 8px rgba(0,0,0,.35);
@@ -19,11 +20,34 @@ export default styled.button`
     width: 100%;
   `}
 
+  ${({ add }) => add && `
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    font-size: 2rem;
+    padding: 0;
+    border-radius: ${ globalBorderRadiusButton };
+  `}
+
+  ${({ save }) => save && `
+    display: block;
+    margin: 0 auto;
+    width: 70px;
+    height: auto;
+    text-align: center;
+    text-transform: uppercase;
+  `}
+
   ${({ icon }) => icon && `
     padding: 5px 15px;
   `}
 
   ${({ danger }) => danger && `
     background: linear-gradient(to top, #AF4646, #D87777);
+    width: 35px;
+    height: 30px;
+    padding: 0;
   `}
 `;

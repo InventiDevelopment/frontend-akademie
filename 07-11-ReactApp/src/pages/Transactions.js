@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Modal from 'react-modal/lib/components/Modal';
 import { faChartBar } from '@fortawesome/fontawesome-free-regular';
+import { faPlusSquare } from '@fortawesome/fontawesome-free-regular';
 import getTime from 'date-fns/get_time';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -15,7 +16,6 @@ import { addTransactionToBE, deleteTransactionFromBE, setTransactionVisibility }
 import { getFilteredTransactions } from '../reducers/transactions';
 
 const defaultNewTransactionState = { value: 0, message: '', type: 'income' };
-const activeIndex = 0;
 
 class Transactions extends Component {
   state = {
@@ -53,7 +53,7 @@ class Transactions extends Component {
       <React.Fragment>
         <Header centered>
           <ToggleButtons margin="0 20px 0 0" buttonNames={["All", "In", "Out"]} onClick={this.setTransactionVisibleCategory} activeIndex={transactionVisibleCategory} />
-          <StyledButton icon onClick={() => this.props.history.push("/overview")}>
+          <StyledButton add icon onClick={() => this.props.history.push("/overview")}>
             <StyledIcon icon={faChartBar} />
           </StyledButton>
         </Header>
@@ -61,7 +61,9 @@ class Transactions extends Component {
           <TransactionList transactions={this.props.transactions} deleteTransaction={this.deleteTransaction} />
         </Content>
         <Footer>
-          <StyledButton block onClick={() => this.setState({modalOpen: true})}>Add new</StyledButton>
+          <StyledButton add onClick={() => this.setState({modalOpen: true})}>
+          <StyledIcon icon={faPlusSquare} />
+          </StyledButton>
         </Footer>
         <Modal isOpen={modalOpen} onRequestClose={() => this.setState({modalOpen: false})}>
           <AddTransactionForm value={value}

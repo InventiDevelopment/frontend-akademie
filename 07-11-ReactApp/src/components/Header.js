@@ -5,7 +5,7 @@ export default styled.header`
   display: flex;
   align-items: center;
   width: 100%;
-  padding: 20px;
+  padding: 20px 0;
   position: fixed;
   background-color: ${ backgroundColor };
   height: 70px;

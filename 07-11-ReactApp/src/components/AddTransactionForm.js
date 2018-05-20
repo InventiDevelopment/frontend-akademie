@@ -6,38 +6,38 @@ import StyledInput from './StyledInput';
 
 const FormRow = styled.div`
   margin-bottom: 10px;
-  text-align: center;
+  text-align: left;
 
   &:last-of-type {
-    margin-bottom: 0;
+    margin: 80px 0 0 0;
   }
-`;
+`
 
 export default ({ value, message, type, valueChanged, addTransaction }) => (
   <React.Fragment>
-    <FormRow>
-      <span>Value</span>
-      <StyledInput id="value"
-        value={value}
-        onChange={valueChanged} />
-    </FormRow>
-    <FormRow>
-      <span>Message</span>
-      <StyledInput id="message"
-        value={message}
-        onChange={valueChanged} />
-    </FormRow>
-    <FormRow>
-      <span>Type</span>
-      <StyledSelect id="type"
-        value={type}
-        onChange={valueChanged} >
-        <option>income</option>
-        <option>expense</option>
-      </StyledSelect>
-    </FormRow>
-    <FormRow>
-      <StyledButton onClick={addTransaction}>Add</StyledButton>
-    </FormRow>
+      <FormRow>
+        <span>Value</span>
+        <StyledInput id="value"
+          value={value}
+          onChange={valueChanged} />
+      </FormRow>
+      <FormRow>
+        <span>Name</span>
+        <StyledInput id="message"
+          value={message}
+          onChange={valueChanged} />
+      </FormRow>
+      <FormRow>
+        <span>Type</span>
+        <StyledSelect id="type"
+          value={type}
+          onChange={valueChanged} >
+          <option>income</option>
+          <option>expense</option>
+        </StyledSelect>
+      </FormRow>
+      <FormRow>
+        <StyledButton save onClick={addTransaction}>Save</StyledButton>
+      </FormRow>
   </React.Fragment>
 )

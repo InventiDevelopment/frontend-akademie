@@ -19,9 +19,11 @@ const TransactionRow = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-size: 1.1rem;
 
   ${({ expanded }) => expanded && `
     margin-top: 10px;
+    font-size: .95rem;
   `}
 `;
 
@@ -33,7 +35,7 @@ export default ({ data, expanded, toggleExpanded, deleteTransaction }) => (
     </TransactionRow>
     {expanded &&
     <TransactionRow expanded>
-      <div>{format(parse(data.created), 'H:mm DD:MM:YYYY')}</div>
+      <div>{format(parse(data.created), 'HH:mm DD.MM.YYYY')}</div>
       <StyledButton icon danger onClick={() => deleteTransaction(data)}>
         <StyledIcon icon={faEraser}/>
       </StyledButton>

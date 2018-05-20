@@ -1,1 +1,2 @@
-export const globalBorderRadius = '5px';
+export const globalBorderRadius = '8px';
+export const globalBorderRadiusButton = '50%';

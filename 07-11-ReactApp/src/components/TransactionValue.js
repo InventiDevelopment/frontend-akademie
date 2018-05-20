@@ -9,6 +9,7 @@ const FlexContaner = styled.div`
 
 const Value = styled.div`
   font-weight: bold;
+  font-size: 1.3rem;
   color: ${ transactionExpense };
   margin-right: 5px;
 

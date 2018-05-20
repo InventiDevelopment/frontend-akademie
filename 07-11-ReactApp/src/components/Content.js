@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export default styled.section`
-  padding: 0 20px;
+  padding: 0 10px;
   margin: 80px auto;
   overflow-y: auto;
-  height: ${ window.outerHeight - 200 }px
+  height: ${ window.outerHeight - 160 }px;
 `;

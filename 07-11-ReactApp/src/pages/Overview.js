@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Header from '../components/Header';
 import Content from '../components/Content';
 import Footer from '../components/Footer';
+import { faArrowAltCircleLeft } from '@fortawesome/fontawesome-free-regular';
+import StyledIcon from '../components/StyledIcon'; 
 import TransactionOverview from '../components/TransactionOverview';
 import StyledButton from '../components/StyledButton';
 import ToggleButtons from '../components/ToggleButtons';
@@ -11,7 +13,7 @@ import transaction from '../data/transactions.json';
 import getMonth from 'date-fns';
 
 
-const setMonth = new Date().getMonth(transaction.created, 0);
+const onChange = new Date().getMonth(transaction.created, 0);
 class Overview extends Component {
   setMonth = (event) => {
     this.setState({ [event.target.id]: event.target.value })
@@ -29,7 +31,7 @@ class Overview extends Component {
           <TransactionOverview overview={overview} />
         </Content>
         <Footer>
-          <StyledButton block onClick={() => history.push("/")}>To homepage</StyledButton>
+          <StyledButton add onClick={() => history.push("/")}><StyledIcon icon={faArrowAltCircleLeft} /></StyledButton>
         </Footer>
       </React.Fragment>
     )
