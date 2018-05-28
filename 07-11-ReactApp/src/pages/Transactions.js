@@ -12,7 +12,7 @@ import StyledIcon from '../components/StyledIcon';
 import AddTransactionForm from '../components/AddTransactionForm';
 import ToggleButtons from '../components/ToggleButtons';
 import connect from 'react-redux/lib/connect/connect';
-import { addTransactionToBE, deleteTransactionFromBE, setTransactionVisibility } from '../actions';
+import { addTransactionToBE, editTransactionInBE, deleteTransactionFromBE, setTransactionVisibility } from '../actions';
 import { getFilteredTransactions } from '../reducers/transactions';
 
 const defaultNewTransactionState = { value: 0, message: '', type: 'income' };
@@ -29,6 +29,18 @@ class Transactions extends Component {
 
   valueChanged = (event) => {
     this.setState({ [event.target.id]: event.target.value })
+  }
+
+  editTransaction = (transaction) => {
+    const currentTime = new Date();
+    this.props.editTransactionInBE({
+      value: '',
+      name: '',
+      type: '',
+      created: getTime(currentTime),
+      id: getTime(currentTime)
+    })
+    this.setState({ modalOpen: false })
   }
 
   addNewTransaction = () => {

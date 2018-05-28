@@ -8,20 +8,19 @@ import TransactionOverview from '../components/TransactionOverview';
 import StyledButton from '../components/StyledButton';
 import ToggleButtons from '../components/ToggleButtons';
 import { connect } from 'react-redux';
-import transactions, { getOverview } from '../reducers/transactions';
+import { getOverview } from '../reducers/transactions';
 import transaction from '../data/transactions.json';
-import getMonth from 'date-fns';
-import month from '../data/months.json';
-
+import { setMonthVisibility } from '../actions/index';
 
 const onChange = new Date().getMonth(transaction.created, 0);
 class Overview extends Component {
-  setMonth = (month) => {
-    this.setState({ [month.target.value]: month.target.name })
+  onChange = (event) => {
+    console.log(event)
+    this.props.setMonthVisibility( parseInt(event.target.value) )
   }
 
   render() {
-    const { history, overview } = this.props;
+    const { history, overview } = this.props;    
 
     return (
       <React.Fragment>
@@ -29,7 +28,7 @@ class Overview extends Component {
           <ToggleButtons buttonNames={["Today", "Monthly", "Overall"]} activeIndex={1} />
         </Header>
         <Content>
-          <TransactionOverview overview={overview} />
+          <TransactionOverview overview={overview} onChangeHandlerFromParent={this.onChange}/>
         </Content>
         <Footer>
           <StyledButton add onClick={() => history.push("/")}><StyledIcon icon={faArrowAltCircleLeft} /></StyledButton>
@@ -45,4 +44,4 @@ const mapStateToProps = store => {
   }
 }
 
-export default connect(mapStateToProps)(Overview);
+export default connect(mapStateToProps, { setMonthVisibility })(Overview);

@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { transactionExpense, transactionIncome } from "../constants/colors";
 
-const FlexContaner = styled.div`
+const FlexContainer = styled.div`
   display: flex;
   align-items:center;
 `;
@@ -26,10 +26,10 @@ const Currency = styled.span`
 `;
 
 export default ({type, children}) => (
-  <FlexContaner>
+  <FlexContainer>
     <Value type={type}>
       {type === 'income' ? `+ ${children}` : `- ${children}`}
     </Value>
     <Currency>CZK</Currency>
-  </FlexContaner>
+  </FlexContainer>
 )

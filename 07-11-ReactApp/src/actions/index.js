@@ -2,9 +2,11 @@ import { api } from '../util/api';
 
 export const ADD_TRANSACTION = 'ADD_TRANSACTION';
 export const INIT_TRANSACTION = 'INIT_TRANSACTION';
+export const EDIT_TRANSACTION = 'EDIT_TRANSACTION';
 export const DElETE_TRANSACTION = 'DElETE_TRANSACTION';
 export const SET_TRANSACTION_VISIBILITY = 'SET_TRANSACTION_VISIBILITY';
 export const SET_MONTH = 'SET_MONTH';
+export const SET_PERIOD = 'SET_PERIOD';
 
 export const addTransaction = (transaction) => {
   return {
@@ -17,6 +19,13 @@ export const setInitialTransactions = (data) => {
   return {
     type: INIT_TRANSACTION,
     data: data
+  }
+}
+
+export const editTransactionInStore = (transaction) => {
+  return {
+    type: EDIT_TRANSACTION,
+    data: transaction
   }
 }
 
@@ -41,6 +50,13 @@ export const setMonthVisibility = (data) => {
   }
 }
 
+export const setPeriodVisibility = (data) => {
+  return {
+    type: SET_PERIOD,
+    data
+  }
+}
+
 export const getTransactionData = () => {
   return dispatch => {
     return api.get(`/transactions`)
@@ -56,6 +72,15 @@ export const getTransactionData = () => {
 export const addTransactionToBE = (transaction) => {
   return dispatch => {
     return api.post(`/transactions`, transaction)
+      .then(response => {
+        dispatch(getTransactionData())
+      })
+  }
+}
+
+export const editTransactionInBE = (transactionId) => {
+  return dispatch => {
+    return api.put(`/transactions/${transactionId}`)
       .then(response => {
         dispatch(getTransactionData())
       })
