@@ -59,16 +59,12 @@ class Transactions extends Component {
     this.props.setTransactionVisibility(index);
   }
 
-  setActiveButton = (index) => {
-    this.props.setSelectedButton(index);
-  }
-
   render() {
     const { modalOpen, value, message, type, transactionVisibleCategory, selectedButton } = this.state;
     return (
       <React.Fragment>
         <Header centered>
-          <ToggleButtons margin="0 20px 0 0" buttonNames={["All", "In", "Out"]} onClick={this.setTransactionVisibleCategory} activeIndex={transactionVisibleCategory} onClick={this.setActiveButton} activeIndex={selectedButton} />
+          <ToggleButtons margin="0 20px 0 0" buttonNames={["All", "In", "Out"]} onClick={this.setTransactionVisibleCategory} activeIndex={transactionVisibleCategory} />
           <StyledButton add icon onClick={() => this.props.history.push("/overview")}>
             <StyledIcon icon={faChartBar} />
           </StyledButton>
