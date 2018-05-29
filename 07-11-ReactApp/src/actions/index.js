@@ -5,6 +5,7 @@ export const INIT_TRANSACTION = 'INIT_TRANSACTION';
 export const EDIT_TRANSACTION = 'EDIT_TRANSACTION';
 export const DElETE_TRANSACTION = 'DElETE_TRANSACTION';
 export const SET_TRANSACTION_VISIBILITY = 'SET_TRANSACTION_VISIBILITY';
+export const SET_SELECTED_BUTTON = 'SET_SELECTED_BUTTON';
 export const SET_MONTH = 'SET_MONTH';
 export const SET_PERIOD = 'SET_PERIOD';
 
@@ -39,6 +40,13 @@ export const deleteTransactionFromStore = (transaction) => {
 export const setTransactionVisibility = (data) => {
   return {
     type: SET_TRANSACTION_VISIBILITY,
+    data
+  }
+}
+
+export const setSelectedButton = (data) => {
+  return {
+    type: SET_SELECTED_BUTTON,
     data
   }
 }

@@ -12,7 +12,7 @@ import StyledIcon from '../components/StyledIcon';
 import AddTransactionForm from '../components/AddTransactionForm';
 import ToggleButtons from '../components/ToggleButtons';
 import connect from 'react-redux/lib/connect/connect';
-import { addTransactionToBE, editTransactionInBE, deleteTransactionFromBE, setTransactionVisibility } from '../actions';
+import { addTransactionToBE, editTransactionInBE, deleteTransactionFromBE, setTransactionVisibility, setSelectedButton } from '../actions';
 import { getFilteredTransactions } from '../reducers/transactions';
 
 const defaultNewTransactionState = { value: 0, message: '', type: 'income' };
@@ -59,12 +59,16 @@ class Transactions extends Component {
     this.props.setTransactionVisibility(index);
   }
 
+  setActiveButton = (index) => {
+    this.props.setSelectedButton(index);
+  }
+
   render() {
-    const { modalOpen, value, message, type, transactionVisibleCategory } = this.state;
+    const { modalOpen, value, message, type, transactionVisibleCategory, selectedButton } = this.state;
     return (
       <React.Fragment>
         <Header centered>
-          <ToggleButtons margin="0 20px 0 0" buttonNames={["All", "In", "Out"]} onClick={this.setTransactionVisibleCategory} activeIndex={transactionVisibleCategory} />
+          <ToggleButtons margin="0 20px 0 0" buttonNames={["All", "In", "Out"]} onClick={this.setTransactionVisibleCategory} activeIndex={transactionVisibleCategory} onClick={this.setActiveButton} activeIndex={selectedButton} />
           <StyledButton add icon onClick={() => this.props.history.push("/overview")}>
             <StyledIcon icon={faChartBar} />
           </StyledButton>
