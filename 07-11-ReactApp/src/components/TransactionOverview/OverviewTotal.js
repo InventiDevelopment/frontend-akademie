@@ -24,7 +24,7 @@ export default ({ overview }) => (
     </OverviewRow>
     <OverviewRow total>
       Total
-      <TransactionValue type="income">{overview.total}</TransactionValue>
+      <TransactionValue type ="income">{overview.total}</TransactionValue>
     </OverviewRow>
   </OverviewRoot>
 )

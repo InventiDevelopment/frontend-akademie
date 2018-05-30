@@ -25,7 +25,7 @@ class Overview extends Component {
     return (
       <React.Fragment>
         <Header centered>
-          <ToggleButtons buttonNames={["Today", "Monthly", "Overall"]} activeIndex={1} />
+          <ToggleButtons buttonNames={["Today", "Monthly", "Overall"]} activeIndex={0} />
         </Header>
         <Content>
           <TransactionOverview overview={overview} onChangeHandlerFromParent={this.onChange}/>

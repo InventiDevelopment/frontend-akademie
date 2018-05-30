@@ -20,9 +20,9 @@ const defaultNewTransactionState = { value: 0, message: '', type: 'income' };
 class Transactions extends Component {
   state = {
     modalOpen: false,
-    ...defaultNewTransactionState
+    ...defaultNewTransactionState,
   }
-
+  
   deleteTransaction = (transaction) => {
     this.props.deleteTransactionFromBE(transaction.id);
   }
@@ -60,7 +60,7 @@ class Transactions extends Component {
   }
 
   render() {
-    const { modalOpen, value, message, type, transactionVisibleCategory, selectedButton } = this.state;
+    const { modalOpen, value, message, type, transactionVisibleCategory } = this.state;
     return (
       <React.Fragment>
         <Header centered>
