@@ -1,11 +1,5 @@
-[
-    {
-      "name": "ut ipsum",
-      "type": "income",
-      "value": 820,
-      "created": 1502528408000,
-      "id": 1502528408000
-    },
+{
+  "transactions": [
     {
       "name": "Lorem voluptate",
       "type": "income",
@@ -453,5 +447,20 @@
       "value": 455,
       "created": 1515681054000,
       "id": 1515681054000
+    },
+    {
+      "value": 654,
+      "name": "asdf",
+      "type": "income",
+      "created": 1526406228489,
+      "id": 1522370056001
+    },
+    {
+      "value": 99999,
+      "name": "ahoj",
+      "type": "income",
+      "created": 1526406317360,
+      "id": 1522370056002
     }
   ]
+}
