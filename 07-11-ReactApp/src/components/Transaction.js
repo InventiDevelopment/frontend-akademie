@@ -2,10 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import parse from 'date-fns/parse';
 import format from 'date-fns/format';
-import { faEraser } from '@fortawesome/fontawesome-free-solid'
 import TransactionValue from "./TransactionValue";
 import Button from "./Button";
-import Icon from './Icon';
 
 const TransactionRoot = styled.div`
     margin-bottom: 6px;
@@ -35,7 +33,6 @@ export default ({ data, expanded, toggleExpanded, deleteTransaction }) => (
       <TransactionRow expanded>
         <div>{format(parse(data.created), 'H:mm DD:MM:YYYY')}</div>
         <Button icon danger onClick={() => deleteTransaction(data)}>
-          <Icon icon={faEraser}/>
         </Button>
       </TransactionRow>
       }

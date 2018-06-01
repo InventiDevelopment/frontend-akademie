@@ -31,7 +31,7 @@ export default class Dropdown extends React.Component {
       
       closeMenu(event) {
         
-        if (!this.dropdownMenu.contains(event.target)) {
+        if (!this.Dropdown.contains(event.target)) {
           
           this.setState({ showMenu: false }, () => {
             document.removeEventListener('click', this.closeMenu);
