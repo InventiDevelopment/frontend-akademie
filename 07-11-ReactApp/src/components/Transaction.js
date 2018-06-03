@@ -11,6 +11,7 @@ const TransactionRoot = styled.div`
     display: flex;
     justify-content: space-between;
     background-color: white;
+    font-size: 1.1rem;
 `;
 
 const TransactionRow = styled.div`
@@ -23,6 +24,10 @@ const TransactionRow = styled.div`
     `}
 `;
 
+const ButtonDngr = styled.button`
+    font-size: 0.3rem;
+`
+
 export default ({ data, expanded, toggleExpanded, deleteTransaction }) => (
     <TransactionRoot onClick={toggleExpanded}>
       <TransactionRow>
@@ -32,8 +37,11 @@ export default ({ data, expanded, toggleExpanded, deleteTransaction }) => (
       {expanded &&
       <TransactionRow expanded>
         <div>{format(parse(data.created), 'H:mm DD:MM:YYYY')}</div>
-        <Button icon danger onClick={() => deleteTransaction(data)}>
+        <ButtonDngr>
+        <Button icon danger onClick= {() => deleteTransaction(data)}>
+          Delete
         </Button>
+        </ButtonDngr>
       </TransactionRow>
       }
     </TransactionRoot>

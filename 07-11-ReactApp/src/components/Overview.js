@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import MainModal from "./Modal";
-import Dropdown from "./Dropdown";
+import Footer from "./Footer";
 
 const Page = styled.div`
     height: 94vh;
@@ -31,26 +30,18 @@ const BalanceValue = styled.div`
 export default class Overview extends React.Component {
         render() {
             return (
-                <Page>
                 <div>
+                    <Page>
                     <div>
                         <Title><h1>Overview</h1></Title>
                         <Box>
-                        <Dropdown />
                         <BalanceValue><p>5 000 Kč</p></BalanceValue>
                         <p>spent today</p>
                         </Box>
                     </div>
-            
-                    <div>
-                    <Box>
-                        <h3>Přehled za dané období</h3>
-                    </Box>
-                    </div>
-                    
-                <MainModal />
+                    </Page>
+                    <Footer />
                 </div>
-                </Page>
             );
         }
     }

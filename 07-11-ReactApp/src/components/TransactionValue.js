@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const FlexContaner = styled.div`
+const FlexContainer = styled.div`
   display: flex;
-  align-items:center;
+  align-items: space-between;
 `;
 
 const Value = styled.div`
@@ -23,10 +23,10 @@ const Currency = styled.span`
 `;
 
 export default ({type, children}) => (
-  <FlexContaner>
+  <FlexContainer>
     <Value type={type}>
       {type === 'income' ? `+ ${children}` : `- ${children}`}
     </Value>
     <Currency>CZK</Currency>
-  </FlexContaner>
+  </FlexContainer>
 )

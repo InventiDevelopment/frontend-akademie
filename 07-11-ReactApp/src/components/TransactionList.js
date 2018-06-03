@@ -9,6 +9,7 @@ const List = styled.ul`
   list-style-type: none;
 `;
 
+
 export default ({ transaction, deleteTransaction }) => (
   <React.Fragment>
     <List>

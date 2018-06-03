@@ -9,7 +9,7 @@ class Balance extends React.Component {
 
     return (
       <div>
-        <button onClick={ increment }>Ahoj</button>
+        <button onClick={ increment }></button>
         <bold>{ balance }</bold>
       </div>
     )

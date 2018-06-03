@@ -1,40 +1,40 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {
   BrowserRouter as Router,
   Route,
-  Link
 } from "react-router-dom";
 import { Provider } from "react-redux";
-import { createStore } from "redux";
-import TransactionList from './components/TransactionList';
-import Overview from './components/Overview';
+import { createStore, compose, applyMiddleware } from "redux";
+import TransactionList from './pages/TransactionList';
+import Overview from './pages/Overview';
+import Balance from './pages/OverviewBalance';
 import styled from 'styled-components';
-import transaction from './reducers/transaction';
-
-const store = createStore(transaction, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+import thunk from 'redux-thunk';
+import rootReducer from './reducers/rootReducer';
+import initTransactions from './hoc/transaction';
 
 const Navigation = styled.div`
   font-size: 0.3rem;
   text-align: center;
 `
 
-class App extends Component {
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const store = createStore(rootReducer, composeEnhancers(applyMiddleware(thunk)));
+
+class App extends React.Component {
   render() {
     return (
       <Provider store={store}>
-        <Router>
-           <div className="page">
-           <Navigation>
-            <p>
-              <Link to="/">Homepage</Link>
-              <Link to="/overview">Overview</Link>
-            </p>
-            </Navigation>
-            <Route exact path="/" component={TransactionList} />
-            <Route path="/overview" component={Overview} />
-            </div>
-        </Router>
-        </Provider>
+      <Router>
+        <React.Fragment>
+          <Navigation>
+          <Route exact path="/" component={initTransactions(TransactionList)} />
+          <Route path="/overview" component={initTransactions(Overview)} />
+          <Route path="/balance" component={Balance} />
+          </Navigation>
+        </React.Fragment>
+      </Router>
+      </Provider>
     );
   }
 }
