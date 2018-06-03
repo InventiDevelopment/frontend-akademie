@@ -1,8 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { border, white } from '../../constants/colors';
+import { border, white, transactionIncome, transactionExpense } from '../../constants/colors';
 import OverviewRow from './OverviewRow';
-import TransactionValue from '../TransactionValue';
 
 const OverviewRoot = styled.div`
   margin: 20px 0;
@@ -12,19 +11,33 @@ const OverviewRoot = styled.div`
   background-color: ${ white};
 `;
 
+const OverviewIncome = styled.div`
+  color: ${ transactionIncome};
+  font-weight: bold;
+  font-size: 1.3rem;
+  margin-right: 5px;
+`;
+
+const OverviewExpense = styled.div`
+  color: ${ transactionExpense};
+  font-weight: bold;
+  font-size: 1.3rem;
+  margin-right: 5px;
+`
+
 export default ({ overview }) => (
   <OverviewRoot class="transaction-overview">
     <OverviewRow income>
       Income
-      <TransactionValue type="income">{overview.income}</TransactionValue>
+      <OverviewIncome>{overview.income}</OverviewIncome>
     </OverviewRow>
     <OverviewRow expenses>
       Expenses
-      <TransactionValue type="expense">{overview.expenses}</TransactionValue>
+      <OverviewExpense>{overview.expenses}</OverviewExpense>
     </OverviewRow>
     <OverviewRow total>
       Total
-      {overview.total < 0 ? <TransactionValue type="expense">{overview.total}</TransactionValue> : <TransactionValue type="income">{overview.total}</TransactionValue>}
+      {overview.total < 0 ? <OverviewExpense>{overview.total}</OverviewExpense> : <OverviewIncome><span>+</span>{overview.total}</OverviewIncome>}
     </OverviewRow>
   </OverviewRoot>
 )

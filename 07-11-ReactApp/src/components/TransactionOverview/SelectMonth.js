@@ -14,9 +14,9 @@ const SelectMonthLabel = styled.label`
 export default ({ onChangeHandlerFromParent }) => (
   <SelectMonthRoot class="select-month">
     <SelectMonthLabel>Month:</SelectMonthLabel>
-    <StyledSelect class="input" onChange={ onChangeHandlerFromParent }>
+    <StyledSelect class="input" onChange={onChangeHandlerFromParent}>
       {months.map((month, key) => (
-        <option key={key} value={month.value}>{ month.name }</option>
+        <option key={key} value={month.value}>{month.name}</option>
       ))}
     </StyledSelect>
   </SelectMonthRoot>

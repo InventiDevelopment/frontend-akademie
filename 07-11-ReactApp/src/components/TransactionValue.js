@@ -28,7 +28,7 @@ const Currency = styled.span`
 export default ({ type, children }) => (
   <FlexContainer>
     <Value type={type}>
-      {type === 'expense' ? `${children}` : `+ ${children}`}
+      {type === 'expense' ? `- ${children}` : `+ ${children}`}
     </Value>
     <Currency>CZK</Currency>
   </FlexContainer>
