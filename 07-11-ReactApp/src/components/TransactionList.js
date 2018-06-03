@@ -8,12 +8,12 @@ const List = styled.ul`
   list-style-type: none;
 `;
 
-export default ({ transactions, deleteTransaction }) => (
+export default ({ transactions, editTransaction, deleteTransaction }) => (
   <React.Fragment>
     <List>
       {
         transactions.map((transaction) =>
-          <TransactionContainer data={transaction} deleteTransaction={deleteTransaction} />
+          <TransactionContainer data={transaction} editTransaction={editTransaction} deleteTransaction={deleteTransaction} />
         )
       }
     </List>

@@ -18,12 +18,12 @@ const ToggleButton = styled.button`
   color: #00000;
 
   &:first-of-type {
-    border-top-left-radius: ${ globalBorderRadius };
+    border-top-left-radius: ${ globalBorderRadius};
     border-right: .5px solid #fdfdfd;
   }
 
   &:last-of-type {
-    border-top-right-radius: ${ globalBorderRadius };
+    border-top-right-radius: ${ globalBorderRadius};
     border-left: .5px solid #fdfdfd;
   }
 
@@ -35,10 +35,22 @@ const ToggleButton = styled.button`
 `;
 let activeIndex = 0;
 
-export default ({ buttonNames, onClick = ()=>{}, ...other }) => (
-  <ToggleRoot {...other}>
-    {buttonNames.map((name, key) => (
-      <ToggleButton type="button" active={key === activeIndex} onClick={() => onClick(key)}>{name}</ToggleButton>
-    ))}
-  </ToggleRoot>
-)
+export default class ToggleButtons extends React.Component {
+  setActiveButton = (key) => {
+    activeIndex = key
+  }
+  setOnClickButton = (key) => {
+    this.props.onClick(key)
+    this.setActiveButton(key)
+  }
+
+  render() {
+    return (
+      <ToggleRoot>
+        {this.props.buttonNames.map((name, key) => (
+          <ToggleButton type="button" active={activeIndex === key} onClick={() => this.setOnClickButton(key)}>{name}</ToggleButton>
+        ))}
+      </ToggleRoot>
+    )
+  }
+}

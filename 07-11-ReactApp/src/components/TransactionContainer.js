@@ -13,6 +13,7 @@ export default class TransactionContainer extends Component {
       <Transaction data={this.props.data}
         expanded={this.state.expanded}
         toggleExpanded={this.clickHandler}
+        editTransaction={this.props.editTransaction}
         deleteTransaction={this.props.deleteTransaction} />
     )
   }

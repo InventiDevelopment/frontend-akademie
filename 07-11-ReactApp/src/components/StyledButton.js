@@ -31,6 +31,30 @@ export default styled.button`
     border-radius: ${ globalBorderRadiusButton };
   `}
 
+  ${({ overview }) => overview && `
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    font-size: 2rem;
+    padding: 0;
+    margin-left: 1rem;
+    border-radius: ${ globalBorderRadiusButton };
+  `}
+
+  ${({ close }) => close && `
+    display: block;
+    border-radius: 50%;
+    padding: 0px;
+    margin: 0 0 1rem auto;
+    text-align: right;
+    background: none;
+    color: #78909c;
+    text-shadow: none;
+    box-shadow: none;
+  `}
+
   ${({ save }) => save && `
     display: block;
     margin: 0 auto;

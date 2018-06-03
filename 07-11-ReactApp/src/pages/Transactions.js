@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Modal from 'react-modal/lib/components/Modal';
 import { faChartBar } from '@fortawesome/fontawesome-free-regular';
 import { faPlusSquare } from '@fortawesome/fontawesome-free-regular';
+import { faTimesCircle } from '@fortawesome/fontawesome-free-regular';
 import getTime from 'date-fns/get_time';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -12,7 +13,7 @@ import StyledIcon from '../components/StyledIcon';
 import AddTransactionForm from '../components/AddTransactionForm';
 import ToggleButtons from '../components/ToggleButtons';
 import connect from 'react-redux/lib/connect/connect';
-import { addTransactionToBE, editTransactionInBE, deleteTransactionFromBE, setTransactionVisibility, setSelectedButton } from '../actions';
+import { addTransactionToBE, deleteTransactionFromBE, setTransactionVisibility } from '../actions';
 import { getFilteredTransactions } from '../reducers/transactions';
 
 const defaultNewTransactionState = { value: 0, message: '', type: 'income' };
@@ -65,7 +66,7 @@ class Transactions extends Component {
       <React.Fragment>
         <Header centered>
           <ToggleButtons margin="0 20px 0 0" buttonNames={["All", "In", "Out"]} onClick={this.setTransactionVisibleCategory} activeIndex={transactionVisibleCategory} />
-          <StyledButton add icon onClick={() => this.props.history.push("/overview")}>
+          <StyledButton overview icon onClick={() => this.props.history.push("/overview")}>
             <StyledIcon icon={faChartBar} />
           </StyledButton>
         </Header>
@@ -78,6 +79,9 @@ class Transactions extends Component {
           </StyledButton>
         </Footer>
         <Modal isOpen={modalOpen} onRequestClose={() => this.setState({modalOpen: false})}>
+          <StyledButton close onClick={() => this.setState({modalOpen: false})}>
+            <StyledIcon icon={faTimesCircle} />
+          </StyledButton>
           <AddTransactionForm value={value}
             message={message}
             type={type}
