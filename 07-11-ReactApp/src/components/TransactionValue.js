@@ -10,12 +10,12 @@ const FlexContainer = styled.div`
 const Value = styled.div`
   font-weight: bold;
   font-size: 1.3rem;
-  color: ${ transactionExpense };
+  color: ${ transactionExpense};
   margin-right: 5px;
 
   ${({ type }) =>
     type === 'income' && `
-      color: ${ transactionIncome };
+      color: ${ transactionIncome};
     `
   }
 `;
@@ -25,7 +25,7 @@ const Currency = styled.span`
   font-size: 10px;
 `;
 
-export default ({type, children}) => (
+export default ({ type, children }) => (
   <FlexContainer>
     <Value type={type}>
       {type === 'income' ? `+ ${children}` : `- ${children}`}

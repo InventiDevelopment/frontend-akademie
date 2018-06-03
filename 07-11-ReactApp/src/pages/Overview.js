@@ -3,7 +3,7 @@ import Header from '../components/Header';
 import Content from '../components/Content';
 import Footer from '../components/Footer';
 import { faArrowAltCircleLeft } from '@fortawesome/fontawesome-free-regular';
-import StyledIcon from '../components/StyledIcon'; 
+import StyledIcon from '../components/StyledIcon';
 import TransactionOverview from '../components/TransactionOverview';
 import StyledButton from '../components/StyledButton';
 import ToggleButtons from '../components/ToggleButtons';
@@ -15,12 +15,11 @@ import { setMonthVisibility } from '../actions/index';
 const onChange = new Date().getMonth(transaction.created, 0);
 class Overview extends Component {
   onChange = (event) => {
-    console.log(event)
-    this.props.setMonthVisibility( parseInt(event.target.value) )
+    this.props.setMonthVisibility(parseInt(event.target.value))
   }
 
   render() {
-    const { history, overview } = this.props;    
+    const { history, overview } = this.props;
 
     return (
       <React.Fragment>
@@ -28,7 +27,7 @@ class Overview extends Component {
           <ToggleButtons buttonNames={["Today", "Monthly", "Overall"]} activeIndex={0} />
         </Header>
         <Content>
-          <TransactionOverview overview={overview} onChangeHandlerFromParent={this.onChange}/>
+          <TransactionOverview overview={overview} onChangeHandlerFromParent={this.onChange} />
         </Content>
         <Footer>
           <StyledButton add onClick={() => history.push("/")}><StyledIcon icon={faArrowAltCircleLeft} /></StyledButton>
