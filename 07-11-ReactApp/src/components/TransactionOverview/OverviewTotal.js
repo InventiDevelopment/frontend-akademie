@@ -7,9 +7,9 @@ import TransactionValue from '../TransactionValue';
 const OverviewRoot = styled.div`
   margin: 20px 0;
   padding: 20px 10px;
-  border: 1px solid ${ border };
+  border: 1px solid ${ border};
   border-radius: 4px;
-  background-color: ${ white };
+  background-color: ${ white};
 `;
 
 export default ({ overview }) => (
@@ -24,7 +24,7 @@ export default ({ overview }) => (
     </OverviewRow>
     <OverviewRow total>
       Total
-      <TransactionValue type ="income">{overview.total}</TransactionValue>
+      {overview.total < 0 ? <TransactionValue type="expense">{overview.total}</TransactionValue> : <TransactionValue type="income">{overview.total}</TransactionValue>}
     </OverviewRow>
   </OverviewRoot>
 )
