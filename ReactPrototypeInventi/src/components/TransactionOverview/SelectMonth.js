@@ -11,12 +11,12 @@ const SelectMonthLabel = styled.label`
   margin-right: 10px;
 `;
 
-export default () => (
+export default (valueChanged) => (
   <SelectMonthRoot class="select-month">
     <SelectMonthLabel>Current Month:</SelectMonthLabel>
-    <StyledSelect class="input">
+    <StyledSelect class="input" onChange={valueChanged}>
       {months.map((month, key) => (
-        <option key={key} value={month}>{ month }</option>
+        <option key={key} value={month.value}>{ month.name }</option>
       ))}
     </StyledSelect>
   </SelectMonthRoot>

@@ -40,7 +40,25 @@ export const getTransactionData = () => {
         dispatch(setInitialTransactions(response.data))
       })
       .catch(error => {
-        dispatch(setInitialTransactions({}))
+        dispatch(setInitialTransactions([]))
+      })
+  }
+}
+
+export const deleteTransactionFromBE = (transactionId) => {
+  return dispatch => {
+    return api.delete(`/transactions/${transactionId}`)
+      .then(response => {
+        dispatch(getTransactionData())
+      })
+  }
+}
+
+export const addTransactionToBE = ( transaction ) => {
+  return dispatch => {
+    return api.post('/transactions/', transaction)
+      .then(response => {
+        dispatch(getTransactionData())
       })
   }
 }

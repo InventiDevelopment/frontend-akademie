@@ -9,8 +9,11 @@ import { connect } from 'react-redux';
 import { getOverview } from '../reducers/transactions';
 
 class Overview extends Component {
+  valueChanged = (event) => {
+    this.setState({ [event.target.id]: event.target.value })
+  }
   render() {
-    const { history, overview } = this.props;
+    const { history, overview, valueChanged } = this.props;
 
     return (
       <React.Fragment>
@@ -18,7 +21,7 @@ class Overview extends Component {
           <ToggleButtons buttonNames={["Today", "Monthly", "Overall"]} activeIndex={1} />
         </Header>
         <Content>
-          <TransactionOverview overview={overview} />
+          <TransactionOverview overview={overview} onChange={valueChanged}/>
         </Content>
         <Footer>
           <StyledButton block onClick={() => history.push("/")}>To homepage</StyledButton>

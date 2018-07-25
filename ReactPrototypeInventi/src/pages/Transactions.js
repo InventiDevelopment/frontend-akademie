@@ -11,7 +11,7 @@ import StyledIcon from '../components/StyledIcon';
 import AddTransactionForm from '../components/AddTransactionForm';
 import ToggleButtons from '../components/ToggleButtons';
 import connect from 'react-redux/lib/connect/connect';
-import { addTransaction, deleteTransactionFromStore, setTransactionVisibility } from '../actions';
+import { addTransactionToBE, deleteTransactionFromBE, setTransactionVisibility } from '../actions';
 import { getFilteredTransactions } from '../reducers/transactions';
 
 const defaultNewTransactionState = { value: 0, message: '', type: 'income' };
@@ -23,7 +23,7 @@ class Transactions extends Component {
   }
 
   deleteTransaction = (transaction) => {
-    this.props.deleteTransactionFromStore(transaction);
+    this.props.deleteTransactionFromBE(transaction.id);
   }
 
   valueChanged = (event) => {
@@ -31,12 +31,15 @@ class Transactions extends Component {
   }
 
   addNewTransaction = () => {
-    this.props.addTransaction({
+    const currentTime = new Date()
+    this.props.addTransactionToBE({
       value: parseInt(this.state.value, 0),
       name: this.state.message,
       type: this.state.type,
-      created: getTime(new Date())
+      created: getTime(currentTime),
+      id: getTime(currentTime)
     })
+    this.setState({modalOpen: false})
   }
 
   setTransactinonVisibleCategory = (index) => {
@@ -79,5 +82,5 @@ const mapStateToProps = (store) => {
 }
 
 export default connect(mapStateToProps,
-  { addTransaction, deleteTransactionFromStore, setTransactionVisibility }
+  { addTransactionToBE, deleteTransactionFromBE, setTransactionVisibility }
 )(Transactions)
